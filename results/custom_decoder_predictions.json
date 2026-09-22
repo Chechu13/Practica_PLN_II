@@ -1,0 +1,422 @@
+[
+  {
+    "question": "Who established the progressive-education movement?",
+    "prediction": "",
+    "reference": "John Dewey and Francis Parker",
+    "has_answer": true
+  },
+  {
+    "question": "By what other term is anti-aircraft warfare known?",
+    "prediction": "",
+    "reference": "counter-air defence",
+    "has_answer": true
+  },
+  {
+    "question": "Which two countries are connected by the Viking Link power cable?",
+    "prediction": "",
+    "reference": "Denmark and the United Kingdom",
+    "has_answer": true
+  },
+  {
+    "question": "In what year did Hudson first present his two-hour daylight-saving theory to the Wellington Philosophical Society?",
+    "prediction": "",
+    "reference": "1895",
+    "has_answer": true
+  },
+  {
+    "question": "What reward did the Great Internet Mersenne Prime Search offer for discovering a prime number with at least ten million digits?",
+    "prediction": "",
+    "reference": "US$100,000",
+    "has_answer": true
+  },
+  {
+    "question": "Which authors contributed to shaping the post-punk movement?",
+    "prediction": "",
+    "reference": "William S. Burroughs and J.G. Ballard",
+    "has_answer": true
+  },
+  {
+    "question": "Which scientist received the 2022 Nobel Prize in Physiology or Medicine?",
+    "prediction": "",
+    "reference": "Svante Pääbo",
+    "has_answer": true
+  },
+  {
+    "question": "Which HBO series about House Targaryen is a prequel to Game of Thrones?",
+    "prediction": "",
+    "reference": "House of the Dragon",
+    "has_answer": true
+  },
+  {
+    "question": "Who designed the Manuscript Society building?",
+    "prediction": "",
+    "reference": "King Lui-Wu",
+    "has_answer": true
+  },
+  {
+    "question": "What was Callimachus' catalog at the Library of Alexandria called?",
+    "prediction": "",
+    "reference": "Pinakes",
+    "has_answer": true
+  },
+  {
+    "question": "What is Alaska's ferry network called?",
+    "prediction": "",
+    "reference": "the Alaska Marine Highway",
+    "has_answer": true
+  },
+  {
+    "question": "What name was Pope Saint John XXIII given at birth?",
+    "prediction": "",
+    "reference": "Angelo Giuseppe Roncalli",
+    "has_answer": true
+  },
+  {
+    "question": "When did the Meymandi Theater first open?",
+    "prediction": "the the",
+    "reference": "2008",
+    "has_answer": true
+  },
+  {
+    "question": "What is in my left pocket right now?",
+    "prediction": "",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "From which century do the earliest dissertations on clothing date?",
+    "prediction": "",
+    "reference": "19th",
+    "has_answer": true
+  },
+  {
+    "question": "By what other designation is 25 October known, keeping the Battle of Agincourt dated 25 October 1415?",
+    "prediction": "",
+    "reference": "Saint Crispin's Day",
+    "has_answer": true
+  },
+  {
+    "question": "Who constructed a plant at Clover Field?",
+    "prediction": "",
+    "reference": "Donald Wills Douglas, Sr",
+    "has_answer": true
+  },
+  {
+    "question": "What drug is sold under the brand name Wegovy?",
+    "prediction": "",
+    "reference": "Semaglutide",
+    "has_answer": true
+  },
+  {
+    "question": "42.",
+    "prediction": "the the",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "Which renowned theatre can be found in Georgs Palace?",
+    "prediction": "",
+    "reference": "GOP Variety theatre",
+    "has_answer": true
+  },
+  {
+    "question": "How many Nobel Prize winners have had an affiliation with Washington University?",
+    "prediction": "",
+    "reference": "Twenty-five",
+    "has_answer": true
+  },
+  {
+    "question": "Which city is home to the Merdeka 118 skyscraper?",
+    "prediction": "",
+    "reference": "Kuala Lumpur",
+    "has_answer": true
+  },
+  {
+    "question": "Who constructed the temple at Göbekli Tepe?",
+    "prediction": "",
+    "reference": "nomadic hunter-gatherer tribes",
+    "has_answer": true
+  },
+  {
+    "question": "What was the location of the BBC's second studio?",
+    "prediction": "",
+    "reference": "16 Portland Place, London",
+    "has_answer": true
+  },
+  {
+    "question": "What term does the Internet Archive use to characterize the Wayback Machine?",
+    "prediction": "",
+    "reference": "three dimensional index",
+    "has_answer": true
+  },
+  {
+    "question": "...",
+    "prediction": "the the the the",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "When is my birthday?",
+    "prediction": "",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "Whom did Darwin help with research into marine invertebrates?",
+    "prediction": "",
+    "reference": "Robert Grant",
+    "has_answer": true
+  },
+  {
+    "question": "When did development of the ASCII standard get underway?",
+    "prediction": "",
+    "reference": "October 6, 1960",
+    "has_answer": true
+  },
+  {
+    "question": "What is the square root of a banana?",
+    "prediction": "",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "What game won Game of the Year at The Game Awards 2024?",
+    "prediction": "",
+    "reference": "Astro Bot",
+    "has_answer": true
+  },
+  {
+    "question": "What system allows composers to specify a musical work's pitches, tempo, meter, and rhythms to performers?",
+    "prediction": "",
+    "reference": "Western staff notation",
+    "has_answer": true
+  },
+  {
+    "question": "Who characterized the Windows 8 interface as awkward and impractical?",
+    "prediction": "",
+    "reference": "Adrian Kingsley-Hughes",
+    "has_answer": true
+  },
+  {
+    "question": "What does the Royal Institute of British Architects recognize with the Stirling Prize?",
+    "prediction": "",
+    "reference": "the best new building of the year",
+    "has_answer": true
+  },
+  {
+    "question": "Where",
+    "prediction": "the",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "Fine by me.",
+    "prediction": "",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "In which state did Kanye, Shakira, and Rage Against the Machine refuse to perform because of a new law targeting illegal aliens?",
+    "prediction": "",
+    "reference": "Arizona",
+    "has_answer": true
+  },
+  {
+    "question": "How was a Vestal punished for losing her chastity?",
+    "prediction": "",
+    "reference": "buried alive",
+    "has_answer": true
+  },
+  {
+    "question": "When did the earliest whole-genome duplication event take place?",
+    "prediction": "",
+    "reference": "319 million years ago",
+    "has_answer": true
+  },
+  {
+    "question": "Which word was named Cambridge Dictionary's Word of the Year for 2024?",
+    "prediction": "",
+    "reference": "Manifest",
+    "has_answer": true
+  },
+  {
+    "question": "Which shoes am I wearing?",
+    "prediction": "",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "Who initiated analytic philosophy's discussion of the problem concerning time's passage?",
+    "prediction": "",
+    "reference": "J. M. E. McTaggart",
+    "has_answer": true
+  },
+  {
+    "question": "Which newspaper bought Wordle in 2022?",
+    "prediction": "",
+    "reference": "The New York Times",
+    "has_answer": true
+  },
+  {
+    "question": "What is the airtight glass enclosure of an incandescent bulb called?",
+    "prediction": "",
+    "reference": "the envelope",
+    "has_answer": true
+  },
+  {
+    "question": "What caused damage to Westminster Abbey on 15 November 1940?",
+    "prediction": "",
+    "reference": "the Blitz",
+    "has_answer": true
+  },
+  {
+    "question": "Who made up the senate that counseled consuls in the Roman government?",
+    "prediction": "",
+    "reference": "appointed magistrates",
+    "has_answer": true
+  },
+  {
+    "question": "What PC magazine said that the iPod had \"altered the landscape for portable audio players\"?",
+    "prediction": "",
+    "reference": "PC World",
+    "has_answer": true
+  },
+  {
+    "question": "Which Spanish lagoon was granted legal personhood in 2022?",
+    "prediction": "",
+    "reference": "Mar Menor",
+    "has_answer": true
+  },
+  {
+    "question": "When was Planck awarded the Nobel Prize in Physics for discovering energy quanta?",
+    "prediction": "",
+    "reference": "1918",
+    "has_answer": true
+  },
+  {
+    "question": "Approximately how many people may have inhabited the Amazon region in AD 1500?",
+    "prediction": "",
+    "reference": "5 million",
+    "has_answer": true
+  },
+  {
+    "question": "Which two applications of zinc ore are described in the Rasaratna Samuccaya?",
+    "prediction": "",
+    "reference": "metal extraction and another used for medicinal purposes",
+    "has_answer": true
+  },
+  {
+    "question": "Is that the one you meant?",
+    "prediction": "",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "At what age were British Gas plc employees required to retire?",
+    "prediction": "",
+    "reference": "women retire at age 60 and men at 65",
+    "has_answer": true
+  },
+  {
+    "question": "How fast may vehicles travel on the Sui-Yu Expressway?",
+    "prediction": "",
+    "reference": "80 km/h (50 mph)",
+    "has_answer": true
+  },
+  {
+    "question": "No.",
+    "prediction": "the the the the the",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "Hello.",
+    "prediction": "the the",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "Which designer was behind the westernized character designs in Digimon?",
+    "prediction": "",
+    "reference": "Kenji Watanabe",
+    "has_answer": true
+  },
+  {
+    "question": "Actually, never mind.",
+    "prediction": "the the",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "?",
+    "prediction": "the",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "Which classic title was initially available through Xbox Live Arcade?",
+    "prediction": "",
+    "reference": "Ms. Pac-Man",
+    "has_answer": true
+  },
+  {
+    "question": "Undo that.",
+    "prediction": "the the",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "How many books are on the shelf behind me?",
+    "prediction": "",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "Which Mexican city did US forces occupy during the Revolution?",
+    "prediction": "",
+    "reference": "Veracruz",
+    "has_answer": true
+  },
+  {
+    "question": "What online learning platform was acquired by 2U in 2021?",
+    "prediction": "",
+    "reference": "edX",
+    "has_answer": true
+  },
+  {
+    "question": "Which toy inspired the 2023 film directed by Greta Gerwig?",
+    "prediction": "",
+    "reference": "Barbie",
+    "has_answer": true
+  },
+  {
+    "question": "Exposure to therapy dogs reduced what in children with ADHD?",
+    "prediction": "the the",
+    "reference": "antisocial and violent behavior",
+    "has_answer": true
+  },
+  {
+    "question": "wq wq wq",
+    "prediction": "",
+    "reference": "",
+    "has_answer": false
+  },
+  {
+    "question": "What is the name of the nuclear fusion facility inaugurated in Japan in 2023?",
+    "prediction": "",
+    "reference": "JT-60SA",
+    "has_answer": true
+  },
+  {
+    "question": "Which form of materialism characterized Marxist philosophy?",
+    "prediction": "",
+    "reference": "dialectical materialism",
+    "has_answer": true
+  },
+  {
+    "question": "On which two concepts does the Neo-Eriksonian identity-status paradigm center?",
+    "prediction": "",
+    "reference": "exploration and commitment",
+    "has_answer": true
+  }
+]

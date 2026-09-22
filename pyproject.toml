@@ -3,10 +3,29 @@ name = "practica-pln-ii"
 version = "0.1.0"
 description = "Análisis Exploratorio de Datos (EDA) para un corpus de textos y preguntas de PLN."
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = "==3.12.*"
+
 dependencies = [
     "pandas",
     "matplotlib",
     "seaborn",
-    "jupyter"
+    "jupyter",
+    "transformers",
+    "tqdm",
+    "accelerate",
+    "torch",
+    "torchvision",
+    "scikit-learn",
 ]
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch" }
+torchvision = { index = "pytorch" }
+
+[tool.uv]
+environments = ["sys_platform == 'win32' and python_version == '3.12'"]

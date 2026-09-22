@@ -13,6 +13,7 @@ dependencies = [
     "transformers",
     "tqdm",
     "accelerate",
+    "peft",
     "torch",
     "torchvision",
     "scikit-learn",

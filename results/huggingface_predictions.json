@@ -37,7 +37,7 @@
   },
   {
     "question": "Which scientist received the 2022 Nobel Prize in Physiology or Medicine?",
-    "prediction": "Patrice Collas",
+    "prediction": "Svante Pääbo",
     "reference": "Svante Pääbo",
     "has_answer": true
   },
@@ -49,7 +49,7 @@
   },
   {
     "question": "Who designed the Manuscript Society building?",
-    "prediction": "style.",
+    "prediction": "",
     "reference": "King Lui-Wu",
     "has_answer": true
   },
@@ -181,13 +181,13 @@
   },
   {
     "question": "What game won Game of the Year at The Game Awards 2024?",
-    "prediction": "empty",
+    "prediction": "Horizon Forbidden West",
     "reference": "Astro Bot",
     "has_answer": true
   },
   {
     "question": "What system allows composers to specify a musical work's pitches, tempo, meter, and rhythms to performers?",
-    "prediction": "Western staff notation",
+    "prediction": "staff notation",
     "reference": "Western staff notation",
     "has_answer": true
   },
@@ -235,7 +235,7 @@
   },
   {
     "question": "Which word was named Cambridge Dictionary's Word of the Year for 2024?",
-    "prediction": "empty",
+    "prediction": "misogynoir",
     "reference": "Manifest",
     "has_answer": true
   },
@@ -265,7 +265,7 @@
   },
   {
     "question": "What caused damage to Westminster Abbey on 15 November 1940?",
-    "prediction": "Blitz",
+    "prediction": "the Blitz",
     "reference": "the Blitz",
     "has_answer": true
   },
@@ -283,7 +283,7 @@
   },
   {
     "question": "Which Spanish lagoon was granted legal personhood in 2022?",
-    "prediction": "Cabo de Gata-Níjar",
+    "prediction": "Laguna de Gallocanta",
     "reference": "Mar Menor",
     "has_answer": true
   },
@@ -301,7 +301,7 @@
   },
   {
     "question": "Which two applications of zinc ore are described in the Rasaratna Samuccaya?",
-    "prediction": "metallic extraction and another used for medicinal purposes",
+    "prediction": "metallic zinc and another used for medicinal purposes",
     "reference": "metal extraction and another used for medicinal purposes",
     "has_answer": true
   },
@@ -313,13 +313,13 @@
   },
   {
     "question": "At what age were British Gas plc employees required to retire?",
-    "prediction": "& Co KG, and then was dismissed. She claimed that she should have received 14 years' notice, not 10, because the Directive",
+    "prediction": "& Co KG",
     "reference": "women retire at age 60 and men at 65",
     "has_answer": true
   },
   {
     "question": "How fast may vehicles travel on the Sui-Yu Expressway?",
-    "prediction": "80 km/h (50 mph)",
+    "prediction": "80 km/h",
     "reference": "80 km/h (50 mph)",
     "has_answer": true
   },

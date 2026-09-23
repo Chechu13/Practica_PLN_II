@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(project_root)
 
-from models.encoder_decoder import EncoderDecoderTransformer
+from src.modelos.encoder_decoder import EncoderDecoderTransformer
 from src.evaluate import evaluate_predictions
 from src.preprocess.preprocess import CustomTokenizer, prepare_dataset
 

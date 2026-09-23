@@ -1,4 +1,5 @@
 import json
+import math
 import os
 import random
 import sys
@@ -109,6 +110,10 @@ def train_model(model, train_data, tokenizer, device):
         (parameter for parameter in model.parameters() if parameter.requires_grad),
         lr=LEARNING_RATE,
     )
+    updates_per_epoch = math.ceil(len(loader) / GRADIENT_ACCUMULATION_STEPS)
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
+        optimizer, T_max=EPOCHS * updates_per_epoch
+    )
     model.train()
     for epoch in range(EPOCHS):
         total_loss = 0.0
@@ -120,6 +125,7 @@ def train_model(model, train_data, tokenizer, device):
             if step % GRADIENT_ACCUMULATION_STEPS == 0 or step == len(loader):
                 torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
                 optimizer.step()
+                scheduler.step()
                 optimizer.zero_grad()
             total_loss += loss.item() * GRADIENT_ACCUMULATION_STEPS
             if step % 10 == 0 or step == len(loader):
@@ -208,8 +214,10 @@ def main():
         )
 
     results_dir = os.path.join(PROJECT_ROOT, "results")
-    adapter_dir = os.path.join(results_dir, "qwen_lora_adapter")
+    models_dir = os.path.join(PROJECT_ROOT, "models")
+    adapter_dir = os.path.join(models_dir, "qwen_lora_adapter")
     os.makedirs(results_dir, exist_ok=True)
+    os.makedirs(models_dir, exist_ok=True)
     model.save_pretrained(adapter_dir)
     tokenizer.save_pretrained(adapter_dir)
     predictions_path = os.path.join(results_dir, "huggingface_predictions.json")

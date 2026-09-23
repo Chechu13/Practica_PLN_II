@@ -12,7 +12,7 @@ sys.path.append(project_root)
 
 from src.preprocess.preprocess import prepare_dataset, CustomTokenizer
 from src.evaluate import evaluate_predictions
-from models.simple_decoder import SimpleDecoder
+from src.modelos.simple_decoder import SimpleDecoder
 
 def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

@@ -21,7 +21,7 @@ from src.preprocess.preprocess import prepare_dataset
 
 MODEL_ID = "Qwen/Qwen2.5-7B-Instruct"
 MAX_LENGTH = 384
-EPOCHS = 1
+EPOCHS = 3
 LEARNING_RATE = 2e-4
 GRADIENT_ACCUMULATION_STEPS = 4
 

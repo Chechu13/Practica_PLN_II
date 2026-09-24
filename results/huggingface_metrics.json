@@ -1,17 +1,17 @@
 {
   "overall": {
-    "exact_match": 82.86,
-    "f1_score": 87.1,
+    "exact_match": 77.14,
+    "f1_score": 80.11,
     "total_evaluated": 70
   },
   "answerable": {
-    "exact_match": 77.78,
-    "f1_score": 83.27,
+    "exact_match": 72.22,
+    "f1_score": 76.07,
     "total_evaluated": 54
   },
   "unanswerable": {
-    "exact_match": 100.0,
-    "f1_score": 100.0,
+    "exact_match": 93.75,
+    "f1_score": 93.75,
     "total_evaluated": 16
   }
 }

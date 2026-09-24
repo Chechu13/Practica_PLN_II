@@ -3,420 +3,560 @@
     "question": "Who established the progressive-education movement?",
     "prediction": "John Dewey and Francis Parker",
     "reference": "John Dewey and Francis Parker",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c14764",
+    "retrieval_score": 0.6040782928466797
   },
   {
     "question": "By what other term is anti-aircraft warfare known?",
     "prediction": "counter-air defence",
     "reference": "counter-air defence",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c06574",
+    "retrieval_score": 0.6857618689537048
   },
   {
     "question": "Which two countries are connected by the Viking Link power cable?",
-    "prediction": "United Kingdom and Norway",
+    "prediction": "Norway and the United Kingdom",
     "reference": "Denmark and the United Kingdom",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c02577",
+    "retrieval_score": 0.3955124020576477
   },
   {
     "question": "In what year did Hudson first present his two-hour daylight-saving theory to the Wellington Philosophical Society?",
     "prediction": "1895",
     "reference": "1895",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c03186",
+    "retrieval_score": 0.6947790384292603
   },
   {
     "question": "What reward did the Great Internet Mersenne Prime Search offer for discovering a prime number with at least ten million digits?",
     "prediction": "US$100,000",
     "reference": "US$100,000",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c19916",
+    "retrieval_score": 1.1831293106079102
   },
   {
     "question": "Which authors contributed to shaping the post-punk movement?",
     "prediction": "William S. Burroughs and J.G. Ballard",
     "reference": "William S. Burroughs and J.G. Ballard",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c14841",
+    "retrieval_score": 0.7181283235549927
   },
   {
     "question": "Which scientist received the 2022 Nobel Prize in Physiology or Medicine?",
     "prediction": "Svante Pääbo",
     "reference": "Svante Pääbo",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c10254",
+    "retrieval_score": 0.560478687286377
   },
   {
     "question": "Which HBO series about House Targaryen is a prequel to Game of Thrones?",
     "prediction": "House of the Dragon",
     "reference": "House of the Dragon",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c15120",
+    "retrieval_score": 0.5774286389350891
   },
   {
     "question": "Who designed the Manuscript Society building?",
-    "prediction": "",
+    "prediction": "Eero Saarinen",
     "reference": "King Lui-Wu",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c19756",
+    "retrieval_score": 0.6048318147659302
   },
   {
     "question": "What was Callimachus' catalog at the Library of Alexandria called?",
     "prediction": "Pinakes",
     "reference": "Pinakes",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c07965",
+    "retrieval_score": 1.0696020126342773
   },
   {
     "question": "What is Alaska's ferry network called?",
     "prediction": "Alaska Marine Highway",
     "reference": "the Alaska Marine Highway",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c13336",
+    "retrieval_score": 0.7191441059112549
   },
   {
     "question": "What name was Pope Saint John XXIII given at birth?",
     "prediction": "Angelo Giuseppe Roncalli",
     "reference": "Angelo Giuseppe Roncalli",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c12654",
+    "retrieval_score": 0.7200831174850464
   },
   {
     "question": "When did the Meymandi Theater first open?",
     "prediction": "2008",
     "reference": "2008",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c10332",
+    "retrieval_score": 1.1130664348602295
   },
   {
     "question": "What is in my left pocket right now?",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c04753",
+    "retrieval_score": 0.2587166428565979
   },
   {
     "question": "From which century do the earliest dissertations on clothing date?",
     "prediction": "19th",
     "reference": "19th",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c08264",
+    "retrieval_score": 1.0716224908828735
   },
   {
     "question": "By what other designation is 25 October known, keeping the Battle of Agincourt dated 25 October 1415?",
     "prediction": "Saint Crispin's Day",
     "reference": "Saint Crispin's Day",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c06010",
+    "retrieval_score": 1.1090408563613892
   },
   {
     "question": "Who constructed a plant at Clover Field?",
     "prediction": "Donald Wills Douglas, Sr.",
     "reference": "Donald Wills Douglas, Sr",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c15955",
+    "retrieval_score": 1.01423978805542
   },
   {
     "question": "What drug is sold under the brand name Wegovy?",
     "prediction": "semaglutide",
     "reference": "Semaglutide",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c07625",
+    "retrieval_score": 0.4751884639263153
   },
   {
     "question": "42.",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c11632",
+    "retrieval_score": 0.35812005400657654
   },
   {
     "question": "Which renowned theatre can be found in Georgs Palace?",
     "prediction": "GOP Variety theatre",
     "reference": "GOP Variety theatre",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c05789",
+    "retrieval_score": 1.0442922115325928
   },
   {
     "question": "How many Nobel Prize winners have had an affiliation with Washington University?",
     "prediction": "twenty-five",
     "reference": "Twenty-five",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c15974",
+    "retrieval_score": 0.5930037498474121
   },
   {
     "question": "Which city is home to the Merdeka 118 skyscraper?",
-    "prediction": "Jakarta",
+    "prediction": "Kuala Lumpur",
     "reference": "Kuala Lumpur",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c01163",
+    "retrieval_score": 0.7374919652938843
   },
   {
     "question": "Who constructed the temple at Göbekli Tepe?",
     "prediction": "nomadic hunter-gatherer tribes",
     "reference": "nomadic hunter-gatherer tribes",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c14329",
+    "retrieval_score": 0.9960564970970154
   },
   {
     "question": "What was the location of the BBC's second studio?",
     "prediction": "16 Portland Place, London",
     "reference": "16 Portland Place, London",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c01773",
+    "retrieval_score": 0.621909499168396
   },
   {
     "question": "What term does the Internet Archive use to characterize the Wayback Machine?",
     "prediction": "a \"three dimensional index\"",
     "reference": "three dimensional index",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c01401",
+    "retrieval_score": 0.8248085975646973
   },
   {
     "question": "...",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c16910",
+    "retrieval_score": 0.24004468321800232
   },
   {
     "question": "When is my birthday?",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c06006",
+    "retrieval_score": 0.4165632724761963
   },
   {
     "question": "Whom did Darwin help with research into marine invertebrates?",
     "prediction": "Robert Grant",
     "reference": "Robert Grant",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c11378",
+    "retrieval_score": 0.635036826133728
   },
   {
     "question": "When did development of the ASCII standard get underway?",
     "prediction": "October 6, 1960",
     "reference": "October 6, 1960",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c06199",
+    "retrieval_score": 0.738974928855896
   },
   {
     "question": "What is the square root of a banana?",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c09371",
+    "retrieval_score": 0.7563891410827637
   },
   {
     "question": "What game won Game of the Year at The Game Awards 2024?",
-    "prediction": "Horizon Forbidden West",
+    "prediction": "The Last of Us Part II",
     "reference": "Astro Bot",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c00310",
+    "retrieval_score": 0.49483799934387207
   },
   {
     "question": "What system allows composers to specify a musical work's pitches, tempo, meter, and rhythms to performers?",
-    "prediction": "staff notation",
+    "prediction": "musical notation",
     "reference": "Western staff notation",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c03683",
+    "retrieval_score": 0.6013753414154053
   },
   {
     "question": "Who characterized the Windows 8 interface as awkward and impractical?",
-    "prediction": "the interface as \"clumsy and impractical\"?",
+    "prediction": "the interface as \"clumsy and impractical\"?\nAdrian Kingsley-Hughes",
     "reference": "Adrian Kingsley-Hughes",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c16876",
+    "retrieval_score": 1.2610114812850952
   },
   {
     "question": "What does the Royal Institute of British Architects recognize with the Stirling Prize?",
-    "prediction": "the best new building of the year",
+    "prediction": "an outstanding building",
     "reference": "the best new building of the year",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c03240",
+    "retrieval_score": 0.5275595188140869
   },
   {
     "question": "Where",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c07183",
+    "retrieval_score": 0.45166462659835815
   },
   {
     "question": "Fine by me.",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c00723",
+    "retrieval_score": 0.28188908100128174
   },
   {
     "question": "In which state did Kanye, Shakira, and Rage Against the Machine refuse to perform because of a new law targeting illegal aliens?",
     "prediction": "Arizona",
     "reference": "Arizona",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c00744",
+    "retrieval_score": 1.0088653564453125
   },
   {
     "question": "How was a Vestal punished for losing her chastity?",
     "prediction": "buried alive",
     "reference": "buried alive",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c17770",
+    "retrieval_score": 1.1699905395507812
   },
   {
     "question": "When did the earliest whole-genome duplication event take place?",
     "prediction": "319 million years ago",
     "reference": "319 million years ago",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c15878",
+    "retrieval_score": 0.6245932579040527
   },
   {
     "question": "Which word was named Cambridge Dictionary's Word of the Year for 2024?",
-    "prediction": "misogynoir",
+    "prediction": "climate",
     "reference": "Manifest",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c05883",
+    "retrieval_score": 0.4934983253479004
   },
   {
     "question": "Which shoes am I wearing?",
-    "prediction": "",
+    "prediction": "boots",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c08265",
+    "retrieval_score": 0.4389312267303467
   },
   {
     "question": "Who initiated analytic philosophy's discussion of the problem concerning time's passage?",
-    "prediction": "J. M. E. McTaggart",
+    "prediction": "Bertrand Russell",
     "reference": "J. M. E. McTaggart",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c14304",
+    "retrieval_score": 0.5185313820838928
   },
   {
     "question": "Which newspaper bought Wordle in 2022?",
     "prediction": "The New York Times",
     "reference": "The New York Times",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c05049",
+    "retrieval_score": 0.5960679054260254
   },
   {
     "question": "What is the airtight glass enclosure of an incandescent bulb called?",
     "prediction": "envelope",
     "reference": "the envelope",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c08199",
+    "retrieval_score": 0.6417416334152222
   },
   {
     "question": "What caused damage to Westminster Abbey on 15 November 1940?",
-    "prediction": "the Blitz",
+    "prediction": "Luftwaffe",
     "reference": "the Blitz",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c15427",
+    "retrieval_score": 0.6117501258850098
   },
   {
     "question": "Who made up the senate that counseled consuls in the Roman government?",
-    "prediction": "appointed magistrates",
+    "prediction": "Roman Censors",
     "reference": "appointed magistrates",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c16430",
+    "retrieval_score": 0.6922739148139954
   },
   {
     "question": "What PC magazine said that the iPod had \"altered the landscape for portable audio players\"?",
     "prediction": "PC World",
     "reference": "PC World",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c00267",
+    "retrieval_score": 0.6460270285606384
   },
   {
     "question": "Which Spanish lagoon was granted legal personhood in 2022?",
     "prediction": "Laguna de Gallocanta",
     "reference": "Mar Menor",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c11547",
+    "retrieval_score": 0.4667731523513794
   },
   {
     "question": "When was Planck awarded the Nobel Prize in Physics for discovering energy quanta?",
     "prediction": "1918",
     "reference": "1918",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c13896",
+    "retrieval_score": 1.1833406686782837
   },
   {
     "question": "Approximately how many people may have inhabited the Amazon region in AD 1500?",
     "prediction": "5 million",
     "reference": "5 million",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c19405",
+    "retrieval_score": 0.7086945176124573
   },
   {
     "question": "Which two applications of zinc ore are described in the Rasaratna Samuccaya?",
-    "prediction": "metallic zinc and another used for medicinal purposes",
+    "prediction": "metal extraction and another used for medicinal purposes",
     "reference": "metal extraction and another used for medicinal purposes",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c14016",
+    "retrieval_score": 1.1528003215789795
   },
   {
     "question": "Is that the one you meant?",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c00765",
+    "retrieval_score": 0.2636845111846924
   },
   {
     "question": "At what age were British Gas plc employees required to retire?",
-    "prediction": "& Co KG",
+    "prediction": "65",
     "reference": "women retire at age 60 and men at 65",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c11251",
+    "retrieval_score": 0.4201483130455017
   },
   {
     "question": "How fast may vehicles travel on the Sui-Yu Expressway?",
-    "prediction": "80 km/h",
+    "prediction": "80 km/h (50 mph)",
     "reference": "80 km/h (50 mph)",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c12021",
+    "retrieval_score": 0.7244802117347717
   },
   {
     "question": "No.",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c02246",
+    "retrieval_score": 0.2356935292482376
   },
   {
     "question": "Hello.",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c03142",
+    "retrieval_score": 0.6388553977012634
   },
   {
     "question": "Which designer was behind the westernized character designs in Digimon?",
-    "prediction": "Kenji Watanabe",
+    "prediction": "Takashi Ishimura",
     "reference": "Kenji Watanabe",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c04751",
+    "retrieval_score": 0.7245566248893738
   },
   {
     "question": "Actually, never mind.",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c00723",
+    "retrieval_score": 0.25568240880966187
   },
   {
     "question": "?",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c14970",
+    "retrieval_score": 0.19995003938674927
   },
   {
     "question": "Which classic title was initially available through Xbox Live Arcade?",
     "prediction": "Ms. Pac-Man",
     "reference": "Ms. Pac-Man",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c06035",
+    "retrieval_score": 0.5988290309906006
   },
   {
     "question": "Undo that.",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c00597",
+    "retrieval_score": 0.5151471495628357
   },
   {
     "question": "How many books are on the shelf behind me?",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c19763",
+    "retrieval_score": 0.493683785200119
   },
   {
     "question": "Which Mexican city did US forces occupy during the Revolution?",
     "prediction": "Veracruz",
     "reference": "Veracruz",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c06079",
+    "retrieval_score": 0.6783168315887451
   },
   {
     "question": "What online learning platform was acquired by 2U in 2021?",
     "prediction": "Coursera",
     "reference": "edX",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c14770",
+    "retrieval_score": 0.49951058626174927
   },
   {
     "question": "Which toy inspired the 2023 film directed by Greta Gerwig?",
     "prediction": "Barbie",
     "reference": "Barbie",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c11674",
+    "retrieval_score": 0.8847423791885376
   },
   {
     "question": "Exposure to therapy dogs reduced what in children with ADHD?",
     "prediction": "antisocial and violent behavior",
     "reference": "antisocial and violent behavior",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c01111",
+    "retrieval_score": 1.163953423500061
   },
   {
     "question": "wq wq wq",
     "prediction": "",
     "reference": "",
-    "has_answer": false
+    "has_answer": false,
+    "retrieved_context_id": "c09890",
+    "retrieval_score": 0.4033735990524292
   },
   {
     "question": "What is the name of the nuclear fusion facility inaugurated in Japan in 2023?",
-    "prediction": "JT-60SA",
+    "prediction": "Fukushima Daini",
     "reference": "JT-60SA",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c10260",
+    "retrieval_score": 0.5213257074356079
   },
   {
     "question": "Which form of materialism characterized Marxist philosophy?",
     "prediction": "dialectical materialism",
     "reference": "dialectical materialism",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c02024",
+    "retrieval_score": 0.6946724653244019
   },
   {
     "question": "On which two concepts does the Neo-Eriksonian identity-status paradigm center?",
     "prediction": "exploration and commitment",
     "reference": "exploration and commitment",
-    "has_answer": true
+    "has_answer": true,
+    "retrieved_context_id": "c05559",
+    "retrieval_score": 1.3584799766540527
   }
 ]

@@ -18,7 +18,7 @@ sys.path.append(PROJECT_ROOT)
 
 from src.evaluate import evaluate_predictions
 from src.preprocess.preprocess import prepare_dataset
-from src.retrieval.context_retriever import ContextRetriever
+from src.retrieval.fallback_retriever import FallbackRetriever
 
 
 MODEL_ID = "Qwen/Qwen2.5-7B-Instruct"
@@ -72,10 +72,23 @@ def make_prompt(item, prompt_name=PROMPT_NAME):
 
 
 class QuestionAnsweringDataset(Dataset):
-    def __init__(self, samples, tokenizer):
+    def __init__(self, samples, tokenizer, retriever=None):
         self.samples = samples
         self.tokenizer = tokenizer
-        self.examples = [self._encode(sample) for sample in samples]
+        self.retriever = retriever
+        self.retrieved_samples = {}
+
+    def _resolve_context(self, index):
+        sample = self.samples[index]
+        if sample["context"] or self.retriever is None:
+            return sample
+        if index not in self.retrieved_samples:
+            retrieved = self.retriever.retrieve(sample["question"])
+            self.retrieved_samples[index] = {
+                **sample,
+                "context": retrieved["context"],
+            }
+        return self.retrieved_samples[index]
 
     def _encode(self, sample):
         prompt = self.tokenizer.apply_chat_template(
@@ -93,10 +106,10 @@ class QuestionAnsweringDataset(Dataset):
         return {"input_ids": input_ids, "labels": labels}
 
     def __len__(self):
-        return len(self.examples)
+        return len(self.samples)
 
     def __getitem__(self, index):
-        return self.examples[index]
+        return self._encode(self._resolve_context(index))
 
 
 def collate_batch(batch, pad_token_id):
@@ -116,8 +129,8 @@ def collate_batch(batch, pad_token_id):
     }
 
 
-def train_model(model, train_data, tokenizer, device):
-    dataset = QuestionAnsweringDataset(train_data, tokenizer)
+def train_model(model, train_data, tokenizer, device, retriever=None):
+    dataset = QuestionAnsweringDataset(train_data, tokenizer, retriever=retriever)
     loader = DataLoader(
         dataset,
         batch_size=1,
@@ -183,21 +196,6 @@ def metrics_by_answer_status(results):
     }
 
 
-def add_retrieved_contexts(dataset, retriever):
-    retrieved_dataset = []
-    for item in dataset:
-        retrieved = retriever.retrieve(item["question"])
-        retrieved_dataset.append(
-            {
-                **item,
-                "context": retrieved["context"],
-                "retrieved_context_id": retrieved["context_id"],
-                "retrieval_score": retrieved["score"],
-                "has_context": True,
-            }
-        )
-    return retrieved_dataset
-
 def main():
     set_seed()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -205,9 +203,9 @@ def main():
 
     dataset = prepare_dataset(
         os.path.join(PROJECT_ROOT, "data", "questions_train.json"),
+        os.path.join(PROJECT_ROOT, "data", "contexts.json"),
     )
-    retriever = ContextRetriever(CONTEXT_INDEX_PATH, device=device)
-    dataset = add_retrieved_contexts(dataset, retriever)
+    retriever = FallbackRetriever(CONTEXT_INDEX_PATH, device=device, threshold=0.60)
     train_data, test_data = train_test_split(dataset, test_size=0.2, random_state=42)
     print(
         f"Datos de entrenamiento: {len(train_data)} | Datos de test: {len(test_data)} | "
@@ -236,20 +234,27 @@ def main():
     model.print_trainable_parameters()
 
     print("\nIniciando fine-tuning LoRA...")
-    train_model(model, train_data, tokenizer, device)
+    train_model(model, train_data, tokenizer, device, retriever=retriever)
 
     print("\nEvaluando en el conjunto de TEST...")
     model.eval()
     results = []
     for item in test_data:
+        retrieved = retriever.retrieve(item["question"])
+        inference_item = {
+            **item,
+            "context": retrieved["context"],
+        }
         results.append(
             {
                 "question": item["question"],
-                "prediction": generate_answer(model, tokenizer, item, device),
+                "prediction": generate_answer(
+                    model, tokenizer, inference_item, device
+                ),
                 "reference": item["answer"],
                 "has_answer": item["has_answer"],
-                "retrieved_context_id": item["retrieved_context_id"],
-                "retrieval_score": item["retrieval_score"],
+                "retrieved_context_id": retrieved["context_id"],
+                "retrieval_score": retrieved["score"],
             }
         )
 

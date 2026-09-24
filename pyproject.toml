@@ -17,6 +17,7 @@ dependencies = [
     "torch",
     "torchvision",
     "scikit-learn",
+    "ddgs",
 ]
 
 [[tool.uv.index]]

@@ -3,6 +3,7 @@ import math
 import os
 import random
 import sys
+from functools import lru_cache
 
 import numpy as np
 import torch
@@ -26,6 +27,8 @@ EPOCHS = 1
 LEARNING_RATE = 2e-4
 GRADIENT_ACCUMULATION_STEPS = 4
 CONTEXT_INDEX_PATH = os.path.join(PROJECT_ROOT, "models", "context_embeddings.pt")
+PROMPTS_DIR = os.path.join(PROJECT_ROOT, "prompts")
+PROMPT_NAME = "primer.md"
 
 
 def set_seed(seed=42):
@@ -36,16 +39,29 @@ def set_seed(seed=42):
         torch.cuda.manual_seed_all(seed)
 
 
-def make_prompt(item):
+@lru_cache(maxsize=None)
+def load_prompt(prompt_name):
+    if not prompt_name.endswith(".md"):
+        prompt_name = f"{prompt_name}.md"
+    prompt_path = os.path.join(PROMPTS_DIR, prompt_name)
+    if not os.path.isfile(prompt_path):
+        available_prompts = sorted(
+            name for name in os.listdir(PROMPTS_DIR) if name.endswith(".md")
+        )
+        raise FileNotFoundError(
+            f"No se encontro el prompt '{prompt_name}' en {PROMPTS_DIR}. "
+            f"Disponibles: {', '.join(available_prompts) or 'ninguno'}"
+        )
+    with open(prompt_path, encoding="utf-8") as prompt_file:
+        return prompt_file.read().strip()
+
+
+def make_prompt(item, prompt_name=PROMPT_NAME):
     context = item["context"] or "No context is available."
     messages = [
         {
             "role": "system",
-            "content": (
-                "Answer the question using the context when available. "
-                "If the answer is unknown or the question is unanswerable, "
-                "return an empty answer. Be concise."
-            ),
+            "content": load_prompt(prompt_name),
         },
         {
             "role": "user",

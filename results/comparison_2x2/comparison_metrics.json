@@ -1,0 +1,70 @@
+{
+  "Qwen Base + Context": {
+    "overall": {
+      "exact_match": 15.71,
+      "f1_score": 30.85,
+      "total_evaluated": 70
+    },
+    "answerable": {
+      "exact_match": 20.37,
+      "f1_score": 40.0,
+      "total_evaluated": 54
+    },
+    "unanswerable": {
+      "exact_match": 0.0,
+      "f1_score": 0.0,
+      "total_evaluated": 16
+    }
+  },
+  "Qwen Base + Fallback": {
+    "overall": {
+      "exact_match": 18.57,
+      "f1_score": 36.87,
+      "total_evaluated": 70
+    },
+    "answerable": {
+      "exact_match": 24.07,
+      "f1_score": 47.8,
+      "total_evaluated": 54
+    },
+    "unanswerable": {
+      "exact_match": 0.0,
+      "f1_score": 0.0,
+      "total_evaluated": 16
+    }
+  },
+  "Qwen Fine-tuned + Context": {
+    "overall": {
+      "exact_match": 71.43,
+      "f1_score": 75.35,
+      "total_evaluated": 70
+    },
+    "answerable": {
+      "exact_match": 68.52,
+      "f1_score": 73.61,
+      "total_evaluated": 54
+    },
+    "unanswerable": {
+      "exact_match": 81.25,
+      "f1_score": 81.25,
+      "total_evaluated": 16
+    }
+  },
+  "Qwen Fine-tuned + Fallback": {
+    "overall": {
+      "exact_match": 68.57,
+      "f1_score": 73.96,
+      "total_evaluated": 70
+    },
+    "answerable": {
+      "exact_match": 62.96,
+      "f1_score": 69.95,
+      "total_evaluated": 54
+    },
+    "unanswerable": {
+      "exact_match": 87.5,
+      "f1_score": 87.5,
+      "total_evaluated": 16
+    }
+  }
+}

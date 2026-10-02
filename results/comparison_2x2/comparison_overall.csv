@@ -1,0 +1,5 @@
+condition,subset,EM,F1,N
+Qwen Base + Context,overall,15.71,30.85,70
+Qwen Base + Fallback,overall,18.57,36.87,70
+Qwen Fine-tuned + Context,overall,71.43,75.35,70
+Qwen Fine-tuned + Fallback,overall,68.57,73.96,70

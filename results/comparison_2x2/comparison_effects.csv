@@ -1,0 +1,5 @@
+comparacion,sin_FT,con_FT,delta,Context,Fallback
+Fine-tuning + Fallback,36.87,73.96,37.089999999999996,,
+Fine-tuning + Context,30.85,75.35,44.49999999999999,,
+Fallback en Qwen Base,,,6.019999999999996,30.85,36.87
+Fallback en Qwen Fine-tuned,,,-1.3900000000000006,75.35,73.96

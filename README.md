@@ -10,8 +10,7 @@ Este proyecto aborda la **generación de respuestas fundamentadas** para pregunt
 
 El sistema trabaja sobre una colección interna de contextos procedentes de Wikipedia y combina diferentes estrategias de **recuperación y generación**, incluyendo modelos Transformer implementados con PyTorch, modelos de Hugging Face y un mecanismo de *fallback* mediante búsqueda web.
 
-La práctica requiere comparar distintas propuestas y analizar tanto la calidad de las respuestas como la recuperación de contexto y el comportamiento global del sistema. fileciteturn0file0L74-L93
-
+La práctica requiere comparar distintas propuestas y analizar tanto la calidad de las respuestas como la recuperación de contexto y el comportamiento global del sistema. 
 ## Enfoque actual
 
 La implementación se encuentra todavía en desarrollo. Actualmente se han explorado, entre otras, las siguientes líneas:
@@ -111,7 +110,7 @@ La implementación de estas métricas se encuentra en:
 src/evaluate.py
 ```
 
-El enunciado de la práctica establece además la necesidad de justificar las métricas utilizadas y considerar la calidad de recuperación, generación y coste del sistema completo. fileciteturn0file0L74-L80
+El enunciado de la práctica establece además la necesidad de justificar las métricas utilizadas y considerar la calidad de recuperación, generación y coste del sistema completo. 
 
 ## Estado actual
 

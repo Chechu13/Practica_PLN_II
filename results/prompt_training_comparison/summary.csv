@@ -1,0 +1,7 @@
+Modelo,Prompt,EM (%),F1 (%),Answerable F1 (%),Unanswerable F1 (%)
+Base-Zero,zero,15.71,30.85,40.0,0.0
+Base-One,one,11.43,12.05,15.63,0.0
+Base-Few,few,0.0,0.0,0.0,0.0
+FT-Zero,zero,77.14,80.11,76.07,93.75
+FT-One,one,14.29,20.59,21.14,18.75
+FT-Few,few,0.0,0.73,0.95,0.0

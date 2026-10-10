@@ -1,0 +1,3500 @@
+[
+  {
+    "model": "Base-Zero",
+    "prompt": "zero",
+    "metrics": {
+      "overall": {
+        "exact_match": 15.71,
+        "f1_score": 30.85,
+        "total_evaluated": 70
+      },
+      "answerable": {
+        "exact_match": 20.37,
+        "f1_score": 40.0,
+        "total_evaluated": 54
+      },
+      "unanswerable": {
+        "exact_match": 0.0,
+        "f1_score": 0.0,
+        "total_evaluated": 16
+      }
+    },
+    "predictions": [
+      {
+        "question": "Who established the progressive-education movement?",
+        "prediction": "John Dewey and Francis Parker established the progressive education movement.",
+        "reference": "John Dewey and Francis Parker",
+        "has_answer": true,
+        "retrieved_context_id": "c14764",
+        "retrieval_score": 0.6040782928466797
+      },
+      {
+        "question": "By what other term is anti-aircraft warfare known?",
+        "prediction": "Counter-air defence",
+        "reference": "counter-air defence",
+        "has_answer": true,
+        "retrieved_context_id": "c06574",
+        "retrieval_score": 0.6857618689537048
+      },
+      {
+        "question": "Which two countries are connected by the Viking Link power cable?",
+        "prediction": "Empty answer.",
+        "reference": "Denmark and the United Kingdom",
+        "has_answer": true,
+        "retrieved_context_id": "c02577",
+        "retrieval_score": 0.3955124020576477
+      },
+      {
+        "question": "In what year did Hudson first present his two-hour daylight-saving theory to the Wellington Philosophical Society?",
+        "prediction": "1895",
+        "reference": "1895",
+        "has_answer": true,
+        "retrieved_context_id": "c03186",
+        "retrieval_score": 0.6947790384292603
+      },
+      {
+        "question": "What reward did the Great Internet Mersenne Prime Search offer for discovering a prime number with at least ten million digits?",
+        "prediction": "The Great Internet Mersenne Prime Search project was awarded a US$100,000 prize for first discovering a prime with at least 1",
+        "reference": "US$100,000",
+        "has_answer": true,
+        "retrieved_context_id": "c19916",
+        "retrieval_score": 0.8331292867660522
+      },
+      {
+        "question": "Which authors contributed to shaping the post-punk movement?",
+        "prediction": "William S. Burroughs and J.G. Ballard contributed to shaping the post-punk movement through their influence on various artists.",
+        "reference": "William S. Burroughs and J.G. Ballard",
+        "has_answer": true,
+        "retrieved_context_id": "c14841",
+        "retrieval_score": 0.7181283235549927
+      },
+      {
+        "question": "Which scientist received the 2022 Nobel Prize in Physiology or Medicine?",
+        "prediction": "Empty answer. The given context does not provide information about the 2022 Nobel Prize in Physiology or Medicine recipient.",
+        "reference": "Svante Pääbo",
+        "has_answer": true,
+        "retrieved_context_id": "c10254",
+        "retrieval_score": 0.560478687286377
+      },
+      {
+        "question": "Which HBO series about House Targaryen is a prequel to Game of Thrones?",
+        "prediction": "Empty answer.",
+        "reference": "House of the Dragon",
+        "has_answer": true,
+        "retrieved_context_id": "c00282",
+        "retrieval_score": 0.37808966636657715
+      },
+      {
+        "question": "Who designed the Manuscript Society building?",
+        "prediction": "Empty answer.",
+        "reference": "King Lui-Wu",
+        "has_answer": true,
+        "retrieved_context_id": "c19756",
+        "retrieval_score": 0.6048318147659302
+      },
+      {
+        "question": "What was Callimachus' catalog at the Library of Alexandria called?",
+        "prediction": "Callimachus' catalog of the holdings of the library of Alexandria was called the Pinakes.",
+        "reference": "Pinakes",
+        "has_answer": true,
+        "retrieved_context_id": "c07965",
+        "retrieval_score": 0.7196019887924194
+      },
+      {
+        "question": "What is Alaska's ferry network called?",
+        "prediction": "Alaska's ferry network is known as the Alaska Marine Highway.",
+        "reference": "the Alaska Marine Highway",
+        "has_answer": true,
+        "retrieved_context_id": "c13336",
+        "retrieval_score": 0.7191441059112549
+      },
+      {
+        "question": "What name was Pope Saint John XXIII given at birth?",
+        "prediction": "Pope Saint John XXIII was given the name Angelo Giuseppe Roncalli at birth.",
+        "reference": "Angelo Giuseppe Roncalli",
+        "has_answer": true,
+        "retrieved_context_id": "c12654",
+        "retrieval_score": 0.7200831174850464
+      },
+      {
+        "question": "When did the Meymandi Theater first open?",
+        "prediction": "2008",
+        "reference": "2008",
+        "has_answer": true,
+        "retrieved_context_id": "c10332",
+        "retrieval_score": 0.7630664110183716
+      },
+      {
+        "question": "What is in my left pocket right now?",
+        "prediction": "Empty",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c04753",
+        "retrieval_score": 0.2587166428565979
+      },
+      {
+        "question": "From which century do the earliest dissertations on clothing date?",
+        "prediction": "19th century",
+        "reference": "19th",
+        "has_answer": true,
+        "retrieved_context_id": "c08264",
+        "retrieval_score": 0.7216224670410156
+      },
+      {
+        "question": "By what other designation is 25 October known, keeping the Battle of Agincourt dated 25 October 1415?",
+        "prediction": "Saint Crispin's Day",
+        "reference": "Saint Crispin's Day",
+        "has_answer": true,
+        "retrieved_context_id": "c06010",
+        "retrieval_score": 0.7590408325195312
+      },
+      {
+        "question": "Who constructed a plant at Clover Field?",
+        "prediction": "Donald Wills Douglas, Sr. constructed a plant at Clover Field.",
+        "reference": "Donald Wills Douglas, Sr",
+        "has_answer": true,
+        "retrieved_context_id": "c15955",
+        "retrieval_score": 0.664239764213562
+      },
+      {
+        "question": "What drug is sold under the brand name Wegovy?",
+        "prediction": "Empty answer.",
+        "reference": "Semaglutide",
+        "has_answer": true,
+        "retrieved_context_id": "c07625",
+        "retrieval_score": 0.4751884639263153
+      },
+      {
+        "question": "42.",
+        "prediction": "The context provided does not contain any information related to the number 42. Therefore, there is no answer to this question based on the given information.",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c11632",
+        "retrieval_score": 0.35812005400657654
+      },
+      {
+        "question": "Which renowned theatre can be found in Georgs Palace?",
+        "prediction": "The GOP Variety theatre can be found in Georgs Palace.",
+        "reference": "GOP Variety theatre",
+        "has_answer": true,
+        "retrieved_context_id": "c05789",
+        "retrieval_score": 0.6942921876907349
+      },
+      {
+        "question": "How many Nobel Prize winners have had an affiliation with Washington University?",
+        "prediction": "Twenty-five",
+        "reference": "Twenty-five",
+        "has_answer": true,
+        "retrieved_context_id": "c15974",
+        "retrieval_score": 0.5930037498474121
+      },
+      {
+        "question": "Which city is home to the Merdeka 118 skyscraper?",
+        "prediction": "1,500,000 m²) of that space occupied. The Uptown District has a population of 35,00",
+        "reference": "Kuala Lumpur",
+        "has_answer": true,
+        "retrieved_context_id": "c05510",
+        "retrieval_score": 0.5329116582870483
+      },
+      {
+        "question": "Who constructed the temple at Göbekli Tepe?",
+        "prediction": "Nomadic hunter-gatherer tribes constructed the temple at Göbekli Tepe.",
+        "reference": "nomadic hunter-gatherer tribes",
+        "has_answer": true,
+        "retrieved_context_id": "c14329",
+        "retrieval_score": 0.6460565328598022
+      },
+      {
+        "question": "What was the location of the BBC's second studio?",
+        "prediction": "The BBC's second studio was located in 16 Portland Place, London.",
+        "reference": "16 Portland Place, London",
+        "has_answer": true,
+        "retrieved_context_id": "c01773",
+        "retrieval_score": 0.621909499168396
+      },
+      {
+        "question": "What term does the Internet Archive use to characterize the Wayback Machine?",
+        "prediction": "\"three-dimensional index\"",
+        "reference": "three dimensional index",
+        "has_answer": true,
+        "retrieved_context_id": "c01401",
+        "retrieval_score": 0.8248085975646973
+      },
+      {
+        "question": "...",
+        "prediction": "What is the purpose of the Umhlanga Reed Dance ceremony in Swaziland? \n\nThe purposes of the Umhlanga Reed Dance ceremony in Sw",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c16910",
+        "retrieval_score": 0.24004468321800232
+      },
+      {
+        "question": "When is my birthday?",
+        "prediction": "Empty answer.",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c06006",
+        "retrieval_score": 0.4165632724761963
+      },
+      {
+        "question": "Whom did Darwin help with research into marine invertebrates?",
+        "prediction": "Robert Grant",
+        "reference": "Robert Grant",
+        "has_answer": true,
+        "retrieved_context_id": "c11378",
+        "retrieval_score": 0.635036826133728
+      },
+      {
+        "question": "When did development of the ASCII standard get underway?",
+        "prediction": "Development of the ASCII standard got underway on October 6, 1960.",
+        "reference": "October 6, 1960",
+        "has_answer": true,
+        "retrieved_context_id": "c06199",
+        "retrieval_score": 0.738974928855896
+      },
+      {
+        "question": "What is the square root of a banana?",
+        "prediction": "An empty answer as the question is not related to the provided context and does not have a mathematical or logical meaning.",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c09371",
+        "retrieval_score": 0.40638914704322815
+      },
+      {
+        "question": "What game won Game of the Year at The Game Awards 2024?",
+        "prediction": "Empty answer.",
+        "reference": "Astro Bot",
+        "has_answer": true,
+        "retrieved_context_id": "c00310",
+        "retrieval_score": 0.49483799934387207
+      },
+      {
+        "question": "What system allows composers to specify a musical work's pitches, tempo, meter, and rhythms to performers?",
+        "prediction": "Musical notation.",
+        "reference": "Western staff notation",
+        "has_answer": true,
+        "retrieved_context_id": "c03683",
+        "retrieval_score": 0.6013753414154053
+      },
+      {
+        "question": "Who characterized the Windows 8 interface as awkward and impractical?",
+        "prediction": "the interface as \"clumsy and impractical\"?",
+        "reference": "Adrian Kingsley-Hughes",
+        "has_answer": true,
+        "retrieved_context_id": "c16876",
+        "retrieval_score": 0.9110114574432373
+      },
+      {
+        "question": "What does the Royal Institute of British Architects recognize with the Stirling Prize?",
+        "prediction": "Empty answer.",
+        "reference": "the best new building of the year",
+        "has_answer": true,
+        "retrieved_context_id": "c03240",
+        "retrieval_score": 0.5275595188140869
+      },
+      {
+        "question": "Where",
+        "prediction": "Where are Dell's facilities located in the United States?\n\nDell's facilities in the United States are located in Austin, Texas; Plano, Texas; Nash",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c07183",
+        "retrieval_score": 0.45166462659835815
+      },
+      {
+        "question": "Fine by me.",
+        "prediction": "Empty answer.",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00723",
+        "retrieval_score": 0.28188908100128174
+      },
+      {
+        "question": "In which state did Kanye, Shakira, and Rage Against the Machine refuse to perform because of a new law targeting illegal aliens?",
+        "prediction": "Arizona",
+        "reference": "Arizona",
+        "has_answer": true,
+        "retrieved_context_id": "c00744",
+        "retrieval_score": 0.6588653326034546
+      },
+      {
+        "question": "How was a Vestal punished for losing her chastity?",
+        "prediction": "A Vestal who lost her chastity was punished by being buried alive.",
+        "reference": "buried alive",
+        "has_answer": true,
+        "retrieved_context_id": "c17770",
+        "retrieval_score": 0.8199906349182129
+      },
+      {
+        "question": "When did the earliest whole-genome duplication event take place?",
+        "prediction": "The earliest whole-genome duplication event mentioned took place 319 million years ago.",
+        "reference": "319 million years ago",
+        "has_answer": true,
+        "retrieved_context_id": "c15878",
+        "retrieval_score": 0.6245932579040527
+      },
+      {
+        "question": "Which word was named Cambridge Dictionary's Word of the Year for 2024?",
+        "prediction": "Empty answer.",
+        "reference": "Manifest",
+        "has_answer": true,
+        "retrieved_context_id": "c05883",
+        "retrieval_score": 0.4934983253479004
+      },
+      {
+        "question": "Which shoes am I wearing?",
+        "prediction": "Empty answer.",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c08265",
+        "retrieval_score": 0.4389312267303467
+      },
+      {
+        "question": "Who initiated analytic philosophy's discussion of the problem concerning time's passage?",
+        "prediction": "St. Augustine initiated the philosophical discussion of the problem concerning time's passage, though not within the context of analytic philosophy, which emerged much later.",
+        "reference": "J. M. E. McTaggart",
+        "has_answer": true,
+        "retrieved_context_id": "c14304",
+        "retrieval_score": 0.5185313820838928
+      },
+      {
+        "question": "Which newspaper bought Wordle in 2022?",
+        "prediction": "Empty answer.",
+        "reference": "The New York Times",
+        "has_answer": true,
+        "retrieved_context_id": "c05049",
+        "retrieval_score": 0.5960679054260254
+      },
+      {
+        "question": "What is the airtight glass enclosure of an incandescent bulb called?",
+        "prediction": "The airtight glass enclosure of an incandescent bulb is called the envelope or bulb.",
+        "reference": "the envelope",
+        "has_answer": true,
+        "retrieved_context_id": "c08199",
+        "retrieval_score": 0.6417416334152222
+      },
+      {
+        "question": "What caused damage to Westminster Abbey on 15 November 1940?",
+        "prediction": "The provided context does not mention any bombing of Westminster Abbey on 15 November 1940. The closest date mentioned is 11/1",
+        "reference": "the Blitz",
+        "has_answer": true,
+        "retrieved_context_id": "c15427",
+        "retrieval_score": 0.6117501258850098
+      },
+      {
+        "question": "Who made up the senate that counseled consuls in the Roman government?",
+        "prediction": "Roman Censors ordinarily selected newly elected magistrates for membership in the senate, which then counseled consuls in the Roman government.",
+        "reference": "appointed magistrates",
+        "has_answer": true,
+        "retrieved_context_id": "c16430",
+        "retrieval_score": 0.6922739148139954
+      },
+      {
+        "question": "What PC magazine said that the iPod had \"altered the landscape for portable audio players\"?",
+        "prediction": "PC World",
+        "reference": "PC World",
+        "has_answer": true,
+        "retrieved_context_id": "c00267",
+        "retrieval_score": 0.6460270285606384
+      },
+      {
+        "question": "Which Spanish lagoon was granted legal personhood in 2022?",
+        "prediction": "Empty answer.",
+        "reference": "Mar Menor",
+        "has_answer": true,
+        "retrieved_context_id": "c11547",
+        "retrieval_score": 0.4667731523513794
+      },
+      {
+        "question": "When was Planck awarded the Nobel Prize in Physics for discovering energy quanta?",
+        "prediction": "1918",
+        "reference": "1918",
+        "has_answer": true,
+        "retrieved_context_id": "c13896",
+        "retrieval_score": 0.8333406448364258
+      },
+      {
+        "question": "Approximately how many people may have inhabited the Amazon region in AD 1500?",
+        "prediction": "Approximately 5 million people may have inhabited the Amazon region in AD 1500.",
+        "reference": "5 million",
+        "has_answer": true,
+        "retrieved_context_id": "c19405",
+        "retrieval_score": 0.7086945176124573
+      },
+      {
+        "question": "Which two applications of zinc ore are described in the Rasaratna Samuccaya?",
+        "prediction": "The Rasaratna Samuccaya describes two applications of zinc-containing ores: one used for metal extraction and another used for medicinal purposes.",
+        "reference": "metal extraction and another used for medicinal purposes",
+        "has_answer": true,
+        "retrieved_context_id": "c14016",
+        "retrieval_score": 0.8028002977371216
+      },
+      {
+        "question": "Is that the one you meant?",
+        "prediction": "Empty answer.",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00765",
+        "retrieval_score": 0.2636845111846924
+      },
+      {
+        "question": "At what age were British Gas plc employees required to retire?",
+        "prediction": "Empty answer.",
+        "reference": "women retire at age 60 and men at 65",
+        "has_answer": true,
+        "retrieved_context_id": "c11251",
+        "retrieval_score": 0.4201483130455017
+      },
+      {
+        "question": "How fast may vehicles travel on the Sui-Yu Expressway?",
+        "prediction": "Vehicles may travel on the Sui-Yu Expressway at a speed limit of 80 km/h (50 mph).",
+        "reference": "80 km/h (50 mph)",
+        "has_answer": true,
+        "retrieved_context_id": "c12021",
+        "retrieval_score": 0.7244802117347717
+      },
+      {
+        "question": "No.",
+        "prediction": "An empty answer as the question \"No.\" does not provide enough information to form a relevant question or statement based on the given context.",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c02246",
+        "retrieval_score": 0.2356935292482376
+      },
+      {
+        "question": "Hello.",
+        "prediction": "\"Lionel Richie's \"Hello\" reached #1 on both the chart mentioned and the Hot 100 in 1984.\"",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c03142",
+        "retrieval_score": 0.2888553738594055
+      },
+      {
+        "question": "Which designer was behind the westernized character designs in Digimon?",
+        "prediction": "Kenji Watanabe was influenced by American comics and began making characters look stronger and \"cool,\" contributing to the westernized character designs in Digimon.",
+        "reference": "Kenji Watanabe",
+        "has_answer": true,
+        "retrieved_context_id": "c10877",
+        "retrieval_score": 0.5578301548957825
+      },
+      {
+        "question": "Actually, never mind.",
+        "prediction": "An empty answer as per your instruction.",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00723",
+        "retrieval_score": 0.25568240880966187
+      },
+      {
+        "question": "?",
+        "prediction": "Empty answer.",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c14970",
+        "retrieval_score": 0.19995003938674927
+      },
+      {
+        "question": "Which classic title was initially available through Xbox Live Arcade?",
+        "prediction": "Ms. Pac-Man",
+        "reference": "Ms. Pac-Man",
+        "has_answer": true,
+        "retrieved_context_id": "c06035",
+        "retrieval_score": 0.5988290309906006
+      },
+      {
+        "question": "Undo that.",
+        "prediction": "The Internet Archive did not remove the sites; lawyers from the Church of Scientology demanded the removal.",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c01420",
+        "retrieval_score": 0.3133695423603058
+      },
+      {
+        "question": "How many books are on the shelf behind me?",
+        "prediction": "Empty answer.",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c19763",
+        "retrieval_score": 0.493683785200119
+      },
+      {
+        "question": "Which Mexican city did US forces occupy during the Revolution?",
+        "prediction": "Veracruz",
+        "reference": "Veracruz",
+        "has_answer": true,
+        "retrieved_context_id": "c06079",
+        "retrieval_score": 0.6783168315887451
+      },
+      {
+        "question": "What online learning platform was acquired by 2U in 2021?",
+        "prediction": "Empty answer.",
+        "reference": "edX",
+        "has_answer": true,
+        "retrieved_context_id": "c14770",
+        "retrieval_score": 0.49951058626174927
+      },
+      {
+        "question": "Which toy inspired the 2023 film directed by Greta Gerwig?",
+        "prediction": "Empty answer.",
+        "reference": "Barbie",
+        "has_answer": true,
+        "retrieved_context_id": "c11674",
+        "retrieval_score": 0.5347423553466797
+      },
+      {
+        "question": "Exposure to therapy dogs reduced what in children with ADHD?",
+        "prediction": "Exposure to therapy dogs reduced antisocial and violent behavior in children with ADHD.",
+        "reference": "antisocial and violent behavior",
+        "has_answer": true,
+        "retrieved_context_id": "c01111",
+        "retrieval_score": 0.8139533996582031
+      },
+      {
+        "question": "wq wq wq",
+        "prediction": "The question \"wq wq wq\" does not provide any meaningful information to form an answer based on the given context. It appears to be an unclear",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c09890",
+        "retrieval_score": 0.4033735990524292
+      },
+      {
+        "question": "What is the name of the nuclear fusion facility inaugurated in Japan in 2023?",
+        "prediction": "Empty answer.",
+        "reference": "JT-60SA",
+        "has_answer": true,
+        "retrieved_context_id": "c10260",
+        "retrieval_score": 0.5213257074356079
+      },
+      {
+        "question": "Which form of materialism characterized Marxist philosophy?",
+        "prediction": "Dialectical materialism characterized later Marxist philosophy.",
+        "reference": "dialectical materialism",
+        "has_answer": true,
+        "retrieved_context_id": "c02024",
+        "retrieval_score": 0.6946724653244019
+      },
+      {
+        "question": "On which two concepts does the Neo-Eriksonian identity-status paradigm center?",
+        "prediction": "The Neo-Eriksonian identity-status paradigm centers on the concepts of exploration and commitment.",
+        "reference": "exploration and commitment",
+        "has_answer": true,
+        "retrieved_context_id": "c05559",
+        "retrieval_score": 1.0084799528121948
+      }
+    ]
+  },
+  {
+    "model": "Base-One",
+    "prompt": "one",
+    "metrics": {
+      "overall": {
+        "exact_match": 11.43,
+        "f1_score": 12.05,
+        "total_evaluated": 70
+      },
+      "answerable": {
+        "exact_match": 14.81,
+        "f1_score": 15.63,
+        "total_evaluated": 54
+      },
+      "unanswerable": {
+        "exact_match": 0.0,
+        "f1_score": 0.0,
+        "total_evaluated": 16
+      }
+    },
+    "predictions": [
+      {
+        "question": "Who established the progressive-education movement?",
+        "prediction": ".\n\nQuestion:\nWhat year did Friedrich Fröbel live until?",
+        "reference": "John Dewey and Francis Parker",
+        "has_answer": true,
+        "retrieved_context_id": "c14764",
+        "retrieval_score": 0.6040782928466797
+      },
+      {
+        "question": "By what other term is anti-aircraft warfare known?",
+        "prediction": "What does NATO define as anti-aircraft warfare?",
+        "reference": "counter-air defence",
+        "has_answer": true,
+        "retrieved_context_id": "c06574",
+        "retrieval_score": 0.6857618689537048
+      },
+      {
+        "question": "Which two countries are connected by the Viking Link power cable?",
+        "prediction": "Answer:\nEmpty answer",
+        "reference": "Denmark and the United Kingdom",
+        "has_answer": true,
+        "retrieved_context_id": "c02577",
+        "retrieval_score": 0.3955124020576477
+      },
+      {
+        "question": "In what year did Hudson first present his two-hour daylight-saving theory to the Wellington Philosophical Society?",
+        "prediction": "He proposed advanced clocks during spring and summer months by 20 minutes per week in four steps, hoping this would enable more people to enjoy the outdoors in the",
+        "reference": "1895",
+        "has_answer": true,
+        "retrieved_context_id": "c03186",
+        "retrieval_score": 0.6947790384292603
+      },
+      {
+        "question": "What reward did the Great Internet Mersenne Prime Search offer for discovering a prime number with at least ten million digits?",
+        "prediction": "are also listed.\n\nQuestion:\nWhat was the prize amount for the first prime with at least 10 million digits?",
+        "reference": "US$100,000",
+        "has_answer": true,
+        "retrieved_context_id": "c19916",
+        "retrieval_score": 0.8331292867660522
+      },
+      {
+        "question": "Which authors contributed to shaping the post-punk movement?",
+        "prediction": "terms, and some, like Crass, were overtly political.\n\nQuestion:\nWhat was the primary focus of post-punk artists?",
+        "reference": "William S. Burroughs and J.G. Ballard",
+        "has_answer": true,
+        "retrieved_context_id": "c14841",
+        "retrieval_score": 0.7181283235549927
+      },
+      {
+        "question": "Which scientist received the 2022 Nobel Prize in Physiology or Medicine?",
+        "prediction": "Empty answer",
+        "reference": "Svante Pääbo",
+        "has_answer": true,
+        "retrieved_context_id": "c10254",
+        "retrieval_score": 0.560478687286377
+      },
+      {
+        "question": "Which HBO series about House Targaryen is a prequel to Game of Thrones?",
+        "prediction": "Answer:\nEmpty answer",
+        "reference": "House of the Dragon",
+        "has_answer": true,
+        "retrieved_context_id": "c00282",
+        "retrieval_score": 0.37808966636657715
+      },
+      {
+        "question": "Who designed the Manuscript Society building?",
+        "prediction": ", also designed by Saarinen.\n\nQuestion:\nWhat year did Eero Saarinen create the second master plan for the University of Chicago?",
+        "reference": "King Lui-Wu",
+        "has_answer": true,
+        "retrieved_context_id": "c19756",
+        "retrieval_score": 0.6048318147659302
+      },
+      {
+        "question": "What was Callimachus' catalog at the Library of Alexandria called?",
+        "prediction": "Apollonius of Rhodes is best known for his epic Argonautica, which attempted to revitalize this genre by focusing on psychological motivation and using detailed settings",
+        "reference": "Pinakes",
+        "has_answer": true,
+        "retrieved_context_id": "c07965",
+        "retrieval_score": 0.7196019887924194
+      },
+      {
+        "question": "What is Alaska's ferry network called?",
+        "prediction": "Alaska Marine Highway",
+        "reference": "the Alaska Marine Highway",
+        "has_answer": true,
+        "retrieved_context_id": "c13336",
+        "retrieval_score": 0.7191441059112549
+      },
+      {
+        "question": "What name was Pope Saint John XXIII given at birth?",
+        "prediction": "He was ordained a priest in 1904 and served in various roles within the Church, including as a diplomat and a cardinal before becoming pope.\n\nQuestion",
+        "reference": "Angelo Giuseppe Roncalli",
+        "has_answer": true,
+        "retrieved_context_id": "c12654",
+        "retrieval_score": 0.7200831174850464
+      },
+      {
+        "question": "When did the Meymandi Theater first open?",
+        "prediction": "2008",
+        "reference": "2008",
+        "has_answer": true,
+        "retrieved_context_id": "c10332",
+        "retrieval_score": 0.7630664110183716
+      },
+      {
+        "question": "What is in my left pocket right now?",
+        "prediction": "over a long silk slip and is often accompanied by a shawl.\n\nQuestion:\nWhat type of fabric is commonly used for the dirac?",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c04753",
+        "retrieval_score": 0.2587166428565979
+      },
+      {
+        "question": "From which century do the earliest dissertations on clothing date?",
+        "prediction": "research had been devoted to the study of thermal regulation, little research had been done on other dimensions of function such as exercise physiology.\n\nQuestion:\nWhat year was the",
+        "reference": "19th",
+        "has_answer": true,
+        "retrieved_context_id": "c08264",
+        "retrieval_score": 0.7216224670410156
+      },
+      {
+        "question": "By what other designation is 25 October known, keeping the Battle of Agincourt dated 25 October 1415?",
+        "prediction": "1415?",
+        "reference": "Saint Crispin's Day",
+        "has_answer": true,
+        "retrieved_context_id": "c06010",
+        "retrieval_score": 0.7590408325195312
+      },
+      {
+        "question": "Who constructed a plant at Clover Field?",
+        "prediction": "Santa Monica area until 1968, when they moved to Long Beach.\n\nQuestion:\nWhen did the Douglas Company move its facilities to Long Beach?",
+        "reference": "Donald Wills Douglas, Sr",
+        "has_answer": true,
+        "retrieved_context_id": "c15955",
+        "retrieval_score": 0.664239764213562
+      },
+      {
+        "question": "What drug is sold under the brand name Wegovy?",
+        "prediction": "for $430 million.\n\nQuestion:\nWhat were the two largest criminal fines ever imposed on corporations?",
+        "reference": "Semaglutide",
+        "has_answer": true,
+        "retrieved_context_id": "c07625",
+        "retrieval_score": 0.4751884639263153
+      },
+      {
+        "question": "42.",
+        "prediction": "xxxx folk series, blue 51-xxxx jazz series, and orange 52-xxxx blues series.\n\nQuestion:\nWhat was the first format released by",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c11632",
+        "retrieval_score": 0.35812005400657654
+      },
+      {
+        "question": "Which renowned theatre can be found in Georgs Palace?",
+        "prediction": "hosts the Kleines Fest im Großen Garten event?",
+        "reference": "GOP Variety theatre",
+        "has_answer": true,
+        "retrieved_context_id": "c05789",
+        "retrieval_score": 0.6942921876907349
+      },
+      {
+        "question": "How many Nobel Prize winners have had an affiliation with Washington University?",
+        "prediction": ":\nHow many Nobel laureates have been affiliated with Washington University?",
+        "reference": "Twenty-five",
+        "has_answer": true,
+        "retrieved_context_id": "c15974",
+        "retrieval_score": 0.5930037498474121
+      },
+      {
+        "question": "Which city is home to the Merdeka 118 skyscraper?",
+        "prediction": "'s tallest skyscraper outside of a central business district.\n\nQuestion:\nWhat is the name of the tallest building in Uptown?",
+        "reference": "Kuala Lumpur",
+        "has_answer": true,
+        "retrieved_context_id": "c05510",
+        "retrieval_score": 0.5329116582870483
+      },
+      {
+        "question": "Who constructed the temple at Göbekli Tepe?",
+        "prediction": "which may have stood as high as 18 feet (5.5 m).\n\nQuestion:\nWhat is the earliest known human-made place of worship?",
+        "reference": "nomadic hunter-gatherer tribes",
+        "has_answer": true,
+        "retrieved_context_id": "c14329",
+        "retrieval_score": 0.6460565328598022
+      },
+      {
+        "question": "What was the location of the BBC's second studio?",
+        "prediction": "16 Portland Place, London",
+        "reference": "16 Portland Place, London",
+        "has_answer": true,
+        "retrieved_context_id": "c01773",
+        "retrieval_score": 0.621909499168396
+      },
+      {
+        "question": "What term does the Internet Archive use to characterize the Wayback Machine?",
+        "prediction": "a \"three dimensional index\"",
+        "reference": "three dimensional index",
+        "has_answer": true,
+        "retrieved_context_id": "c01401",
+        "retrieval_score": 0.8248085975646973
+      },
+      {
+        "question": "...",
+        "prediction": "a role model for the participants.\n\nQuestion:\nWhat is the main purpose of the Umhlanga Reed Dance?",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c16910",
+        "retrieval_score": 0.24004468321800232
+      },
+      {
+        "question": "When is my birthday?",
+        "prediction": "day.\n\nQuestion:\nWhat is the name of the calendar that was reformed to create the Gregorian calendar?",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c06006",
+        "retrieval_score": 0.4165632724761963
+      },
+      {
+        "question": "Whom did Darwin help with research into marine invertebrates?",
+        "prediction": "",
+        "reference": "Robert Grant",
+        "has_answer": true,
+        "retrieved_context_id": "c11378",
+        "retrieval_score": 0.635036826133728
+      },
+      {
+        "question": "When did development of the ASCII standard get underway?",
+        "prediction": "than teleprinters.\n\nQuestion:\nWhen was the first edition of the ASCII standard published?",
+        "reference": "October 6, 1960",
+        "has_answer": true,
+        "retrieved_context_id": "c06199",
+        "retrieval_score": 0.738974928855896
+      },
+      {
+        "question": "What is the square root of a banana?",
+        "prediction": "can become dominant in disturbed habitats because they can reproduce asexually.\n\nQuestion:\nCan polyploid plants always cross-breed successfully with the parent population?",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c09371",
+        "retrieval_score": 0.40638914704322815
+      },
+      {
+        "question": "What game won Game of the Year at The Game Awards 2024?",
+        "prediction": "the Game Critics Guild.\n\nQuestion:\nWhich awards did Twilight Princess receive from IGN?",
+        "reference": "Astro Bot",
+        "has_answer": true,
+        "retrieved_context_id": "c00310",
+        "retrieval_score": 0.49483799934387207
+      },
+      {
+        "question": "What system allows composers to specify a musical work's pitches, tempo, meter, and rhythms to performers?",
+        "prediction": "record of the works and enables Classical musicians to perform music from many centuries ago.\n\nQuestion:\nWhat is the key characteristic of classical music that distinguishes it from other",
+        "reference": "Western staff notation",
+        "has_answer": true,
+        "retrieved_context_id": "c03683",
+        "retrieval_score": 0.6013753414154053
+      },
+      {
+        "question": "Who characterized the Windows 8 interface as awkward and impractical?",
+        "prediction": "was \"a bold move\" and \"a significant departure from previous versions of Windows,\" but that it was \"not intuitive\" and \"confusing\" for many",
+        "reference": "Adrian Kingsley-Hughes",
+        "has_answer": true,
+        "retrieved_context_id": "c16876",
+        "retrieval_score": 0.9110114574432373
+      },
+      {
+        "question": "What does the Royal Institute of British Architects recognize with the Stirling Prize?",
+        "prediction": "It does not recognize anything with the Stirling Prize according to the given context.",
+        "reference": "the best new building of the year",
+        "has_answer": true,
+        "retrieved_context_id": "c03240",
+        "retrieval_score": 0.5275595188140869
+      },
+      {
+        "question": "Where",
+        "prediction": "ź, Poland; and São Paulo, Brazil.\n\nQuestion:\nWhere is Dell's facility in India located?",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c07183",
+        "retrieval_score": 0.45166462659835815
+      },
+      {
+        "question": "Fine by me.",
+        "prediction": ".\"\n\nQuestion:\nWhat was Kanye West's next album originally titled?",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00723",
+        "retrieval_score": 0.28188908100128174
+      },
+      {
+        "question": "In which state did Kanye, Shakira, and Rage Against the Machine refuse to perform because of a new law targeting illegal aliens?",
+        "prediction": "immigrants.\n\nQuestion:\nHow much did Kanye West earn for his performance in Kazakhstan?",
+        "reference": "Arizona",
+        "has_answer": true,
+        "retrieved_context_id": "c00744",
+        "retrieval_score": 0.6588653326034546
+      },
+      {
+        "question": "How was a Vestal punished for losing her chastity?",
+        "prediction": "chastity?",
+        "reference": "buried alive",
+        "has_answer": true,
+        "retrieved_context_id": "c17770",
+        "retrieval_score": 0.8199906349182129
+      },
+      {
+        "question": "When did the earliest whole-genome duplication event take place?",
+        "prediction": "319 million years ago",
+        "reference": "319 million years ago",
+        "has_answer": true,
+        "retrieved_context_id": "c15878",
+        "retrieval_score": 0.6245932579040527
+      },
+      {
+        "question": "Which word was named Cambridge Dictionary's Word of the Year for 2024?",
+        "prediction": "in 2019?",
+        "reference": "Manifest",
+        "has_answer": true,
+        "retrieved_context_id": "c05883",
+        "retrieval_score": 0.4934983253479004
+      },
+      {
+        "question": "Which shoes am I wearing?",
+        "prediction": "This question cannot be answered based on the given context.",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c08265",
+        "retrieval_score": 0.4389312267303467
+      },
+      {
+        "question": "Who initiated analytic philosophy's discussion of the problem concerning time's passage?",
+        "prediction": "on the knowledge of the movement of things, and that without created things there could be no knowledge of time.\n\nQuestion:\nWhat book of St. Augustine's Conf",
+        "reference": "J. M. E. McTaggart",
+        "has_answer": true,
+        "retrieved_context_id": "c14304",
+        "retrieval_score": 0.5185313820838928
+      },
+      {
+        "question": "Which newspaper bought Wordle in 2022?",
+        "prediction": "Answer:\nempty",
+        "reference": "The New York Times",
+        "has_answer": true,
+        "retrieved_context_id": "c05049",
+        "retrieval_score": 0.5960679054260254
+      },
+      {
+        "question": "What is the airtight glass enclosure of an incandescent bulb called?",
+        "prediction": "envelope",
+        "reference": "the envelope",
+        "has_answer": true,
+        "retrieved_context_id": "c08199",
+        "retrieval_score": 0.6417416334152222
+      },
+      {
+        "question": "What caused damage to Westminster Abbey on 15 November 1940?",
+        "prediction": ". The damage was estimated at £1 billion.\n\nQuestion:\nWhat was the date of the second major attack on London during the Blitz?",
+        "reference": "the Blitz",
+        "has_answer": true,
+        "retrieved_context_id": "c15427",
+        "retrieval_score": 0.6117501258850098
+      },
+      {
+        "question": "Who made up the senate that counseled consuls in the Roman government?",
+        "prediction": "senate took a greater role in ordinary law-making. This century also marked a period during which the individual senator became more important than the senatorial class as a whole",
+        "reference": "appointed magistrates",
+        "has_answer": true,
+        "retrieved_context_id": "c16430",
+        "retrieval_score": 0.6922739148139954
+      },
+      {
+        "question": "What PC magazine said that the iPod had \"altered the landscape for portable audio players\"?",
+        "prediction": "for portable audio players\"?",
+        "reference": "PC World",
+        "has_answer": true,
+        "retrieved_context_id": "c00267",
+        "retrieval_score": 0.6460270285606384
+      },
+      {
+        "question": "Which Spanish lagoon was granted legal personhood in 2022?",
+        "prediction": "Answer:\nEmpty answer",
+        "reference": "Mar Menor",
+        "has_answer": true,
+        "retrieved_context_id": "c11547",
+        "retrieval_score": 0.4667731523513794
+      },
+      {
+        "question": "When was Planck awarded the Nobel Prize in Physics for discovering energy quanta?",
+        "prediction": "anta\".\n\nQuestion:\nWhat year was the first Solvay Conference held?",
+        "reference": "1918",
+        "has_answer": true,
+        "retrieved_context_id": "c13896",
+        "retrieval_score": 0.8333406448364258
+      },
+      {
+        "question": "Approximately how many people may have inhabited the Amazon region in AD 1500?",
+        "prediction": "people lived there before European contact, according to the research of Brazilian archaeologists.\n\nQuestion:\nHow many people lived in the Amazon before European contact?",
+        "reference": "5 million",
+        "has_answer": true,
+        "retrieved_context_id": "c19405",
+        "retrieval_score": 0.7086945176124573
+      },
+      {
+        "question": "Which two applications of zinc ore are described in the Rasaratna Samuccaya?",
+        "prediction": "of metallic zinc and 120,000 tonnes of zinc oxide during the same period.\n\nQuestion:\nWhen did the smelting of metallic zinc",
+        "reference": "metal extraction and another used for medicinal purposes",
+        "has_answer": true,
+        "retrieved_context_id": "c14016",
+        "retrieval_score": 0.8028002977371216
+      },
+      {
+        "question": "Is that the one you meant?",
+        "prediction": "Empty answer",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00765",
+        "retrieval_score": 0.2636845111846924
+      },
+      {
+        "question": "At what age were British Gas plc employees required to retire?",
+        "prediction": "goods was a natural progression.\n\nQuestion:\nWhat year did the industrial revolution begin in Britain?",
+        "reference": "women retire at age 60 and men at 65",
+        "has_answer": true,
+        "retrieved_context_id": "c11251",
+        "retrieval_score": 0.4201483130455017
+      },
+      {
+        "question": "How fast may vehicles travel on the Sui-Yu Expressway?",
+        "prediction": "Expressway is a key project in the Sichuan Province's plan to improve its transportation infrastructure.\n\nQuestion:\nWhat was the total length of the Sui-Y",
+        "reference": "80 km/h (50 mph)",
+        "has_answer": true,
+        "retrieved_context_id": "c12021",
+        "retrieval_score": 0.7244802117347717
+      },
+      {
+        "question": "No.",
+        "prediction": "Answer:\nEmpty answer",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c02246",
+        "retrieval_score": 0.2356935292482376
+      },
+      {
+        "question": "Hello.",
+        "prediction": "00.\n\nQuestion:\nHow many different songs reached number one on the chart in the 1980s?",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c03142",
+        "retrieval_score": 0.2888553738594055
+      },
+      {
+        "question": "Which designer was behind the westernized character designs in Digimon?",
+        "prediction": "the work of H.R. Giger, which he saw at an exhibition in Tokyo.\n\nQuestion:\nWhat was the inspiration for the Digimon character Tyrannomon",
+        "reference": "Kenji Watanabe",
+        "has_answer": true,
+        "retrieved_context_id": "c10877",
+        "retrieval_score": 0.5578301548957825
+      },
+      {
+        "question": "Actually, never mind.",
+        "prediction": ".\"\n\nQuestion:\nWhat was Kanye West's next album originally titled?",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00723",
+        "retrieval_score": 0.25568240880966187
+      },
+      {
+        "question": "?",
+        "prediction": "professor\" needed a place to relax and enjoy themselves.\n\nQuestion:\nWhat was Richard Feynman's profession?",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c14970",
+        "retrieval_score": 0.19995003938674927
+      },
+      {
+        "question": "Which classic title was initially available through Xbox Live Arcade?",
+        "prediction": ".\n\nQuestion:\nWhen did Xbox Live Arcade start?",
+        "reference": "Ms. Pac-Man",
+        "has_answer": true,
+        "retrieved_context_id": "c06035",
+        "retrieval_score": 0.5988290309906006
+      },
+      {
+        "question": "Undo that.",
+        "prediction": "Empty answer",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c01420",
+        "retrieval_score": 0.3133695423603058
+      },
+      {
+        "question": "How many books are on the shelf behind me?",
+        "prediction": "has a number of specialized libraries, including the Oriental Institute Museum and Library, the Gerald Ratner Athletics Center, and the Smart Museum of Art.\n\nQuestion:\nHow",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c19763",
+        "retrieval_score": 0.493683785200119
+      },
+      {
+        "question": "Which Mexican city did US forces occupy during the Revolution?",
+        "prediction": "0 men to attack Columbus, New Mexico, killing 17 Americans. This led to a punitive expedition led by General John J. Pershing that lasted",
+        "reference": "Veracruz",
+        "has_answer": true,
+        "retrieved_context_id": "c06079",
+        "retrieval_score": 0.6783168315887451
+      },
+      {
+        "question": "What online learning platform was acquired by 2U in 2021?",
+        "prediction": "very low cost courses through online venues such as Coursera, Udacity, and edX.\n\nQuestion:\nHow many colleges out of 182 surveyed",
+        "reference": "edX",
+        "has_answer": true,
+        "retrieved_context_id": "c14770",
+        "retrieval_score": 0.49951058626174927
+      },
+      {
+        "question": "Which toy inspired the 2023 film directed by Greta Gerwig?",
+        "prediction": "1925 film The Kiss.\n\nQuestion:\nWhat was the first year TCM held the Young Composers Film Competition?",
+        "reference": "Barbie",
+        "has_answer": true,
+        "retrieved_context_id": "c11674",
+        "retrieval_score": 0.5347423553466797
+      },
+      {
+        "question": "Exposure to therapy dogs reduced what in children with ADHD?",
+        "prediction": "",
+        "reference": "antisocial and violent behavior",
+        "has_answer": true,
+        "retrieved_context_id": "c01111",
+        "retrieval_score": 0.8139533996582031
+      },
+      {
+        "question": "wq wq wq",
+        "prediction": "by the University of Michigan.\n\nQuestion:\nWhat type of content does WDEO 990 broadcast?",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c09890",
+        "retrieval_score": 0.4033735990524292
+      },
+      {
+        "question": "What is the name of the nuclear fusion facility inaugurated in Japan in 2023?",
+        "prediction": "-watt society concept, which calls for a reduction in energy consumption and a shift towards renewable energy sources.\n\nQuestion:\nWhat percentage of votes were in favor of the",
+        "reference": "JT-60SA",
+        "has_answer": true,
+        "retrieved_context_id": "c10260",
+        "retrieval_score": 0.5213257074356079
+      },
+      {
+        "question": "Which form of materialism characterized Marxist philosophy?",
+        "prediction": "dialectical materialism",
+        "reference": "dialectical materialism",
+        "has_answer": true,
+        "retrieved_context_id": "c02024",
+        "retrieval_score": 0.6946724653244019
+      },
+      {
+        "question": "On which two concepts does the Neo-Eriksonian identity-status paradigm center?",
+        "prediction": "exploration and commitment",
+        "reference": "exploration and commitment",
+        "has_answer": true,
+        "retrieved_context_id": "c05559",
+        "retrieval_score": 1.0084799528121948
+      }
+    ]
+  },
+  {
+    "model": "Base-Few",
+    "prompt": "few",
+    "metrics": {
+      "overall": {
+        "exact_match": 0.0,
+        "f1_score": 0.0,
+        "total_evaluated": 70
+      },
+      "answerable": {
+        "exact_match": 0.0,
+        "f1_score": 0.0,
+        "total_evaluated": 54
+      },
+      "unanswerable": {
+        "exact_match": 0.0,
+        "f1_score": 0.0,
+        "total_evaluated": 16
+      }
+    },
+    "predictions": [
+      {
+        "question": "Who established the progressive-education movement?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "John Dewey and Francis Parker",
+        "has_answer": true,
+        "retrieved_context_id": "c14764",
+        "retrieval_score": 0.6040782928466797
+      },
+      {
+        "question": "By what other term is anti-aircraft warfare known?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "counter-air defence",
+        "has_answer": true,
+        "retrieved_context_id": "c06574",
+        "retrieval_score": 0.6857618689537048
+      },
+      {
+        "question": "Which two countries are connected by the Viking Link power cable?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Denmark and the United Kingdom",
+        "has_answer": true,
+        "retrieved_context_id": "c02577",
+        "retrieval_score": 0.3955124020576477
+      },
+      {
+        "question": "In what year did Hudson first present his two-hour daylight-saving theory to the Wellington Philosophical Society?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "1895",
+        "has_answer": true,
+        "retrieved_context_id": "c03186",
+        "retrieval_score": 0.6947790384292603
+      },
+      {
+        "question": "What reward did the Great Internet Mersenne Prime Search offer for discovering a prime number with at least ten million digits?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "US$100,000",
+        "has_answer": true,
+        "retrieved_context_id": "c19916",
+        "retrieval_score": 0.8331292867660522
+      },
+      {
+        "question": "Which authors contributed to shaping the post-punk movement?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "William S. Burroughs and J.G. Ballard",
+        "has_answer": true,
+        "retrieved_context_id": "c14841",
+        "retrieval_score": 0.7181283235549927
+      },
+      {
+        "question": "Which scientist received the 2022 Nobel Prize in Physiology or Medicine?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Svante Pääbo",
+        "has_answer": true,
+        "retrieved_context_id": "c10254",
+        "retrieval_score": 0.560478687286377
+      },
+      {
+        "question": "Which HBO series about House Targaryen is a prequel to Game of Thrones?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "House of the Dragon",
+        "has_answer": true,
+        "retrieved_context_id": "c00282",
+        "retrieval_score": 0.37808966636657715
+      },
+      {
+        "question": "Who designed the Manuscript Society building?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "King Lui-Wu",
+        "has_answer": true,
+        "retrieved_context_id": "c19756",
+        "retrieval_score": 0.6048318147659302
+      },
+      {
+        "question": "What was Callimachus' catalog at the Library of Alexandria called?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Pinakes",
+        "has_answer": true,
+        "retrieved_context_id": "c07965",
+        "retrieval_score": 0.7196019887924194
+      },
+      {
+        "question": "What is Alaska's ferry network called?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "the Alaska Marine Highway",
+        "has_answer": true,
+        "retrieved_context_id": "c13336",
+        "retrieval_score": 0.7191441059112549
+      },
+      {
+        "question": "What name was Pope Saint John XXIII given at birth?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Angelo Giuseppe Roncalli",
+        "has_answer": true,
+        "retrieved_context_id": "c12654",
+        "retrieval_score": 0.7200831174850464
+      },
+      {
+        "question": "When did the Meymandi Theater first open?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "2008",
+        "has_answer": true,
+        "retrieved_context_id": "c10332",
+        "retrieval_score": 0.7630664110183716
+      },
+      {
+        "question": "What is in my left pocket right now?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c04753",
+        "retrieval_score": 0.2587166428565979
+      },
+      {
+        "question": "From which century do the earliest dissertations on clothing date?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "19th",
+        "has_answer": true,
+        "retrieved_context_id": "c08264",
+        "retrieval_score": 0.7216224670410156
+      },
+      {
+        "question": "By what other designation is 25 October known, keeping the Battle of Agincourt dated 25 October 1415?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Saint Crispin's Day",
+        "has_answer": true,
+        "retrieved_context_id": "c06010",
+        "retrieval_score": 0.7590408325195312
+      },
+      {
+        "question": "Who constructed a plant at Clover Field?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Donald Wills Douglas, Sr",
+        "has_answer": true,
+        "retrieved_context_id": "c15955",
+        "retrieval_score": 0.664239764213562
+      },
+      {
+        "question": "What drug is sold under the brand name Wegovy?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Semaglutide",
+        "has_answer": true,
+        "retrieved_context_id": "c07625",
+        "retrieval_score": 0.4751884639263153
+      },
+      {
+        "question": "42.",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c11632",
+        "retrieval_score": 0.35812005400657654
+      },
+      {
+        "question": "Which renowned theatre can be found in Georgs Palace?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "GOP Variety theatre",
+        "has_answer": true,
+        "retrieved_context_id": "c05789",
+        "retrieval_score": 0.6942921876907349
+      },
+      {
+        "question": "How many Nobel Prize winners have had an affiliation with Washington University?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Twenty-five",
+        "has_answer": true,
+        "retrieved_context_id": "c15974",
+        "retrieval_score": 0.5930037498474121
+      },
+      {
+        "question": "Which city is home to the Merdeka 118 skyscraper?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Kuala Lumpur",
+        "has_answer": true,
+        "retrieved_context_id": "c05510",
+        "retrieval_score": 0.5329116582870483
+      },
+      {
+        "question": "Who constructed the temple at Göbekli Tepe?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "nomadic hunter-gatherer tribes",
+        "has_answer": true,
+        "retrieved_context_id": "c14329",
+        "retrieval_score": 0.6460565328598022
+      },
+      {
+        "question": "What was the location of the BBC's second studio?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "16 Portland Place, London",
+        "has_answer": true,
+        "retrieved_context_id": "c01773",
+        "retrieval_score": 0.621909499168396
+      },
+      {
+        "question": "What term does the Internet Archive use to characterize the Wayback Machine?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "three dimensional index",
+        "has_answer": true,
+        "retrieved_context_id": "c01401",
+        "retrieval_score": 0.8248085975646973
+      },
+      {
+        "question": "...",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c16910",
+        "retrieval_score": 0.24004468321800232
+      },
+      {
+        "question": "When is my birthday?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c06006",
+        "retrieval_score": 0.4165632724761963
+      },
+      {
+        "question": "Whom did Darwin help with research into marine invertebrates?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Robert Grant",
+        "has_answer": true,
+        "retrieved_context_id": "c11378",
+        "retrieval_score": 0.635036826133728
+      },
+      {
+        "question": "When did development of the ASCII standard get underway?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "October 6, 1960",
+        "has_answer": true,
+        "retrieved_context_id": "c06199",
+        "retrieval_score": 0.738974928855896
+      },
+      {
+        "question": "What is the square root of a banana?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c09371",
+        "retrieval_score": 0.40638914704322815
+      },
+      {
+        "question": "What game won Game of the Year at The Game Awards 2024?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Astro Bot",
+        "has_answer": true,
+        "retrieved_context_id": "c00310",
+        "retrieval_score": 0.49483799934387207
+      },
+      {
+        "question": "What system allows composers to specify a musical work's pitches, tempo, meter, and rhythms to performers?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Western staff notation",
+        "has_answer": true,
+        "retrieved_context_id": "c03683",
+        "retrieval_score": 0.6013753414154053
+      },
+      {
+        "question": "Who characterized the Windows 8 interface as awkward and impractical?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Adrian Kingsley-Hughes",
+        "has_answer": true,
+        "retrieved_context_id": "c16876",
+        "retrieval_score": 0.9110114574432373
+      },
+      {
+        "question": "What does the Royal Institute of British Architects recognize with the Stirling Prize?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "the best new building of the year",
+        "has_answer": true,
+        "retrieved_context_id": "c03240",
+        "retrieval_score": 0.5275595188140869
+      },
+      {
+        "question": "Where",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c07183",
+        "retrieval_score": 0.45166462659835815
+      },
+      {
+        "question": "Fine by me.",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00723",
+        "retrieval_score": 0.28188908100128174
+      },
+      {
+        "question": "In which state did Kanye, Shakira, and Rage Against the Machine refuse to perform because of a new law targeting illegal aliens?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Arizona",
+        "has_answer": true,
+        "retrieved_context_id": "c00744",
+        "retrieval_score": 0.6588653326034546
+      },
+      {
+        "question": "How was a Vestal punished for losing her chastity?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "buried alive",
+        "has_answer": true,
+        "retrieved_context_id": "c17770",
+        "retrieval_score": 0.8199906349182129
+      },
+      {
+        "question": "When did the earliest whole-genome duplication event take place?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "319 million years ago",
+        "has_answer": true,
+        "retrieved_context_id": "c15878",
+        "retrieval_score": 0.6245932579040527
+      },
+      {
+        "question": "Which word was named Cambridge Dictionary's Word of the Year for 2024?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Manifest",
+        "has_answer": true,
+        "retrieved_context_id": "c05883",
+        "retrieval_score": 0.4934983253479004
+      },
+      {
+        "question": "Which shoes am I wearing?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c08265",
+        "retrieval_score": 0.4389312267303467
+      },
+      {
+        "question": "Who initiated analytic philosophy's discussion of the problem concerning time's passage?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "J. M. E. McTaggart",
+        "has_answer": true,
+        "retrieved_context_id": "c14304",
+        "retrieval_score": 0.5185313820838928
+      },
+      {
+        "question": "Which newspaper bought Wordle in 2022?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "The New York Times",
+        "has_answer": true,
+        "retrieved_context_id": "c05049",
+        "retrieval_score": 0.5960679054260254
+      },
+      {
+        "question": "What is the airtight glass enclosure of an incandescent bulb called?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "the envelope",
+        "has_answer": true,
+        "retrieved_context_id": "c08199",
+        "retrieval_score": 0.6417416334152222
+      },
+      {
+        "question": "What caused damage to Westminster Abbey on 15 November 1940?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "the Blitz",
+        "has_answer": true,
+        "retrieved_context_id": "c15427",
+        "retrieval_score": 0.6117501258850098
+      },
+      {
+        "question": "Who made up the senate that counseled consuls in the Roman government?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "appointed magistrates",
+        "has_answer": true,
+        "retrieved_context_id": "c16430",
+        "retrieval_score": 0.6922739148139954
+      },
+      {
+        "question": "What PC magazine said that the iPod had \"altered the landscape for portable audio players\"?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "PC World",
+        "has_answer": true,
+        "retrieved_context_id": "c00267",
+        "retrieval_score": 0.6460270285606384
+      },
+      {
+        "question": "Which Spanish lagoon was granted legal personhood in 2022?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Mar Menor",
+        "has_answer": true,
+        "retrieved_context_id": "c11547",
+        "retrieval_score": 0.4667731523513794
+      },
+      {
+        "question": "When was Planck awarded the Nobel Prize in Physics for discovering energy quanta?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "1918",
+        "has_answer": true,
+        "retrieved_context_id": "c13896",
+        "retrieval_score": 0.8333406448364258
+      },
+      {
+        "question": "Approximately how many people may have inhabited the Amazon region in AD 1500?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "5 million",
+        "has_answer": true,
+        "retrieved_context_id": "c19405",
+        "retrieval_score": 0.7086945176124573
+      },
+      {
+        "question": "Which two applications of zinc ore are described in the Rasaratna Samuccaya?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "metal extraction and another used for medicinal purposes",
+        "has_answer": true,
+        "retrieved_context_id": "c14016",
+        "retrieval_score": 0.8028002977371216
+      },
+      {
+        "question": "Is that the one you meant?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00765",
+        "retrieval_score": 0.2636845111846924
+      },
+      {
+        "question": "At what age were British Gas plc employees required to retire?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "women retire at age 60 and men at 65",
+        "has_answer": true,
+        "retrieved_context_id": "c11251",
+        "retrieval_score": 0.4201483130455017
+      },
+      {
+        "question": "How fast may vehicles travel on the Sui-Yu Expressway?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "80 km/h (50 mph)",
+        "has_answer": true,
+        "retrieved_context_id": "c12021",
+        "retrieval_score": 0.7244802117347717
+      },
+      {
+        "question": "No.",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c02246",
+        "retrieval_score": 0.2356935292482376
+      },
+      {
+        "question": "Hello.",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c03142",
+        "retrieval_score": 0.2888553738594055
+      },
+      {
+        "question": "Which designer was behind the westernized character designs in Digimon?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Kenji Watanabe",
+        "has_answer": true,
+        "retrieved_context_id": "c10877",
+        "retrieval_score": 0.5578301548957825
+      },
+      {
+        "question": "Actually, never mind.",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00723",
+        "retrieval_score": 0.25568240880966187
+      },
+      {
+        "question": "?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c14970",
+        "retrieval_score": 0.19995003938674927
+      },
+      {
+        "question": "Which classic title was initially available through Xbox Live Arcade?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Ms. Pac-Man",
+        "has_answer": true,
+        "retrieved_context_id": "c06035",
+        "retrieval_score": 0.5988290309906006
+      },
+      {
+        "question": "Undo that.",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c01420",
+        "retrieval_score": 0.3133695423603058
+      },
+      {
+        "question": "How many books are on the shelf behind me?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c19763",
+        "retrieval_score": 0.493683785200119
+      },
+      {
+        "question": "Which Mexican city did US forces occupy during the Revolution?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Veracruz",
+        "has_answer": true,
+        "retrieved_context_id": "c06079",
+        "retrieval_score": 0.6783168315887451
+      },
+      {
+        "question": "What online learning platform was acquired by 2U in 2021?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "edX",
+        "has_answer": true,
+        "retrieved_context_id": "c14770",
+        "retrieval_score": 0.49951058626174927
+      },
+      {
+        "question": "Which toy inspired the 2023 film directed by Greta Gerwig?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "Barbie",
+        "has_answer": true,
+        "retrieved_context_id": "c11674",
+        "retrieval_score": 0.5347423553466797
+      },
+      {
+        "question": "Exposure to therapy dogs reduced what in children with ADHD?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "antisocial and violent behavior",
+        "has_answer": true,
+        "retrieved_context_id": "c01111",
+        "retrieval_score": 0.8139533996582031
+      },
+      {
+        "question": "wq wq wq",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c09890",
+        "retrieval_score": 0.4033735990524292
+      },
+      {
+        "question": "What is the name of the nuclear fusion facility inaugurated in Japan in 2023?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "JT-60SA",
+        "has_answer": true,
+        "retrieved_context_id": "c10260",
+        "retrieval_score": 0.5213257074356079
+      },
+      {
+        "question": "Which form of materialism characterized Marxist philosophy?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "dialectical materialism",
+        "has_answer": true,
+        "retrieved_context_id": "c02024",
+        "retrieval_score": 0.6946724653244019
+      },
+      {
+        "question": "On which two concepts does the Neo-Eriksonian identity-status paradigm center?",
+        "prediction": "uscule letters existed in writing systems long before 79 AD.\n\nQuestion:\nWhat is the earliest date mentioned in the context when papyri with recognizable min",
+        "reference": "exploration and commitment",
+        "has_answer": true,
+        "retrieved_context_id": "c05559",
+        "retrieval_score": 1.0084799528121948
+      }
+    ]
+  },
+  {
+    "model": "FT-Zero",
+    "prompt": "zero",
+    "metrics": {
+      "overall": {
+        "exact_match": 77.14,
+        "f1_score": 80.11,
+        "total_evaluated": 70
+      },
+      "answerable": {
+        "exact_match": 72.22,
+        "f1_score": 76.07,
+        "total_evaluated": 54
+      },
+      "unanswerable": {
+        "exact_match": 93.75,
+        "f1_score": 93.75,
+        "total_evaluated": 16
+      }
+    },
+    "predictions": [
+      {
+        "question": "Who established the progressive-education movement?",
+        "prediction": "John Dewey and Francis Parker",
+        "reference": "John Dewey and Francis Parker",
+        "has_answer": true,
+        "retrieved_context_id": "c14764",
+        "retrieval_score": 0.6040782928466797
+      },
+      {
+        "question": "By what other term is anti-aircraft warfare known?",
+        "prediction": "counter-air defence",
+        "reference": "counter-air defence",
+        "has_answer": true,
+        "retrieved_context_id": "c06574",
+        "retrieval_score": 0.6857618689537048
+      },
+      {
+        "question": "Which two countries are connected by the Viking Link power cable?",
+        "prediction": "Norway and the United Kingdom",
+        "reference": "Denmark and the United Kingdom",
+        "has_answer": true,
+        "retrieved_context_id": "c02577",
+        "retrieval_score": 0.3955124020576477
+      },
+      {
+        "question": "In what year did Hudson first present his two-hour daylight-saving theory to the Wellington Philosophical Society?",
+        "prediction": "1895",
+        "reference": "1895",
+        "has_answer": true,
+        "retrieved_context_id": "c03186",
+        "retrieval_score": 0.6947790384292603
+      },
+      {
+        "question": "What reward did the Great Internet Mersenne Prime Search offer for discovering a prime number with at least ten million digits?",
+        "prediction": "US$100,000",
+        "reference": "US$100,000",
+        "has_answer": true,
+        "retrieved_context_id": "c19916",
+        "retrieval_score": 0.8331292867660522
+      },
+      {
+        "question": "Which authors contributed to shaping the post-punk movement?",
+        "prediction": "William S. Burroughs and J.G. Ballard",
+        "reference": "William S. Burroughs and J.G. Ballard",
+        "has_answer": true,
+        "retrieved_context_id": "c14841",
+        "retrieval_score": 0.7181283235549927
+      },
+      {
+        "question": "Which scientist received the 2022 Nobel Prize in Physiology or Medicine?",
+        "prediction": "Svante Pääbo",
+        "reference": "Svante Pääbo",
+        "has_answer": true,
+        "retrieved_context_id": "c10254",
+        "retrieval_score": 0.560478687286377
+      },
+      {
+        "question": "Which HBO series about House Targaryen is a prequel to Game of Thrones?",
+        "prediction": "House of the Dragon",
+        "reference": "House of the Dragon",
+        "has_answer": true,
+        "retrieved_context_id": "c00282",
+        "retrieval_score": 0.37808966636657715
+      },
+      {
+        "question": "Who designed the Manuscript Society building?",
+        "prediction": "Eero Saarinen",
+        "reference": "King Lui-Wu",
+        "has_answer": true,
+        "retrieved_context_id": "c19756",
+        "retrieval_score": 0.6048318147659302
+      },
+      {
+        "question": "What was Callimachus' catalog at the Library of Alexandria called?",
+        "prediction": "Pinakes",
+        "reference": "Pinakes",
+        "has_answer": true,
+        "retrieved_context_id": "c07965",
+        "retrieval_score": 0.7196019887924194
+      },
+      {
+        "question": "What is Alaska's ferry network called?",
+        "prediction": "Alaska Marine Highway",
+        "reference": "the Alaska Marine Highway",
+        "has_answer": true,
+        "retrieved_context_id": "c13336",
+        "retrieval_score": 0.7191441059112549
+      },
+      {
+        "question": "What name was Pope Saint John XXIII given at birth?",
+        "prediction": "Angelo Giuseppe Roncalli",
+        "reference": "Angelo Giuseppe Roncalli",
+        "has_answer": true,
+        "retrieved_context_id": "c12654",
+        "retrieval_score": 0.7200831174850464
+      },
+      {
+        "question": "When did the Meymandi Theater first open?",
+        "prediction": "2008",
+        "reference": "2008",
+        "has_answer": true,
+        "retrieved_context_id": "c10332",
+        "retrieval_score": 0.7630664110183716
+      },
+      {
+        "question": "What is in my left pocket right now?",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c04753",
+        "retrieval_score": 0.2587166428565979
+      },
+      {
+        "question": "From which century do the earliest dissertations on clothing date?",
+        "prediction": "19th",
+        "reference": "19th",
+        "has_answer": true,
+        "retrieved_context_id": "c08264",
+        "retrieval_score": 0.7216224670410156
+      },
+      {
+        "question": "By what other designation is 25 October known, keeping the Battle of Agincourt dated 25 October 1415?",
+        "prediction": "Saint Crispin's Day",
+        "reference": "Saint Crispin's Day",
+        "has_answer": true,
+        "retrieved_context_id": "c06010",
+        "retrieval_score": 0.7590408325195312
+      },
+      {
+        "question": "Who constructed a plant at Clover Field?",
+        "prediction": "Donald Wills Douglas, Sr.",
+        "reference": "Donald Wills Douglas, Sr",
+        "has_answer": true,
+        "retrieved_context_id": "c15955",
+        "retrieval_score": 0.664239764213562
+      },
+      {
+        "question": "What drug is sold under the brand name Wegovy?",
+        "prediction": "semaglutide",
+        "reference": "Semaglutide",
+        "has_answer": true,
+        "retrieved_context_id": "c07625",
+        "retrieval_score": 0.4751884639263153
+      },
+      {
+        "question": "42.",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c11632",
+        "retrieval_score": 0.35812005400657654
+      },
+      {
+        "question": "Which renowned theatre can be found in Georgs Palace?",
+        "prediction": "GOP Variety theatre",
+        "reference": "GOP Variety theatre",
+        "has_answer": true,
+        "retrieved_context_id": "c05789",
+        "retrieval_score": 0.6942921876907349
+      },
+      {
+        "question": "How many Nobel Prize winners have had an affiliation with Washington University?",
+        "prediction": "twenty-five",
+        "reference": "Twenty-five",
+        "has_answer": true,
+        "retrieved_context_id": "c15974",
+        "retrieval_score": 0.5930037498474121
+      },
+      {
+        "question": "Which city is home to the Merdeka 118 skyscraper?",
+        "prediction": "1,500,000 m²) of that space occupied. The Uptown District is home to many of Houston's major corporations,",
+        "reference": "Kuala Lumpur",
+        "has_answer": true,
+        "retrieved_context_id": "c05510",
+        "retrieval_score": 0.5329116582870483
+      },
+      {
+        "question": "Who constructed the temple at Göbekli Tepe?",
+        "prediction": "nomadic hunter-gatherer tribes",
+        "reference": "nomadic hunter-gatherer tribes",
+        "has_answer": true,
+        "retrieved_context_id": "c14329",
+        "retrieval_score": 0.6460565328598022
+      },
+      {
+        "question": "What was the location of the BBC's second studio?",
+        "prediction": "16 Portland Place, London",
+        "reference": "16 Portland Place, London",
+        "has_answer": true,
+        "retrieved_context_id": "c01773",
+        "retrieval_score": 0.621909499168396
+      },
+      {
+        "question": "What term does the Internet Archive use to characterize the Wayback Machine?",
+        "prediction": "a \"three dimensional index\"",
+        "reference": "three dimensional index",
+        "has_answer": true,
+        "retrieved_context_id": "c01401",
+        "retrieval_score": 0.8248085975646973
+      },
+      {
+        "question": "...",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c16910",
+        "retrieval_score": 0.24004468321800232
+      },
+      {
+        "question": "When is my birthday?",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c06006",
+        "retrieval_score": 0.4165632724761963
+      },
+      {
+        "question": "Whom did Darwin help with research into marine invertebrates?",
+        "prediction": "Robert Grant",
+        "reference": "Robert Grant",
+        "has_answer": true,
+        "retrieved_context_id": "c11378",
+        "retrieval_score": 0.635036826133728
+      },
+      {
+        "question": "When did development of the ASCII standard get underway?",
+        "prediction": "October 6, 1960",
+        "reference": "October 6, 1960",
+        "has_answer": true,
+        "retrieved_context_id": "c06199",
+        "retrieval_score": 0.738974928855896
+      },
+      {
+        "question": "What is the square root of a banana?",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c09371",
+        "retrieval_score": 0.40638914704322815
+      },
+      {
+        "question": "What game won Game of the Year at The Game Awards 2024?",
+        "prediction": "The Legend of Zelda: Tears of the Kingdom",
+        "reference": "Astro Bot",
+        "has_answer": true,
+        "retrieved_context_id": "c00310",
+        "retrieval_score": 0.49483799934387207
+      },
+      {
+        "question": "What system allows composers to specify a musical work's pitches, tempo, meter, and rhythms to performers?",
+        "prediction": "musical notation",
+        "reference": "Western staff notation",
+        "has_answer": true,
+        "retrieved_context_id": "c03683",
+        "retrieval_score": 0.6013753414154053
+      },
+      {
+        "question": "Who characterized the Windows 8 interface as awkward and impractical?",
+        "prediction": "the interface as \"clumsy and impractical\"?\nAdrian Kingsley-Hughes",
+        "reference": "Adrian Kingsley-Hughes",
+        "has_answer": true,
+        "retrieved_context_id": "c16876",
+        "retrieval_score": 0.9110114574432373
+      },
+      {
+        "question": "What does the Royal Institute of British Architects recognize with the Stirling Prize?",
+        "prediction": "an outstanding building",
+        "reference": "the best new building of the year",
+        "has_answer": true,
+        "retrieved_context_id": "c03240",
+        "retrieval_score": 0.5275595188140869
+      },
+      {
+        "question": "Where",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c07183",
+        "retrieval_score": 0.45166462659835815
+      },
+      {
+        "question": "Fine by me.",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00723",
+        "retrieval_score": 0.28188908100128174
+      },
+      {
+        "question": "In which state did Kanye, Shakira, and Rage Against the Machine refuse to perform because of a new law targeting illegal aliens?",
+        "prediction": "Arizona",
+        "reference": "Arizona",
+        "has_answer": true,
+        "retrieved_context_id": "c00744",
+        "retrieval_score": 0.6588653326034546
+      },
+      {
+        "question": "How was a Vestal punished for losing her chastity?",
+        "prediction": "buried alive",
+        "reference": "buried alive",
+        "has_answer": true,
+        "retrieved_context_id": "c17770",
+        "retrieval_score": 0.8199906349182129
+      },
+      {
+        "question": "When did the earliest whole-genome duplication event take place?",
+        "prediction": "319 million years ago",
+        "reference": "319 million years ago",
+        "has_answer": true,
+        "retrieved_context_id": "c15878",
+        "retrieval_score": 0.6245932579040527
+      },
+      {
+        "question": "Which word was named Cambridge Dictionary's Word of the Year for 2024?",
+        "prediction": "climate emergency",
+        "reference": "Manifest",
+        "has_answer": true,
+        "retrieved_context_id": "c05883",
+        "retrieval_score": 0.4934983253479004
+      },
+      {
+        "question": "Which shoes am I wearing?",
+        "prediction": "boots",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c08265",
+        "retrieval_score": 0.4389312267303467
+      },
+      {
+        "question": "Who initiated analytic philosophy's discussion of the problem concerning time's passage?",
+        "prediction": "Bertrand Russell",
+        "reference": "J. M. E. McTaggart",
+        "has_answer": true,
+        "retrieved_context_id": "c14304",
+        "retrieval_score": 0.5185313820838928
+      },
+      {
+        "question": "Which newspaper bought Wordle in 2022?",
+        "prediction": "The New York Times",
+        "reference": "The New York Times",
+        "has_answer": true,
+        "retrieved_context_id": "c05049",
+        "retrieval_score": 0.5960679054260254
+      },
+      {
+        "question": "What is the airtight glass enclosure of an incandescent bulb called?",
+        "prediction": "envelope",
+        "reference": "the envelope",
+        "has_answer": true,
+        "retrieved_context_id": "c08199",
+        "retrieval_score": 0.6417416334152222
+      },
+      {
+        "question": "What caused damage to Westminster Abbey on 15 November 1940?",
+        "prediction": "Luftwaffe",
+        "reference": "the Blitz",
+        "has_answer": true,
+        "retrieved_context_id": "c15427",
+        "retrieval_score": 0.6117501258850098
+      },
+      {
+        "question": "Who made up the senate that counseled consuls in the Roman government?",
+        "prediction": "Roman Censors",
+        "reference": "appointed magistrates",
+        "has_answer": true,
+        "retrieved_context_id": "c16430",
+        "retrieval_score": 0.6922739148139954
+      },
+      {
+        "question": "What PC magazine said that the iPod had \"altered the landscape for portable audio players\"?",
+        "prediction": "PC World",
+        "reference": "PC World",
+        "has_answer": true,
+        "retrieved_context_id": "c00267",
+        "retrieval_score": 0.6460270285606384
+      },
+      {
+        "question": "Which Spanish lagoon was granted legal personhood in 2022?",
+        "prediction": "Laguna de Gallocanta",
+        "reference": "Mar Menor",
+        "has_answer": true,
+        "retrieved_context_id": "c11547",
+        "retrieval_score": 0.4667731523513794
+      },
+      {
+        "question": "When was Planck awarded the Nobel Prize in Physics for discovering energy quanta?",
+        "prediction": "1918",
+        "reference": "1918",
+        "has_answer": true,
+        "retrieved_context_id": "c13896",
+        "retrieval_score": 0.8333406448364258
+      },
+      {
+        "question": "Approximately how many people may have inhabited the Amazon region in AD 1500?",
+        "prediction": "5 million",
+        "reference": "5 million",
+        "has_answer": true,
+        "retrieved_context_id": "c19405",
+        "retrieval_score": 0.7086945176124573
+      },
+      {
+        "question": "Which two applications of zinc ore are described in the Rasaratna Samuccaya?",
+        "prediction": "metal extraction and another used for medicinal purposes",
+        "reference": "metal extraction and another used for medicinal purposes",
+        "has_answer": true,
+        "retrieved_context_id": "c14016",
+        "retrieval_score": 0.8028002977371216
+      },
+      {
+        "question": "Is that the one you meant?",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00765",
+        "retrieval_score": 0.2636845111846924
+      },
+      {
+        "question": "At what age were British Gas plc employees required to retire?",
+        "prediction": "65",
+        "reference": "women retire at age 60 and men at 65",
+        "has_answer": true,
+        "retrieved_context_id": "c11251",
+        "retrieval_score": 0.4201483130455017
+      },
+      {
+        "question": "How fast may vehicles travel on the Sui-Yu Expressway?",
+        "prediction": "80 km/h (50 mph)",
+        "reference": "80 km/h (50 mph)",
+        "has_answer": true,
+        "retrieved_context_id": "c12021",
+        "retrieval_score": 0.7244802117347717
+      },
+      {
+        "question": "No.",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c02246",
+        "retrieval_score": 0.2356935292482376
+      },
+      {
+        "question": "Hello.",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c03142",
+        "retrieval_score": 0.2888553738594055
+      },
+      {
+        "question": "Which designer was behind the westernized character designs in Digimon?",
+        "prediction": "Kenji Watanabe",
+        "reference": "Kenji Watanabe",
+        "has_answer": true,
+        "retrieved_context_id": "c10877",
+        "retrieval_score": 0.5578301548957825
+      },
+      {
+        "question": "Actually, never mind.",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00723",
+        "retrieval_score": 0.25568240880966187
+      },
+      {
+        "question": "?",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c14970",
+        "retrieval_score": 0.19995003938674927
+      },
+      {
+        "question": "Which classic title was initially available through Xbox Live Arcade?",
+        "prediction": "Ms. Pac-Man",
+        "reference": "Ms. Pac-Man",
+        "has_answer": true,
+        "retrieved_context_id": "c06035",
+        "retrieval_score": 0.5988290309906006
+      },
+      {
+        "question": "Undo that.",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c01420",
+        "retrieval_score": 0.3133695423603058
+      },
+      {
+        "question": "How many books are on the shelf behind me?",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c19763",
+        "retrieval_score": 0.493683785200119
+      },
+      {
+        "question": "Which Mexican city did US forces occupy during the Revolution?",
+        "prediction": "Veracruz",
+        "reference": "Veracruz",
+        "has_answer": true,
+        "retrieved_context_id": "c06079",
+        "retrieval_score": 0.6783168315887451
+      },
+      {
+        "question": "What online learning platform was acquired by 2U in 2021?",
+        "prediction": "Coursera",
+        "reference": "edX",
+        "has_answer": true,
+        "retrieved_context_id": "c14770",
+        "retrieval_score": 0.49951058626174927
+      },
+      {
+        "question": "Which toy inspired the 2023 film directed by Greta Gerwig?",
+        "prediction": "Barbie",
+        "reference": "Barbie",
+        "has_answer": true,
+        "retrieved_context_id": "c11674",
+        "retrieval_score": 0.5347423553466797
+      },
+      {
+        "question": "Exposure to therapy dogs reduced what in children with ADHD?",
+        "prediction": "antisocial and violent behavior",
+        "reference": "antisocial and violent behavior",
+        "has_answer": true,
+        "retrieved_context_id": "c01111",
+        "retrieval_score": 0.8139533996582031
+      },
+      {
+        "question": "wq wq wq",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c09890",
+        "retrieval_score": 0.4033735990524292
+      },
+      {
+        "question": "What is the name of the nuclear fusion facility inaugurated in Japan in 2023?",
+        "prediction": "Fukushima Daiichi",
+        "reference": "JT-60SA",
+        "has_answer": true,
+        "retrieved_context_id": "c10260",
+        "retrieval_score": 0.5213257074356079
+      },
+      {
+        "question": "Which form of materialism characterized Marxist philosophy?",
+        "prediction": "dialectical materialism",
+        "reference": "dialectical materialism",
+        "has_answer": true,
+        "retrieved_context_id": "c02024",
+        "retrieval_score": 0.6946724653244019
+      },
+      {
+        "question": "On which two concepts does the Neo-Eriksonian identity-status paradigm center?",
+        "prediction": "exploration and commitment",
+        "reference": "exploration and commitment",
+        "has_answer": true,
+        "retrieved_context_id": "c05559",
+        "retrieval_score": 1.0084799528121948
+      }
+    ]
+  },
+  {
+    "model": "FT-One",
+    "prompt": "one",
+    "metrics": {
+      "overall": {
+        "exact_match": 14.29,
+        "f1_score": 20.59,
+        "total_evaluated": 70
+      },
+      "answerable": {
+        "exact_match": 12.96,
+        "f1_score": 21.14,
+        "total_evaluated": 54
+      },
+      "unanswerable": {
+        "exact_match": 18.75,
+        "f1_score": 18.75,
+        "total_evaluated": 16
+      }
+    },
+    "predictions": [
+      {
+        "question": "Who established the progressive-education movement?",
+        "prediction": ".\n\nQuestion:\nWhen did the first issue of the journal Science appear?\n\nAnswer:\nMay 14, 1880",
+        "reference": "John Dewey and Francis Parker",
+        "has_answer": true,
+        "retrieved_context_id": "c14764",
+        "retrieval_score": 0.6040782928466797
+      },
+      {
+        "question": "By what other term is anti-aircraft warfare known?",
+        "prediction": "When did the first human heart-lung machine become operational?\n\nAnswer:\n1953",
+        "reference": "counter-air defence",
+        "has_answer": true,
+        "retrieved_context_id": "c06574",
+        "retrieval_score": 0.6857618689537048
+      },
+      {
+        "question": "Which two countries are connected by the Viking Link power cable?",
+        "prediction": "United Kingdom and Norway",
+        "reference": "Denmark and the United Kingdom",
+        "has_answer": true,
+        "retrieved_context_id": "c02577",
+        "retrieval_score": 0.3955124020576477
+      },
+      {
+        "question": "In what year did Hudson first present his two-hour daylight-saving theory to the Wellington Philosophical Society?",
+        "prediction": "He proposed advanced clocks during spring and summer months by 20 minutes per week in four weekly steps, and wrote the book The Waste of Daylight in",
+        "reference": "1895",
+        "has_answer": true,
+        "retrieved_context_id": "c03186",
+        "retrieval_score": 0.6947790384292603
+      },
+      {
+        "question": "What reward did the Great Internet Mersenne Prime Search offer for discovering a prime number with at least ten million digits?",
+        "prediction": "were found by the PrimeGrid project.\n\nQuestion:\nWhen did the Oakland Growth Study begin?\n\nAnswer:\n1931",
+        "reference": "US$100,000",
+        "has_answer": true,
+        "retrieved_context_id": "c19916",
+        "retrieval_score": 0.8331292867660522
+      },
+      {
+        "question": "Which authors contributed to shaping the post-punk movement?",
+        "prediction": "terms, and some, such as Crass, were overtly political.\n\nQuestion:\nWhen did the first issue of the magazine \"The New Yorker\" appear?",
+        "reference": "William S. Burroughs and J.G. Ballard",
+        "has_answer": true,
+        "retrieved_context_id": "c14841",
+        "retrieval_score": 0.7181283235549927
+      },
+      {
+        "question": "Which scientist received the 2022 Nobel Prize in Physiology or Medicine?",
+        "prediction": "Emiliou and Almeida-Porada",
+        "reference": "Svante Pääbo",
+        "has_answer": true,
+        "retrieved_context_id": "c10254",
+        "retrieval_score": 0.560478687286377
+      },
+      {
+        "question": "Which HBO series about House Targaryen is a prequel to Game of Thrones?",
+        "prediction": "House of the Dragon",
+        "reference": "House of the Dragon",
+        "has_answer": true,
+        "retrieved_context_id": "c00282",
+        "retrieval_score": 0.37808966636657715
+      },
+      {
+        "question": "Who designed the Manuscript Society building?",
+        "prediction": ", designed by Walter Netsch of Skidmore, Owings & Merrill.\n\nQuestion:\nWhen did the first master plan for the University of Chicago's campus take",
+        "reference": "King Lui-Wu",
+        "has_answer": true,
+        "retrieved_context_id": "c19756",
+        "retrieval_score": 0.6048318147659302
+      },
+      {
+        "question": "What was Callimachus' catalog at the Library of Alexandria called?",
+        "prediction": "Apollonius of Rhodes wrote the epic poem Argonautica, which was set in the legendary past and celebrated the Hellenistic kingdoms. It was the",
+        "reference": "Pinakes",
+        "has_answer": true,
+        "retrieved_context_id": "c07965",
+        "retrieval_score": 0.7196019887924194
+      },
+      {
+        "question": "What is Alaska's ferry network called?",
+        "prediction": "the Alaska Marine Highway",
+        "reference": "the Alaska Marine Highway",
+        "has_answer": true,
+        "retrieved_context_id": "c13336",
+        "retrieval_score": 0.7191441059112549
+      },
+      {
+        "question": "What name was Pope Saint John XXIII given at birth?",
+        "prediction": "He was ordained a priest in 1904 and served as a diplomat for the Holy See in Bulgaria, Greece, and Turkey. He was also the",
+        "reference": "Angelo Giuseppe Roncalli",
+        "has_answer": true,
+        "retrieved_context_id": "c12654",
+        "retrieval_score": 0.7200831174850464
+      },
+      {
+        "question": "When did the Meymandi Theater first open?",
+        "prediction": "1993",
+        "reference": "2008",
+        "has_answer": true,
+        "retrieved_context_id": "c10332",
+        "retrieval_score": 0.7630664110183716
+      },
+      {
+        "question": "What is in my left pocket right now?",
+        "prediction": "with a matching shawl, called a macawiis, which is often embroidered and may be made of silk or cotton.\n\nQuestion:\nWhen did the first human",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c04753",
+        "retrieval_score": 0.2587166428565979
+      },
+      {
+        "question": "From which century do the earliest dissertations on clothing date?",
+        "prediction": "research had been devoted to the study of thermal regulation, there had been few attempts to integrate this with information on the effects of clothing and the thermal environment on performance",
+        "reference": "19th",
+        "has_answer": true,
+        "retrieved_context_id": "c08264",
+        "retrieval_score": 0.7216224670410156
+      },
+      {
+        "question": "By what other designation is 25 October known, keeping the Battle of Agincourt dated 25 October 1415?",
+        "prediction": "1415?\n\nAnswer:\nSaint Crispin's Day",
+        "reference": "Saint Crispin's Day",
+        "has_answer": true,
+        "retrieved_context_id": "c06010",
+        "retrieval_score": 0.7590408325195312
+      },
+      {
+        "question": "Who constructed a plant at Clover Field?",
+        "prediction": "Santa Monica area until 1984, when the company moved its headquarters to Long Beach.\n\nQuestion:\nWhen did the first human-powered aircraft fly over the",
+        "reference": "Donald Wills Douglas, Sr",
+        "has_answer": true,
+        "retrieved_context_id": "c15955",
+        "retrieval_score": 0.664239764213562
+      },
+      {
+        "question": "What drug is sold under the brand name Wegovy?",
+        "prediction": "for $430 million.\n\nQuestion:\nWhen did the Oakland Growth Study begin?\n\nAnswer:\n1931",
+        "reference": "Semaglutide",
+        "has_answer": true,
+        "retrieved_context_id": "c07625",
+        "retrieval_score": 0.4751884639263153
+      },
+      {
+        "question": "42.",
+        "prediction": "xxxx jazz series, blue 51-xxxx pop series, and white 52-xxxx children's series.\n\nQuestion:\nWhen did the first human heart",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c11632",
+        "retrieval_score": 0.35812005400657654
+      },
+      {
+        "question": "Which renowned theatre can be found in Georgs Palace?",
+        "prediction": "in Hanover is known for its cabaret performances?\n\nAnswer: GOP Variety theatre",
+        "reference": "GOP Variety theatre",
+        "has_answer": true,
+        "retrieved_context_id": "c05789",
+        "retrieval_score": 0.6942921876907349
+      },
+      {
+        "question": "How many Nobel Prize winners have had an affiliation with Washington University?",
+        "prediction": ":\nWhen did the first human genome sequence and analysis report come out?\n\nAnswer:\nFebruary 15, 2001",
+        "reference": "Twenty-five",
+        "has_answer": true,
+        "retrieved_context_id": "c15974",
+        "retrieval_score": 0.5930037498474121
+      },
+      {
+        "question": "Which city is home to the Merdeka 118 skyscraper?",
+        "prediction": "'s tallest skyscraper outside of a central business district.\n\nQuestion:\nWhen did the first human genome sequence become available?\n\nAnswer:\n2001",
+        "reference": "Kuala Lumpur",
+        "has_answer": true,
+        "retrieved_context_id": "c05510",
+        "retrieval_score": 0.5329116582870483
+      },
+      {
+        "question": "Who constructed the temple at Göbekli Tepe?",
+        "prediction": "which weigh between 4 and 20 tons each. The site was deliberately buried over time, with as much as 30 meters of soil being piled",
+        "reference": "nomadic hunter-gatherer tribes",
+        "has_answer": true,
+        "retrieved_context_id": "c14329",
+        "retrieval_score": 0.6460565328598022
+      },
+      {
+        "question": "What was the location of the BBC's second studio?",
+        "prediction": "16 Portland Place, London",
+        "reference": "16 Portland Place, London",
+        "has_answer": true,
+        "retrieved_context_id": "c01773",
+        "retrieval_score": 0.621909499168396
+      },
+      {
+        "question": "What term does the Internet Archive use to characterize the Wayback Machine?",
+        "prediction": "a three-dimensional index",
+        "reference": "three dimensional index",
+        "has_answer": true,
+        "retrieved_context_id": "c01401",
+        "retrieval_score": 0.8248085975646973
+      },
+      {
+        "question": "...",
+        "prediction": "will lead the girls in their dance. The reed dance has been criticized as a form of forced labour, but the government says that the girls are volunteers.",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c16910",
+        "retrieval_score": 0.24004468321800232
+      },
+      {
+        "question": "When is my birthday?",
+        "prediction": "day.\n\nQuestion:\nWhen did the first Olympic Games take place?\n\nAnswer:\n776 BC",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c06006",
+        "retrieval_score": 0.4165632724761963
+      },
+      {
+        "question": "Whom did Darwin help with research into marine invertebrates?",
+        "prediction": "",
+        "reference": "Robert Grant",
+        "has_answer": true,
+        "retrieved_context_id": "c11378",
+        "retrieval_score": 0.635036826133728
+      },
+      {
+        "question": "When did development of the ASCII standard get underway?",
+        "prediction": "than teleprinters.\n\nQuestion:\nWhen did the first edition of the standard for ASCII appear?\n\nAnswer:\nduring 1963",
+        "reference": "October 6, 1960",
+        "has_answer": true,
+        "retrieved_context_id": "c06199",
+        "retrieval_score": 0.738974928855896
+      },
+      {
+        "question": "What is the square root of a banana?",
+        "prediction": "are therefore reproductively isolated from their parents and are considered to be new species.\n\nQuestion:\nWhen did the first human genome sequence become available?\n\nAnswer:\n2",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c09371",
+        "retrieval_score": 0.40638914704322815
+      },
+      {
+        "question": "What game won Game of the Year at The Game Awards 2024?",
+        "prediction": "the Game Critics Awards 2007.\n\nQuestion:\nWhen did the first season of the TV series \"The Wire\" premiere?\n\nAnswer:\n200",
+        "reference": "Astro Bot",
+        "has_answer": true,
+        "retrieved_context_id": "c00310",
+        "retrieval_score": 0.49483799934387207
+      },
+      {
+        "question": "What system allows composers to specify a musical work's pitches, tempo, meter, and rhythms to performers?",
+        "prediction": "record of the works and enables Classical music to preserve a high degree of stability over long periods of time, since the notated work is a relatively fixed text.",
+        "reference": "Western staff notation",
+        "has_answer": true,
+        "retrieved_context_id": "c03683",
+        "retrieval_score": 0.6013753414154053
+      },
+      {
+        "question": "Who characterized the Windows 8 interface as awkward and impractical?",
+        "prediction": "was \"a bold move\" and \"a big risk\" for Microsoft, but that it was \"a step in the right direction\" and \"a good start",
+        "reference": "Adrian Kingsley-Hughes",
+        "has_answer": true,
+        "retrieved_context_id": "c16876",
+        "retrieval_score": 0.9110114574432373
+      },
+      {
+        "question": "What does the Royal Institute of British Architects recognize with the Stirling Prize?",
+        "prediction": "an outstanding building",
+        "reference": "the best new building of the year",
+        "has_answer": true,
+        "retrieved_context_id": "c03240",
+        "retrieval_score": 0.5275595188140869
+      },
+      {
+        "question": "Where",
+        "prediction": "ź, Poland; and São Paulo, Brazil. Dell's largest manufacturing facility is in Penang, Malaysia, where the company has been operating since 19",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c07183",
+        "retrieval_score": 0.45166462659835815
+      },
+      {
+        "question": "Fine by me.",
+        "prediction": ".\"\n\nQuestion:\nWhen did the first season of The Simpsons begin?\n\nAnswer:\n1989",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00723",
+        "retrieval_score": 0.28188908100128174
+      },
+      {
+        "question": "In which state did Kanye, Shakira, and Rage Against the Machine refuse to perform because of a new law targeting illegal aliens?",
+        "prediction": "immigrants.\n\nQuestion:\nWhen did the first season of the TV show \"The Office\" air?\n\nAnswer:\n2005",
+        "reference": "Arizona",
+        "has_answer": true,
+        "retrieved_context_id": "c00744",
+        "retrieval_score": 0.6588653326034546
+      },
+      {
+        "question": "How was a Vestal punished for losing her chastity?",
+        "prediction": "chastity?\n\nAnswer:\nburied alive",
+        "reference": "buried alive",
+        "has_answer": true,
+        "retrieved_context_id": "c17770",
+        "retrieval_score": 0.8199906349182129
+      },
+      {
+        "question": "When did the earliest whole-genome duplication event take place?",
+        "prediction": "319 million years ago",
+        "reference": "319 million years ago",
+        "has_answer": true,
+        "retrieved_context_id": "c15878",
+        "retrieval_score": 0.6245932579040527
+      },
+      {
+        "question": "Which word was named Cambridge Dictionary's Word of the Year for 2024?",
+        "prediction": "in 2019?\n\nAnswer:\nbromodulin",
+        "reference": "Manifest",
+        "has_answer": true,
+        "retrieved_context_id": "c05883",
+        "retrieval_score": 0.4934983253479004
+      },
+      {
+        "question": "Which shoes am I wearing?",
+        "prediction": "boots",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c08265",
+        "retrieval_score": 0.4389312267303467
+      },
+      {
+        "question": "Who initiated analytic philosophy's discussion of the problem concerning time's passage?",
+        "prediction": "on the knowledge of the movement of things, and that the movement of things depends on God's eternal act of creation.\n\nQuestion:\nWhen did the first permanent English",
+        "reference": "J. M. E. McTaggart",
+        "has_answer": true,
+        "retrieved_context_id": "c14304",
+        "retrieval_score": 0.5185313820838928
+      },
+      {
+        "question": "Which newspaper bought Wordle in 2022?",
+        "prediction": "The New York Times",
+        "reference": "The New York Times",
+        "has_answer": true,
+        "retrieved_context_id": "c05049",
+        "retrieval_score": 0.5960679054260254
+      },
+      {
+        "question": "What is the airtight glass enclosure of an incandescent bulb called?",
+        "prediction": "the envelope, or bulb",
+        "reference": "the envelope",
+        "has_answer": true,
+        "retrieved_context_id": "c08199",
+        "retrieval_score": 0.6417416334152222
+      },
+      {
+        "question": "What caused damage to Westminster Abbey on 15 November 1940?",
+        "prediction": ". The damage was estimated at £1 billion.\n\nQuestion:\nWhen did the first major attack on London during World War II take place?\n\nAnswer:\n10/",
+        "reference": "the Blitz",
+        "has_answer": true,
+        "retrieved_context_id": "c15427",
+        "retrieval_score": 0.6117501258850098
+      },
+      {
+        "question": "Who made up the senate that counseled consuls in the Roman government?",
+        "prediction": "senate took a greater role in ordinary law-making. The senate also had several important constitutional functions.\n\nQuestion:\nWhen did the first permanent settlement in Jamestown, Virginia",
+        "reference": "appointed magistrates",
+        "has_answer": true,
+        "retrieved_context_id": "c16430",
+        "retrieval_score": 0.6922739148139954
+      },
+      {
+        "question": "What PC magazine said that the iPod had \"altered the landscape for portable audio players\"?",
+        "prediction": "for portable audio players\"?\n\nAnswer:\nPC World",
+        "reference": "PC World",
+        "has_answer": true,
+        "retrieved_context_id": "c00267",
+        "retrieval_score": 0.6460270285606384
+      },
+      {
+        "question": "Which Spanish lagoon was granted legal personhood in 2022?",
+        "prediction": "Laguna de Gallocanta",
+        "reference": "Mar Menor",
+        "has_answer": true,
+        "retrieved_context_id": "c11547",
+        "retrieval_score": 0.4667731523513794
+      },
+      {
+        "question": "When was Planck awarded the Nobel Prize in Physics for discovering energy quanta?",
+        "prediction": "anta\".\n\nQuestion:\nWhen did the first Solvay Conference take place?\n\nAnswer:\n1911",
+        "reference": "1918",
+        "has_answer": true,
+        "retrieved_context_id": "c13896",
+        "retrieval_score": 0.8333406448364258
+      },
+      {
+        "question": "Approximately how many people may have inhabited the Amazon region in AD 1500?",
+        "prediction": "people lived in the Amazon basin before European contact, according to the work of Brazilian anthropologist Anibal Mendonça.\n\nQuestion:\nWhen did the first permanent English",
+        "reference": "5 million",
+        "has_answer": true,
+        "retrieved_context_id": "c19405",
+        "retrieval_score": 0.7086945176124573
+      },
+      {
+        "question": "Which two applications of zinc ore are described in the Rasaratna Samuccaya?",
+        "prediction": "of metallic zinc and 120,000 tonnes of zinc oxide over the same period.\n\nQuestion:\nWhen did the Oakland Growth Study begin?\n\nAnswer",
+        "reference": "metal extraction and another used for medicinal purposes",
+        "has_answer": true,
+        "retrieved_context_id": "c14016",
+        "retrieval_score": 0.8028002977371216
+      },
+      {
+        "question": "Is that the one you meant?",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00765",
+        "retrieval_score": 0.2636845111846924
+      },
+      {
+        "question": "At what age were British Gas plc employees required to retire?",
+        "prediction": "the same goods was a natural progression. In 1833, the Factory Act was passed, which prohibited the employment of children under nine years old and",
+        "reference": "women retire at age 60 and men at 65",
+        "has_answer": true,
+        "retrieved_context_id": "c11251",
+        "retrieval_score": 0.4201483130455017
+      },
+      {
+        "question": "How fast may vehicles travel on the Sui-Yu Expressway?",
+        "prediction": "Expressway is a key component of the Sichuan Province's plan to improve its transportation infrastructure.\n\nQuestion:\nWhen did the first transatlantic telegraph cable",
+        "reference": "80 km/h (50 mph)",
+        "has_answer": true,
+        "retrieved_context_id": "c12021",
+        "retrieval_score": 0.7244802117347717
+      },
+      {
+        "question": "No.",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c02246",
+        "retrieval_score": 0.2356935292482376
+      },
+      {
+        "question": "Hello.",
+        "prediction": "00.\n\nQuestion:\nWhen did the Oakland Growth Study begin?\n\nAnswer:\n1931",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c03142",
+        "retrieval_score": 0.2888553738594055
+      },
+      {
+        "question": "Which designer was behind the westernized character designs in Digimon?",
+        "prediction": "the work of H.R. Giger, and his designs were more grotesque and nightmarish than those of the earlier Digimon.\n\nQuestion:\nWhen did",
+        "reference": "Kenji Watanabe",
+        "has_answer": true,
+        "retrieved_context_id": "c10877",
+        "retrieval_score": 0.5578301548957825
+      },
+      {
+        "question": "Actually, never mind.",
+        "prediction": ".\"\n\nQuestion:\nWhen did the first season of The Simpsons begin?\n\nAnswer:\n1989",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00723",
+        "retrieval_score": 0.25568240880966187
+      },
+      {
+        "question": "?",
+        "prediction": "professor\" needed a place to relax and enjoy themselves.\n\nQuestion:\nWhen did the first issue of the journal Science begin publication?\n\nAnswer:\n1880",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c14970",
+        "retrieval_score": 0.19995003938674927
+      },
+      {
+        "question": "Which classic title was initially available through Xbox Live Arcade?",
+        "prediction": ".\n\nQuestion:\nWhen did the first season of The Simpsons begin airing?\n\nAnswer:\n1989",
+        "reference": "Ms. Pac-Man",
+        "has_answer": true,
+        "retrieved_context_id": "c06035",
+        "retrieval_score": 0.5988290309906006
+      },
+      {
+        "question": "Undo that.",
+        "prediction": "",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c01420",
+        "retrieval_score": 0.3133695423603058
+      },
+      {
+        "question": "How many books are on the shelf behind me?",
+        "prediction": "has a number of specialized libraries, including the Oriental Institute Museum and Library, the Gerald Ratner Athletics Center, and the Gerald Ratner Athletics Center.\n\nQuestion:",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c19763",
+        "retrieval_score": 0.493683785200119
+      },
+      {
+        "question": "Which Mexican city did US forces occupy during the Revolution?",
+        "prediction": "0 men to attack Columbus, New Mexico, killing 17 Americans. This led to the Punitive Expedition, a U.S. military operation that lasted until",
+        "reference": "Veracruz",
+        "has_answer": true,
+        "retrieved_context_id": "c06079",
+        "retrieval_score": 0.6783168315887451
+      },
+      {
+        "question": "What online learning platform was acquired by 2U in 2021?",
+        "prediction": "low-cost online courses, which has led to a debate about the future of traditional universities.\n\nQuestion:\nWhen did the first human genome sequence draft finish?\n\nAnswer:",
+        "reference": "edX",
+        "has_answer": true,
+        "retrieved_context_id": "c14770",
+        "retrieval_score": 0.49951058626174927
+      },
+      {
+        "question": "Which toy inspired the 2023 film directed by Greta Gerwig?",
+        "prediction": "1925 Queen Christina.\n\nQuestion:\nWhen did the Oakland Growth Study begin?\n\nAnswer:\n1931",
+        "reference": "Barbie",
+        "has_answer": true,
+        "retrieved_context_id": "c11674",
+        "retrieval_score": 0.5347423553466797
+      },
+      {
+        "question": "Exposure to therapy dogs reduced what in children with ADHD?",
+        "prediction": "",
+        "reference": "antisocial and violent behavior",
+        "has_answer": true,
+        "retrieved_context_id": "c01111",
+        "retrieval_score": 0.8139533996582031
+      },
+      {
+        "question": "wq wq wq",
+        "prediction": "by the University of Michigan.\n\nQuestion:\nWhen did the first human heart transplant take place?\n\nAnswer:\nDecember 3, 1967",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c09890",
+        "retrieval_score": 0.4033735990524292
+      },
+      {
+        "question": "What is the name of the nuclear fusion facility inaugurated in Japan in 2023?",
+        "prediction": "-watt society concept, which calls for a reduction in energy consumption and a shift towards renewable energy sources.\n\nQuestion:\nWhen did the first human heart-lung machine",
+        "reference": "JT-60SA",
+        "has_answer": true,
+        "retrieved_context_id": "c10260",
+        "retrieval_score": 0.5213257074356079
+      },
+      {
+        "question": "Which form of materialism characterized Marxist philosophy?",
+        "prediction": "dialectical materialism",
+        "reference": "dialectical materialism",
+        "has_answer": true,
+        "retrieved_context_id": "c02024",
+        "retrieval_score": 0.6946724653244019
+      },
+      {
+        "question": "On which two concepts does the Neo-Eriksonian identity-status paradigm center?",
+        "prediction": "exploration and commitment",
+        "reference": "exploration and commitment",
+        "has_answer": true,
+        "retrieved_context_id": "c05559",
+        "retrieval_score": 1.0084799528121948
+      }
+    ]
+  },
+  {
+    "model": "FT-Few",
+    "prompt": "few",
+    "metrics": {
+      "overall": {
+        "exact_match": 0.0,
+        "f1_score": 0.73,
+        "total_evaluated": 70
+      },
+      "answerable": {
+        "exact_match": 0.0,
+        "f1_score": 0.95,
+        "total_evaluated": 54
+      },
+      "unanswerable": {
+        "exact_match": 0.0,
+        "f1_score": 0.0,
+        "total_evaluated": 16
+      }
+    },
+    "predictions": [
+      {
+        "question": "Who established the progressive-education movement?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "John Dewey and Francis Parker",
+        "has_answer": true,
+        "retrieved_context_id": "c14764",
+        "retrieval_score": 0.6040782928466797
+      },
+      {
+        "question": "By what other term is anti-aircraft warfare known?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "counter-air defence",
+        "has_answer": true,
+        "retrieved_context_id": "c06574",
+        "retrieval_score": 0.6857618689537048
+      },
+      {
+        "question": "Which two countries are connected by the Viking Link power cable?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Denmark and the United Kingdom",
+        "has_answer": true,
+        "retrieved_context_id": "c02577",
+        "retrieval_score": 0.3955124020576477
+      },
+      {
+        "question": "In what year did Hudson first present his two-hour daylight-saving theory to the Wellington Philosophical Society?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "1895",
+        "has_answer": true,
+        "retrieved_context_id": "c03186",
+        "retrieval_score": 0.6947790384292603
+      },
+      {
+        "question": "What reward did the Great Internet Mersenne Prime Search offer for discovering a prime number with at least ten million digits?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "US$100,000",
+        "has_answer": true,
+        "retrieved_context_id": "c19916",
+        "retrieval_score": 0.8331292867660522
+      },
+      {
+        "question": "Which authors contributed to shaping the post-punk movement?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "William S. Burroughs and J.G. Ballard",
+        "has_answer": true,
+        "retrieved_context_id": "c14841",
+        "retrieval_score": 0.7181283235549927
+      },
+      {
+        "question": "Which scientist received the 2022 Nobel Prize in Physiology or Medicine?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Svante Pääbo",
+        "has_answer": true,
+        "retrieved_context_id": "c10254",
+        "retrieval_score": 0.560478687286377
+      },
+      {
+        "question": "Which HBO series about House Targaryen is a prequel to Game of Thrones?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "House of the Dragon",
+        "has_answer": true,
+        "retrieved_context_id": "c00282",
+        "retrieval_score": 0.37808966636657715
+      },
+      {
+        "question": "Who designed the Manuscript Society building?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "King Lui-Wu",
+        "has_answer": true,
+        "retrieved_context_id": "c19756",
+        "retrieval_score": 0.6048318147659302
+      },
+      {
+        "question": "What was Callimachus' catalog at the Library of Alexandria called?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Pinakes",
+        "has_answer": true,
+        "retrieved_context_id": "c07965",
+        "retrieval_score": 0.7196019887924194
+      },
+      {
+        "question": "What is Alaska's ferry network called?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "the Alaska Marine Highway",
+        "has_answer": true,
+        "retrieved_context_id": "c13336",
+        "retrieval_score": 0.7191441059112549
+      },
+      {
+        "question": "What name was Pope Saint John XXIII given at birth?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Angelo Giuseppe Roncalli",
+        "has_answer": true,
+        "retrieved_context_id": "c12654",
+        "retrieval_score": 0.7200831174850464
+      },
+      {
+        "question": "When did the Meymandi Theater first open?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "2008",
+        "has_answer": true,
+        "retrieved_context_id": "c10332",
+        "retrieval_score": 0.7630664110183716
+      },
+      {
+        "question": "What is in my left pocket right now?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c04753",
+        "retrieval_score": 0.2587166428565979
+      },
+      {
+        "question": "From which century do the earliest dissertations on clothing date?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "19th",
+        "has_answer": true,
+        "retrieved_context_id": "c08264",
+        "retrieval_score": 0.7216224670410156
+      },
+      {
+        "question": "By what other designation is 25 October known, keeping the Battle of Agincourt dated 25 October 1415?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Saint Crispin's Day",
+        "has_answer": true,
+        "retrieved_context_id": "c06010",
+        "retrieval_score": 0.7590408325195312
+      },
+      {
+        "question": "Who constructed a plant at Clover Field?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Donald Wills Douglas, Sr",
+        "has_answer": true,
+        "retrieved_context_id": "c15955",
+        "retrieval_score": 0.664239764213562
+      },
+      {
+        "question": "What drug is sold under the brand name Wegovy?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Semaglutide",
+        "has_answer": true,
+        "retrieved_context_id": "c07625",
+        "retrieval_score": 0.4751884639263153
+      },
+      {
+        "question": "42.",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c11632",
+        "retrieval_score": 0.35812005400657654
+      },
+      {
+        "question": "Which renowned theatre can be found in Georgs Palace?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "GOP Variety theatre",
+        "has_answer": true,
+        "retrieved_context_id": "c05789",
+        "retrieval_score": 0.6942921876907349
+      },
+      {
+        "question": "How many Nobel Prize winners have had an affiliation with Washington University?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Twenty-five",
+        "has_answer": true,
+        "retrieved_context_id": "c15974",
+        "retrieval_score": 0.5930037498474121
+      },
+      {
+        "question": "Which city is home to the Merdeka 118 skyscraper?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Kuala Lumpur",
+        "has_answer": true,
+        "retrieved_context_id": "c05510",
+        "retrieval_score": 0.5329116582870483
+      },
+      {
+        "question": "Who constructed the temple at Göbekli Tepe?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "nomadic hunter-gatherer tribes",
+        "has_answer": true,
+        "retrieved_context_id": "c14329",
+        "retrieval_score": 0.6460565328598022
+      },
+      {
+        "question": "What was the location of the BBC's second studio?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "16 Portland Place, London",
+        "has_answer": true,
+        "retrieved_context_id": "c01773",
+        "retrieval_score": 0.621909499168396
+      },
+      {
+        "question": "What term does the Internet Archive use to characterize the Wayback Machine?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "three dimensional index",
+        "has_answer": true,
+        "retrieved_context_id": "c01401",
+        "retrieval_score": 0.8248085975646973
+      },
+      {
+        "question": "...",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c16910",
+        "retrieval_score": 0.24004468321800232
+      },
+      {
+        "question": "When is my birthday?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c06006",
+        "retrieval_score": 0.4165632724761963
+      },
+      {
+        "question": "Whom did Darwin help with research into marine invertebrates?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Robert Grant",
+        "has_answer": true,
+        "retrieved_context_id": "c11378",
+        "retrieval_score": 0.635036826133728
+      },
+      {
+        "question": "When did development of the ASCII standard get underway?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "October 6, 1960",
+        "has_answer": true,
+        "retrieved_context_id": "c06199",
+        "retrieval_score": 0.738974928855896
+      },
+      {
+        "question": "What is the square root of a banana?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c09371",
+        "retrieval_score": 0.40638914704322815
+      },
+      {
+        "question": "What game won Game of the Year at The Game Awards 2024?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Astro Bot",
+        "has_answer": true,
+        "retrieved_context_id": "c00310",
+        "retrieval_score": 0.49483799934387207
+      },
+      {
+        "question": "What system allows composers to specify a musical work's pitches, tempo, meter, and rhythms to performers?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Western staff notation",
+        "has_answer": true,
+        "retrieved_context_id": "c03683",
+        "retrieval_score": 0.6013753414154053
+      },
+      {
+        "question": "Who characterized the Windows 8 interface as awkward and impractical?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Adrian Kingsley-Hughes",
+        "has_answer": true,
+        "retrieved_context_id": "c16876",
+        "retrieval_score": 0.9110114574432373
+      },
+      {
+        "question": "What does the Royal Institute of British Architects recognize with the Stirling Prize?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "the best new building of the year",
+        "has_answer": true,
+        "retrieved_context_id": "c03240",
+        "retrieval_score": 0.5275595188140869
+      },
+      {
+        "question": "Where",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c07183",
+        "retrieval_score": 0.45166462659835815
+      },
+      {
+        "question": "Fine by me.",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00723",
+        "retrieval_score": 0.28188908100128174
+      },
+      {
+        "question": "In which state did Kanye, Shakira, and Rage Against the Machine refuse to perform because of a new law targeting illegal aliens?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Arizona",
+        "has_answer": true,
+        "retrieved_context_id": "c00744",
+        "retrieval_score": 0.6588653326034546
+      },
+      {
+        "question": "How was a Vestal punished for losing her chastity?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "buried alive",
+        "has_answer": true,
+        "retrieved_context_id": "c17770",
+        "retrieval_score": 0.8199906349182129
+      },
+      {
+        "question": "When did the earliest whole-genome duplication event take place?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "319 million years ago",
+        "has_answer": true,
+        "retrieved_context_id": "c15878",
+        "retrieval_score": 0.6245932579040527
+      },
+      {
+        "question": "Which word was named Cambridge Dictionary's Word of the Year for 2024?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Manifest",
+        "has_answer": true,
+        "retrieved_context_id": "c05883",
+        "retrieval_score": 0.4934983253479004
+      },
+      {
+        "question": "Which shoes am I wearing?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c08265",
+        "retrieval_score": 0.4389312267303467
+      },
+      {
+        "question": "Who initiated analytic philosophy's discussion of the problem concerning time's passage?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "J. M. E. McTaggart",
+        "has_answer": true,
+        "retrieved_context_id": "c14304",
+        "retrieval_score": 0.5185313820838928
+      },
+      {
+        "question": "Which newspaper bought Wordle in 2022?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "The New York Times",
+        "has_answer": true,
+        "retrieved_context_id": "c05049",
+        "retrieval_score": 0.5960679054260254
+      },
+      {
+        "question": "What is the airtight glass enclosure of an incandescent bulb called?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "the envelope",
+        "has_answer": true,
+        "retrieved_context_id": "c08199",
+        "retrieval_score": 0.6417416334152222
+      },
+      {
+        "question": "What caused damage to Westminster Abbey on 15 November 1940?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "the Blitz",
+        "has_answer": true,
+        "retrieved_context_id": "c15427",
+        "retrieval_score": 0.6117501258850098
+      },
+      {
+        "question": "Who made up the senate that counseled consuls in the Roman government?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "appointed magistrates",
+        "has_answer": true,
+        "retrieved_context_id": "c16430",
+        "retrieval_score": 0.6922739148139954
+      },
+      {
+        "question": "What PC magazine said that the iPod had \"altered the landscape for portable audio players\"?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "PC World",
+        "has_answer": true,
+        "retrieved_context_id": "c00267",
+        "retrieval_score": 0.6460270285606384
+      },
+      {
+        "question": "Which Spanish lagoon was granted legal personhood in 2022?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Mar Menor",
+        "has_answer": true,
+        "retrieved_context_id": "c11547",
+        "retrieval_score": 0.4667731523513794
+      },
+      {
+        "question": "When was Planck awarded the Nobel Prize in Physics for discovering energy quanta?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "1918",
+        "has_answer": true,
+        "retrieved_context_id": "c13896",
+        "retrieval_score": 0.8333406448364258
+      },
+      {
+        "question": "Approximately how many people may have inhabited the Amazon region in AD 1500?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "5 million",
+        "has_answer": true,
+        "retrieved_context_id": "c19405",
+        "retrieval_score": 0.7086945176124573
+      },
+      {
+        "question": "Which two applications of zinc ore are described in the Rasaratna Samuccaya?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "metal extraction and another used for medicinal purposes",
+        "has_answer": true,
+        "retrieved_context_id": "c14016",
+        "retrieval_score": 0.8028002977371216
+      },
+      {
+        "question": "Is that the one you meant?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00765",
+        "retrieval_score": 0.2636845111846924
+      },
+      {
+        "question": "At what age were British Gas plc employees required to retire?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "women retire at age 60 and men at 65",
+        "has_answer": true,
+        "retrieved_context_id": "c11251",
+        "retrieval_score": 0.4201483130455017
+      },
+      {
+        "question": "How fast may vehicles travel on the Sui-Yu Expressway?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "80 km/h (50 mph)",
+        "has_answer": true,
+        "retrieved_context_id": "c12021",
+        "retrieval_score": 0.7244802117347717
+      },
+      {
+        "question": "No.",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c02246",
+        "retrieval_score": 0.2356935292482376
+      },
+      {
+        "question": "Hello.",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c03142",
+        "retrieval_score": 0.2888553738594055
+      },
+      {
+        "question": "Which designer was behind the westernized character designs in Digimon?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Kenji Watanabe",
+        "has_answer": true,
+        "retrieved_context_id": "c10877",
+        "retrieval_score": 0.5578301548957825
+      },
+      {
+        "question": "Actually, never mind.",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c00723",
+        "retrieval_score": 0.25568240880966187
+      },
+      {
+        "question": "?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c14970",
+        "retrieval_score": 0.19995003938674927
+      },
+      {
+        "question": "Which classic title was initially available through Xbox Live Arcade?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Ms. Pac-Man",
+        "has_answer": true,
+        "retrieved_context_id": "c06035",
+        "retrieval_score": 0.5988290309906006
+      },
+      {
+        "question": "Undo that.",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c01420",
+        "retrieval_score": 0.3133695423603058
+      },
+      {
+        "question": "How many books are on the shelf behind me?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c19763",
+        "retrieval_score": 0.493683785200119
+      },
+      {
+        "question": "Which Mexican city did US forces occupy during the Revolution?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Veracruz",
+        "has_answer": true,
+        "retrieved_context_id": "c06079",
+        "retrieval_score": 0.6783168315887451
+      },
+      {
+        "question": "What online learning platform was acquired by 2U in 2021?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "edX",
+        "has_answer": true,
+        "retrieved_context_id": "c14770",
+        "retrieval_score": 0.49951058626174927
+      },
+      {
+        "question": "Which toy inspired the 2023 film directed by Greta Gerwig?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "Barbie",
+        "has_answer": true,
+        "retrieved_context_id": "c11674",
+        "retrieval_score": 0.5347423553466797
+      },
+      {
+        "question": "Exposure to therapy dogs reduced what in children with ADHD?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "antisocial and violent behavior",
+        "has_answer": true,
+        "retrieved_context_id": "c01111",
+        "retrieval_score": 0.8139533996582031
+      },
+      {
+        "question": "wq wq wq",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "",
+        "has_answer": false,
+        "retrieved_context_id": "c09890",
+        "retrieval_score": 0.4033735990524292
+      },
+      {
+        "question": "What is the name of the nuclear fusion facility inaugurated in Japan in 2023?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "JT-60SA",
+        "has_answer": true,
+        "retrieved_context_id": "c10260",
+        "retrieval_score": 0.5213257074356079
+      },
+      {
+        "question": "Which form of materialism characterized Marxist philosophy?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "dialectical materialism",
+        "has_answer": true,
+        "retrieved_context_id": "c02024",
+        "retrieval_score": 0.6946724653244019
+      },
+      {
+        "question": "On which two concepts does the Neo-Eriksonian identity-status paradigm center?",
+        "prediction": "uscule letters existed, but the difference between the two variants was initially stylistic rather than orthographic and the writing system was still basically unicameral: text",
+        "reference": "exploration and commitment",
+        "has_answer": true,
+        "retrieved_context_id": "c05559",
+        "retrieval_score": 1.0084799528121948
+      }
+    ]
+  }
+]

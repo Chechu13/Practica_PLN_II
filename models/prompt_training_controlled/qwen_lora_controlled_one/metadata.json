@@ -1,0 +1,26 @@
+{
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "prompt_strategy": "one",
+  "prompt_file": "controlled_one.md",
+  "adapter": "qwen_lora_controlled_one",
+  "seed": 42,
+  "epochs": 1,
+  "learning_rate": 0.0002,
+  "batch_size": 1,
+  "gradient_accumulation_steps": 4,
+  "max_length": 512,
+  "max_target_length": 96,
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.05,
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "retriever": "ContextRetriever (local only)",
+  "train_size": 280,
+  "test_size": 70,
+  "test_used_for_training": false
+}

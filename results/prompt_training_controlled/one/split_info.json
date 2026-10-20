@@ -1,0 +1,7 @@
+{
+  "seed": 42,
+  "train_size": 280,
+  "test_size": 70,
+  "test_used_for_training": false,
+  "prompt_strategy": "one"
+}

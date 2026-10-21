@@ -1,0 +1,17 @@
+{
+  "n_total": 70,
+  "n_success": 70,
+  "n_errors": 0,
+  "EM_percent": 75.71428571428571,
+  "F1_percent": 79.86054421768708,
+  "answerable_F1_percent": 75.74514991181658,
+  "unanswerable_F1_percent": 93.75,
+  "empty_prediction_rate_percent": 21.428571428571427,
+  "generation_total_seconds": 23.03283850000298,
+  "generation_mean_seconds": 0.32904055000004256,
+  "generation_p50_seconds": 0.3116469000087818,
+  "generation_p95_seconds": 0.5548547599966694,
+  "rag_total_mean_seconds": 0.5763260757134828,
+  "mean_tokens_per_second": 11.908964599849137,
+  "mean_generated_tokens": 4.314285714285714
+}

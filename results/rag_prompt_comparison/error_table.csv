@@ -1,0 +1,5 @@
+﻿Modelo,Preguntas respondibles,Respondibles con respuesta vacía,Preguntas no respondibles,No respondibles con respuesta vacía,Total de respuestas vacías,Errores de ejecución
+BASE,54,0,16,0,0,0
+FT_zero,54,0,16,15,15,0
+FT_one,54,0,16,12,12,0
+FT_few,54,0,16,15,15,0

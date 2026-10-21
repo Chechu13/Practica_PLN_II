@@ -1,0 +1,5 @@
+﻿Modelo,Preguntas,EM (%),F1 (%),F1 respondibles (%),F1 no respondibles (%)
+BASE,70,15.71,31.11,40.33,0.0
+FT_zero,70,78.57,81.86,78.34,93.75
+FT_one,70,58.57,67.28,65.0,75.0
+FT_few,70,75.71,79.86,75.75,93.75

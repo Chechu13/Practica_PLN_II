@@ -1,0 +1,4 @@
+﻿Modelo,Δ EM (pp),Δ F1 (pp),Mejora relativa F1 (%)
+FT_zero,62.86,50.75,163.1
+FT_one,42.86,36.17,116.25
+FT_few,60.0,48.75,156.67

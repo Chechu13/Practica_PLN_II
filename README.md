@@ -2,13 +2,13 @@
 
 > Práctica de **Procesamiento del Lenguaje Natural II** del Grado en Inteligencia Artificial.
 >
-> Proyecto experimental de respuesta a preguntas factuales en inglés con recuperación de contexto (*retrieval-augmented generation*, RAG), modelos Transformer y evaluación cuantitativa.
+> Proyecto experimental de respuesta a preguntas factuales en inglés mediante recuperación de contexto (*retrieval-augmented generation*, RAG), modelos Transformer y evaluación cuantitativa.
 
 ## Descripción
 
-El objetivo es generar respuestas fundamentadas en una colección interna de contextos procedentes de Wikipedia. El proyecto compara distintas estrategias de recuperación y generación, desde arquitecturas Transformer implementadas con PyTorch hasta modelos de Hugging Face, incluido **Qwen2.5-7B-Instruct con fine-tuning mediante LoRA**.
+El objetivo es generar respuestas fundamentadas en una colección local de contextos procedentes de Wikipedia. El proyecto explora distintas estrategias de recuperación y generación, desde arquitecturas Transformer implementadas con PyTorch hasta modelos de Hugging Face, incluido **Qwen2.5-7B-Instruct ajustado mediante LoRA**.
 
-La evaluación considera la coincidencia exacta de las respuestas, el solapamiento de tokens y, en algunos experimentos, el comportamiento por separado en preguntas respondibles y no respondibles.
+La evaluación utiliza Exact Match (EM) y F1 a nivel de tokens. En el experimento de prompting también se analizan por separado las preguntas respondibles y no respondibles, la latencia y el consumo de memoria.
 
 ## Enfoques explorados
 
@@ -16,17 +16,17 @@ La evaluación considera la coincidencia exacta de las respuestas, el solapamien
 - Recuperación semántica mediante embeddings con `sentence-transformers/multi-qa-MiniLM-L6-cos-v1`.
 - Recuperación híbrida que combina similitud semántica y señales léxicas.
 - Recuperación con *fallback* externo en experimentos específicos.
-- Decoder Transformer y Encoder-Decoder Transformer implementados desde cero con PyTorch.
+- Decoder Transformer y Encoder-Decoder Transformer implementados con PyTorch.
 - Modelos de Hugging Face como referencia.
-- Fine-tuning de `Qwen/Qwen2.5-7B-Instruct` mediante LoRA.
-- Comparación entre modelo base y modelo ajustado, y entre variantes de recuperación.
-- Estudio de estrategias de prompting: **zero-shot, one-shot y few-shot**, tanto con el modelo base como con adaptadores LoRA entrenados por separado.
+- Fine-tuning de `Qwen/Qwen2.5-7B-Instruct` mediante adaptadores LoRA.
+- Comparación entre modelo base y modelos ajustados.
+- Estudio de estrategias de prompting **zero-shot, one-shot y few-shot**, con adaptadores entrenados por separado.
 
 ## Resultados
 
-### Comparación de recuperación: modelo base frente a fine-tuning
+### Experimento previo: recuperación con y sin fallback
 
-La siguiente tabla recoge un experimento previo de comparación sobre **70 preguntas de test**. Las puntuaciones se expresan en porcentaje.
+Esta tabla corresponde a un experimento anterior sobre 70 preguntas de test. Se conserva por separado del estudio de prompting porque las configuraciones no son idénticas.
 
 | Configuración | EM (%) | F1 (%) | N |
 |---|---:|---:|---:|
@@ -35,46 +35,49 @@ La siguiente tabla recoge un experimento previo de comparación sobre **70 pregu
 | Qwen Fine-tuned + Context | **71.43** | **75.35** | 70 |
 | Qwen Fine-tuned + Fallback | 68.57 | 73.96 | 70 |
 
-Estos valores pertenecen a ese experimento concreto y no deben combinarse directamente con los resultados del estudio de prompting descrito a continuación.
+### Comparación de prompting y adaptadores LoRA
 
-### Estudio de prompting y adaptadores LoRA
+El conjunto contiene 350 ejemplos. Con `train_test_split(test_size=0.2, random_state=42)`, se utilizan 280 para entrenamiento y 70 para test. La evaluación del notebook compara el modelo base (`BASE`) con tres adaptadores: `FT_zero`, `FT_one` y `FT_few`.
 
-Se entrenaron adaptadores LoRA independientes para las estrategias zero-shot, one-shot y few-shot, usando una partición de entrenamiento/test de 280/70 ejemplos. El objetivo es medir si los ejemplos incluidos en el prompt aportan una mejora adicional y cómo interactúan con el fine-tuning.
+Resultados registrados en la ejecución más reciente:
 
-Resultados preliminares observados en la gráfica de comparación:
+| Modelo | EM (%) | F1 (%) | F1 respondibles (%) | F1 no respondibles (%) | Tiempo medio de generación (s) |
+|---|---:|---:|---:|---:|---:|
+| BASE | 15.71 | 31.11 | 40.33 | 0.00 | 4.651 |
+| FT_zero | **78.57** | **81.86** | 78.34 | 93.75 | 1.800 |
+| FT_one | 58.57 | 67.28 | 65.00 | 75.00 | 0.417 |
+| FT_few | 75.71 | 79.86 | 75.75 | 93.75 | **0.329** |
 
-| Configuración | F1 global aproximado (%) | Interpretación provisional |
-|---|---:|---|
-| Base-Zero | 31 | Mejor que Base-One en esta ejecución |
-| Base-One | 12 | Rendimiento bajo |
-| Base-Few | 0 | Resultado que requiere validación |
-| FT-Zero | **80** | Mejor resultado observado en esta ejecución |
-| FT-One | 21 | Muy inferior a FT-Zero |
-| FT-Few | 0 | Resultado que requiere validación |
+Cada condición obtuvo 70 predicciones correctas en el sentido de que no hubo errores de ejecución; esto no significa que todas las respuestas fueran correctas. Los valores de EM y F1 evalúan la calidad de las predicciones.
 
-Los valores de esta tabla son **lecturas aproximadas de la gráfica**, no una transcripción del CSV de resultados. Deben sustituirse por las cifras exactas de `results/prompt_training_comparison/summary.csv` cuando estén disponibles.
+En esta ejecución, `FT_zero` obtuvo el mejor EM y F1 global. `FT_few` quedó aproximadamente **2 puntos de F1** por debajo y tuvo la menor latencia media de generación. `FT_one` quedó por debajo de las otras dos variantes ajustadas. La mejora de los adaptadores frente a BASE es notable en este conjunto de test.
 
-La evaluación preliminar favorece al adaptador entrenado con zero-shot. Sin embargo, la caída extrema de las variantes few-shot —y la diferencia entre adaptadores— hace necesario validar antes de extraer conclusiones definitivas:
+Estas observaciones son descriptivas y corresponden a una ejecución concreta: no demuestran por sí solas significación estadística ni que una estrategia sea universalmente superior. La diferencia pequeña entre `FT_zero` y `FT_few` debe interpretarse con prudencia.
 
-- que cada adaptador se evalúa con el prompt empleado durante su entrenamiento;
-- que los ejemplos one-shot/few-shot se insertan correctamente y sus marcadores se resuelven;
-- que la generación y la extracción de respuestas son idénticas entre condiciones;
-- que todas las condiciones usan el mismo conjunto de test y el mismo contexto recuperado.
+### Eficiencia y análisis de errores
 
-No se considera demostrado que one-shot o few-shot sean intrínsecamente peores hasta completar estas comprobaciones. Las métricas completas y las predicciones deben consultarse en los archivos de resultados generados por los experimentos.
+Además de las métricas globales, el experimento guarda tablas específicas para comparar latencia, resultados por tipo de pregunta y diferencias entre estrategias:
 
-## Datos y evaluación
+- `efficiency_table.csv`: F1, latencia media y percentil 95, velocidad de generación y VRAM máxima.
+- `quality_table.csv`: EM, F1 global y F1 por tipo de pregunta.
+- `improvement_table.csv`: mejora de cada adaptador respecto a BASE.
+- `strategy_table.csv`: diferencias de F1, EM y tiempo entre estrategias.
+- `error_table.csv`: análisis de respuestas vacías y errores de ejecución.
 
-El conjunto usado en el estudio de prompting contiene 350 ejemplos; con `train_test_split(test_size=0.2, random_state=42)` se obtienen **280 ejemplos de entrenamiento y 70 de test**.
+Los resultados completos y las predicciones de esta ejecución se guardan en `results/rag_prompt_comparison/`, incluyendo `summary_metrics.csv`, `all_predictions.csv` y las predicciones individuales por modelo. Los CSV parciales permiten inspeccionar el progreso de una ejecución interrumpida.
 
-Las métricas utilizadas incluyen:
+## Datos y métricas
 
-- **Exact Match (EM):** comprueba si la predicción normalizada coincide exactamente con la respuesta de referencia.
+Las métricas utilizadas son:
+
+- **Exact Match (EM):** indica si la predicción normalizada coincide exactamente con la respuesta de referencia.
 - **F1 token-level:** mide el solapamiento entre los tokens de la predicción y la referencia.
 - **Answerable F1:** F1 calculado para las preguntas respondibles.
 - **Unanswerable F1:** F1 calculado para las preguntas no respondibles.
+- **Latencia de generación:** tiempo dedicado a generar la respuesta, separado del tiempo de recuperación cuando corresponde.
+- **Tokens/s y VRAM máxima:** medidas complementarias de eficiencia.
 
-La implementación de las métricas generales está en `src/evaluate.py`. Las métricas por tipo de pregunta se usan en el experimento de prompting.
+La implementación general de las métricas está en `src/evaluate.py`. La interpretación de las métricas por tipo de pregunta depende de cómo estén definidas las referencias y las predicciones vacías en el experimento.
 
 ## Estructura del proyecto
 
@@ -104,10 +107,11 @@ La estructura puede evolucionar entre experimentos. Las carpetas principales son
 - `models/prompt_training/qwen_lora_zero/`: adaptador zero-shot.
 - `models/prompt_training/qwen_lora_one/`: adaptador one-shot.
 - `models/prompt_training/qwen_lora_few/`: adaptador few-shot.
-- `results/prompt_training/`: prompts usados durante el entrenamiento.
-- `results/prompt_training_comparison/`: resumen y predicciones de la comparación, cuando se ha ejecutado el notebook correspondiente.
+- `results/prompt_training/`: prompts guardados durante el entrenamiento, si están disponibles localmente.
+- `notebooks/comparacion_finetuning_prompts.ipynb`: notebook de comparación.
+- `results/rag_prompt_comparison/`: métricas, tablas, contextos recuperados y predicciones generadas.
 
-Los adaptadores LoRA y los resultados son artefactos locales; su presencia en la estructura descrita no implica que estén versionados en Git.
+Los adaptadores LoRA y algunos resultados son artefactos locales; su presencia en la estructura descrita no implica que todos los modelos estén versionados en Git.
 
 ## Instalación
 
@@ -127,17 +131,23 @@ Para generar o regenerar los embeddings de los contextos:
 uv run python scripts/create_context_embeddings.py
 ```
 
-## Reproducibilidad y uso del recuperador
+## Reproducibilidad
 
-En los experimentos de prompting, la evaluación debe emplear el **recuperador local `ContextRetriever`** y los embeddings ya generados. No se debe activar un recuperador con *fallback* web, ya que introduciría fuentes externas y rompería la comparación con contexto exclusivamente local.
+Para que las comparaciones sean interpretables:
 
-Para reproducir las comparaciones, conserva la misma partición de test, el mismo recuperador, los mismos contextos y la misma configuración de generación entre condiciones. Registra las métricas exactas y guarda las predicciones junto con los prompts empleados.
+1. Mantén fija la partición de entrenamiento y test.
+2. Utiliza el mismo recuperador local `ContextRetriever` y los mismos contextos recuperados para todos los modelos comparados.
+3. No actives el *fallback* web en el experimento de prompting, ya que introduciría información externa.
+4. Comprueba que cada adaptador se evalúe con la estrategia de prompt que le corresponde y, cuando estén guardados, con los prompts usados durante el entrenamiento.
+5. Conserva las predicciones individuales y las métricas junto con la configuración de generación.
+
+El tiempo medido depende del hardware, la carga de la GPU y la configuración de generación. Los resultados publicados aquí deben entenderse como los de la ejecución registrada, no como garantías de rendimiento en otro equipo.
 
 ## Estado del proyecto
 
 🚧 **En desarrollo.**
 
-El proyecto incluye varios enfoques de recuperación y generación, fine-tuning con LoRA y experimentos de prompting. La prioridad actual es consolidar la evaluación comparativa, verificar la construcción de los prompts —especialmente en few-shot— y documentar los resultados finales sin mezclar experimentos con configuraciones distintas.
+El proyecto reúne experimentos de recuperación, generación y fine-tuning con LoRA. La comparación más reciente sugiere que el ajuste mejora notablemente el rendimiento frente al modelo base y que `FT_zero` y `FT_few` ofrecen resultados globales cercanos, con distintas latencias. Conviene validar los prompts exactos y repetir las evaluaciones antes de formular conclusiones definitivas.
 
 ---
 

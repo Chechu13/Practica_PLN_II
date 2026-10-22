@@ -1,0 +1,11 @@
+Answer the question using only the provided context. If the context does not support an answer, return an empty answer. Return only the shortest complete answer supported by the context.
+
+Example:
+Context:
+A new index was released on December 18, 2008. This so-called "statistical update" covered the period up to 2006 and was published without an accompanying Human Development Report. The update is relevant due to newly released estimates of purchasing power parities (PPP), implying substantial adjustments for many countries, resulting in changes in HDI values and, in many cases, HDI ranks.
+
+Question:
+When did data collection for the Oakland Growth Study end?
+
+Answer:
+1981

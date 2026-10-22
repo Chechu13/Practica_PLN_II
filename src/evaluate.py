@@ -1,3 +1,4 @@
+import math
 import re
 from collections import Counter
 
@@ -37,6 +38,40 @@ def f1_score(prediction, reference):
     f1 = (2 * precision * recall) / (precision + recall)
     return f1
 
+
+def bleu_score(prediction, reference):
+    """BLEU-1: precisión de unigramas con brevity penalty."""
+    pred_tokens = normalize_answer(prediction).split()
+    ref_tokens = normalize_answer(reference).split()
+
+    if not pred_tokens or not ref_tokens:
+        return float(pred_tokens == ref_tokens)
+
+    common = Counter(pred_tokens) & Counter(ref_tokens)
+    num_same = sum(common.values())
+
+    if num_same == 0:
+        return 0.0
+
+    c = len(pred_tokens)
+    r = len(ref_tokens)
+    bp = 1.0 if c > r else math.exp(1 - r / c)
+
+    return bp * num_same / c
+
+def rouge_score(prediction, reference):
+    """ROUGE-1: recall de unigramas."""
+    pred_tokens = normalize_answer(prediction).split()
+    ref_tokens = normalize_answer(reference).split()
+
+    if not pred_tokens or not ref_tokens:
+        return float(pred_tokens == ref_tokens)
+
+    common = Counter(pred_tokens) & Counter(ref_tokens)
+    num_same = sum(common.values())
+
+    return num_same / len(ref_tokens)
+
 def evaluate_predictions(results):
     """
     Evalúa una lista de diccionarios con 'prediction' y 'reference'.
@@ -52,6 +87,8 @@ def evaluate_predictions(results):
 
     em_total = 0
     f1_total = 0.0
+    bleu_total = 0.0
+    rouge_total = 0.0
 
     for item in results:
         pred = item.get('prediction', '')
@@ -59,10 +96,14 @@ def evaluate_predictions(results):
         
         em_total += exact_match_score(pred, ref)
         f1_total += f1_score(pred, ref)
+        bleu_total += bleu_score(pred, ref)
+        rouge_total += rouge_score(pred, ref)
 
     metrics = {
         "exact_match": round(em_total / total * 100, 2), # En porcentaje
         "f1_score": round(f1_total / total * 100, 2),    # En porcentaje
+        "bleu_score": round(bleu_total / total * 100, 2), # En porcentaje
+        "rouge_score": round(rouge_total / total * 100, 2), # En porcentaje
         "total_evaluated": total
     }
     return metrics

@@ -1,0 +1,39 @@
+{
+  "phase": "pilot",
+  "seed": 42,
+  "split_source": "results/rag_audit_2026-10-29/rankings.jsonl",
+  "selected_records": [
+    6,
+    14,
+    19,
+    27,
+    25,
+    88,
+    163,
+    218
+  ],
+  "models": {
+    "7B_FT_zero": {
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "adapter": "C:\\Users\\chech\\Practica_PLN_II\\models\\prompt_training_controlled\\qwen_lora_controlled_zero"
+    },
+    "1.5B_FT_zero": {
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "adapter": "C:\\Users\\chech\\Practica_PLN_II\\models\\prompt_training_controlled_qwen15\\qwen15_lora_controlled_zero"
+    }
+  },
+  "methods": [
+    "semantic",
+    "bm25",
+    "hybrid"
+  ],
+  "retrieval_top_k": 5,
+  "contexts_sent_to_generator": 1,
+  "prompt": "C:\\Users\\chech\\Practica_PLN_II\\prompts\\controlled_zero.md",
+  "max_length": 384,
+  "max_new_tokens": 32,
+  "do_sample": false,
+  "device": "cuda",
+  "index_path": "C:\\Users\\chech\\Practica_PLN_II\\models\\context_embeddings.pt",
+  "model_load_excluded_from_per_question_latency": true
+}

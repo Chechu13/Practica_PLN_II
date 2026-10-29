@@ -1,0 +1,25 @@
+{
+  "seed": 42,
+  "dataset_size": 350,
+  "fit_size": 224,
+  "dev_size": 56,
+  "test_size": 70,
+  "labeled_context_questions": 250,
+  "unlabeled_questions": 100,
+  "chosen_abstention_config_from_dev": {
+    "threshold": 0.5,
+    "margin": 0.0,
+    "coverage": 0.7678571428571429,
+    "answerable_accept_rate": 0.8958333333333334,
+    "unanswerable_abstention_rate": 1.0
+  },
+  "elapsed_seconds": 122.27754120000009,
+  "device": "cpu",
+  "index_path": "C:\\Users\\chech\\Practica_PLN_II\\models\\context_embeddings.pt",
+  "methods": [
+    "semantic",
+    "bm25",
+    "hybrid_rrf"
+  ],
+  "note": "Test metrics are descriptive only; threshold selection used dev exclusively."
+}

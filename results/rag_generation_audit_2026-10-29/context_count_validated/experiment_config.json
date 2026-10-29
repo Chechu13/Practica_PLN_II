@@ -1,0 +1,28 @@
+{
+  "seed": 42,
+  "split": "dev",
+  "n_questions": 56,
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "adapter": "C:\\Users\\chech\\Practica_PLN_II\\models\\prompt_training_controlled_qwen15\\qwen15_lora_controlled_zero",
+  "prompt": "C:\\Users\\chech\\Practica_PLN_II\\prompts\\controlled_zero.md",
+  "methods": [
+    "semantic",
+    "hybrid"
+  ],
+  "context_counts": [
+    1,
+    3,
+    5
+  ],
+  "retrieval_top_k": 5,
+  "max_length": 384,
+  "max_new_tokens": 32,
+  "do_sample": false,
+  "truncation_policy": "reserve_instruction_question_then_ranked_context_prefix",
+  "question_must_be_preserved": true,
+  "rankings_path": "C:\\Users\\chech\\Practica_PLN_II\\results\\rag_audit_2026-10-29\\rankings.jsonl",
+  "reusable_one_context_rows": 107,
+  "new_generation_count": 229,
+  "bootstrap_replicates": 10000,
+  "test_used": false
+}

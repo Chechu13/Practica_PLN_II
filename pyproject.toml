@@ -18,6 +18,8 @@ dependencies = [
     "torchvision",
     "scikit-learn",
     "ddgs",
+    "datasets>=5.1.0",
+    "trl>=1.17.0",
 ]
 
 [[tool.uv.index]]
@@ -30,4 +32,3 @@ torch = { index = "pytorch" }
 torchvision = { index = "pytorch" }
 
 [tool.uv]
-environments = ["sys_platform == 'win32' and python_version == '3.12'"]

@@ -1,0 +1,57 @@
+{
+  "model_id": "Qwen/Qwen3.5-9B",
+  "prompt_strategy": "zero",
+  "prompt_file": "controlled_zero.md",
+  "adapter": "qwen35_9b_lora_controlled_zero",
+  "seed": 42,
+  "epochs": 1,
+  "learning_rate": 0.0002,
+  "batch_size": 1,
+  "gradient_accumulation_steps": 4,
+  "max_length": 512,
+  "max_target_length": 96,
+  "max_grad_norm": 1.0,
+  "gradient_checkpointing": true,
+  "optimizer": "AdamW",
+  "scheduler": "CosineAnnealingLR",
+  "train_size": 280,
+  "test_size": 70,
+  "test_used_for_training": false,
+  "training_losses": [
+    {
+      "epoch": 1,
+      "mean_loss": 0.9163897209642787
+    }
+  ],
+  "training_seconds": 1671.1749840999996,
+  "peak_vram_gib": 12.901299953460693,
+  "dependency_versions": {
+    "torch": "2.11.0+cu128",
+    "transformers": "5.17.0",
+    "peft": "0.21.0",
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2"
+  },
+  "cuda": {
+    "torch_cuda_version": "12.8",
+    "device_name": "NVIDIA GeForce RTX 5060 Ti",
+    "bf16_supported": true
+  },
+  "bitsandbytes_version": "0.50.2",
+  "compute_dtype": "bfloat16",
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "in_proj_qkv",
+    "in_proj_z",
+    "out_proj"
+  ],
+  "trainable_parameters": 7471104,
+  "quantization": {
+    "load_in_4bit": true,
+    "quant_type": "nf4",
+    "use_double_quant": true
+  }
+}

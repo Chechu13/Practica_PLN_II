@@ -12,6 +12,7 @@ dependencies = [
     "jupyter",
     "transformers",
     "tqdm",
+    "bitsandbytes>=0.46.0",
     "accelerate",
     "peft",
     "torch",

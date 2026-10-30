@@ -1,0 +1,17 @@
+{
+  "model_id": "Qwen/Qwen3.5-9B",
+  "adapter": "C:\\Users\\chech\\Practica_PLN_II\\models\\prompt_training_controlled_qwen35_9b\\qwen35_9b_lora_controlled_zero",
+  "prompt_strategy": "zero",
+  "split": "dev",
+  "split_source": "C:\\Users\\chech\\Practica_PLN_II\\results\\rag_audit_2026-10-29\\rankings.jsonl",
+  "same_frozen_semantic_context": true,
+  "quantization": {
+    "load_in_4bit": true,
+    "quant_type": "nf4",
+    "double_quant": true
+  },
+  "max_length": 512,
+  "max_new_tokens": 96,
+  "do_sample": false,
+  "test_used_for_selection": false
+}

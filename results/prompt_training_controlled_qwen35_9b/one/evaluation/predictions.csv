@@ -1,0 +1,445 @@
+split,index,model,prompt_strategy,question,reference,prediction,has_answer,empty_prediction,retrieved_context_id,generation_seconds,generated_tokens,tokens_per_second,model_load_seconds,peak_vram_gib,em,f1
+dev,6,base,one,What kinds of objects can visitors see in the Esteve Pharmacy museum?,"albarellos from the 16th and 17th centuries, old prescription books and antique drugs","Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about old pharmacies in Europe (Dubrovnik, Tallinn, Florence, L",True,False,c19557,6.313603600001443,96,15.205262490660335,16.54042060000029,7.317451000213623,0,0.032786885245901634
+dev,14,base,one,What is the area of the Alexandria Center for Life Science in square meters?,"65,000","Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the Tyson Research Center (location, size, history, usage, Living Learning",True,False,c15990,5.451323600000251,96,17.610401994846825,16.54042060000029,7.317451000213623,0,0.0
+dev,19,base,one,"Which founder of Milton, Massachusetts, also helped formulate Canadian football's rules?",Christopher Gwynn,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint: If the context does not support an answer, return an empty answer.
+    *   Constraint: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the history of Canadian football (first written account, 1862, rules devised in",True,False,c14862,5.637360599999738,96,17.02924592051189,16.54042060000029,7.321871280670166,0,0.0
+dev,25,base,one,...,,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Swaziland's Umhlanga Reed Dance (details about timing,",False,False,c16910,5.524832299999616,96,17.376093026390443,16.54042060000029,7.321871280670166,0,0
+dev,27,base,one,What was the duration of patent protection in Sybaris?,one year,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph discussing the origins of intellectual property concepts, mentioning Jewish law (Hasagat Ge",True,False,c09052,5.494565799999691,96,17.471808236422504,16.54042060000029,7.321871280670166,0,0.0
+dev,29,base,one,What was the Polish revolutionary movement that the Warsaw Pact did not manage to suppress called?,Solidarity,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the Warsaw Pact, NATO, military expansion, the invasion of Czechoslovak",True,False,c01997,5.539622700000109,96,17.329700089502143,16.54042060000029,7.321871280670166,0,0.0
+dev,41,base,one,By what local name is Hokkien known in the Philippines?,Lan-nang or Lán-lâng-oē,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Hokkien speakers in Southeast Asia, United States, specific regions (Burma",True,False,c08633,5.636232700000619,96,17.032653744049544,16.54042060000029,7.321871280670166,0,0.0
+dev,54,base,one,At what frequencies is tonearm skating most likely to be audible?,frequencies below about 20 Hz,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about tonearm skating, frequency multiplexing, tracking noise, subsonic",True,False,c11643,5.971447899999475,96,16.076502986823083,16.54042060000029,7.3302741050720215,0,0.03773584905660377
+dev,62,base,one,What pope celebrated mass in Valencia using the Santo Caliz?,Benedict XVI,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Pope Benedict XVI using the Santo Caliz during Mass at Valencia's Cathedral on",True,False,c06680,5.598694100001012,96,17.14685572837113,16.54042060000029,7.3302741050720215,0,0.07272727272727272
+dev,64,base,one,By what other name was the oil crisis known?,first oil shock,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the 1973 oil crisis, OAPEC, embargo dates,",True,False,c19336,5.682029900000998,96,16.895370437945626,16.54042060000029,7.3302741050720215,0,0.04
+dev,68,base,one,In what year did the fatal bubonic plague strike Strasbourg?,1348,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Strasbourg's history (revolution in 1332, bubonic plague",True,False,c12398,5.554792599999928,96,17.28237342290714,16.54042060000029,7.3302741050720215,0,0.0
+dev,75,base,one,What is Alaska's ferry network called?,the Alaska Marine Highway,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Alaska's ferry system.
+    *   Input Question: ""What is",True,False,c13336,6.011127600000691,96,15.970381330782093,16.54042060000029,7.3302741050720215,0,0.0
+dev,88,base,one,How many people are in the room with me?,,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about household statistics in a municipality (as of 2000 and",False,False,c03551,5.459847000000082,96,17.582910290343037,16.54042060000029,7.3302741050720215,0,0
+dev,93,base,one,When did development of the ASCII standard get underway?,"October 6, 1960","Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about ASCII development (dates, meetings, editions, etc.).
+    *",True,False,c06199,5.472780300000522,96,17.54135827451192,16.54042060000029,7.3302741050720215,0,0.0
+dev,96,base,one,Which two elements interact in humoral immunology?,antibodies and antigens,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about humoral (antibody) response, defining antibodies, antigens,",True,False,c05238,6.081481900000654,96,15.78562619745521,16.54042060000029,7.3302741050720215,0,0.08
+dev,107,base,one,What was the reason the opening three games of the 1945 World Series took place in Detroit?,wartime travel restrictions,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the Cubs, the 1945 World Series, the Curse of",True,False,c08287,5.552311199999167,96,17.29009714009085,16.54042060000029,7.3302741050720215,0,0.0
+dev,135,base,one,Who asserted that the name Black Death first came into use in 1631?,Gasquet,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the origin of the name ""Black Death"" (Latin: *atra mors",True,False,c19508,5.411637900000642,96,17.739546099340576,16.54042060000029,7.3302741050720215,0,0.0
+dev,137,base,one,Over how many categories of federal crime does the FBI exercise jurisdiction?,200,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph describing the FBI's tools and responsibilities (RICO Act, Civil Rights Act of",True,False,c06331,5.45344379999915,96,17.60355539008488,16.54042060000029,7.3302741050720215,0,0.0
+dev,138,base,one,Who made public the CIA's 2005 budget?,Mary Margaret Graham,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint: If the context does not support an answer, return an empty answer.
+    *   Constraint: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph discussing CIA budget disclosures, including figures for FY 1963, FY 199",True,False,c16015,5.464223599999968,96,17.568827161465457,16.54042060000029,7.3302741050720215,0,0.0
+dev,142,base,one,Who was the first person to use the term Iranian language?,Christian Lassen,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the history of the term ""Iranian language family"" (introduced by",True,False,c01565,5.431905600000391,96,17.673355737256017,16.54042060000029,7.3302741050720215,0,0.0
+dev,151,base,one,In what year did Beyoncé first work as a model for Tom Ford?,2010,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint: If the context does not support an answer, return an empty answer.
+    *   Constraint: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Beyoncé's inspirations (Michelle Obama, Oprah Winfrey, Jay Z, Jean-Michel",True,False,c00041,5.4021116999992955,96,17.770828396608778,16.54042060000029,7.3302741050720215,0,0.0
+dev,153,base,one,What brought about the downfall of the Garamantes civilization?,depleted available water,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the Garamantes civilization (origin, location, water source, expansion,",True,False,c12259,5.404892099999415,96,17.761686676411244,16.54042060000029,7.3302741050720215,0,0.0392156862745098
+dev,159,base,one,When did British librarians place To Kill a Mockingbird above the Bible in their rankings?,2006,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the novel *To Kill a Mockingbird*, its reception, sales,",True,False,c00583,5.354647099999056,96,17.928352365185173,16.54042060000029,7.3302741050720215,0,0.0
+dev,161,base,one,To which area of the brain do reticular neurons send signals?,the thalamus,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the SCN (Suprachiasmatic Nucleus), hypothalamus,",True,False,c04440,5.385506000000532,96,17.825623070513803,16.54042060000029,7.3302741050720215,0,0.0
+dev,163,base,one,Just checking something.,,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph describing the SASO (Sexual Attraction Scale of Orientation) consisting of",False,False,c07136,5.505836199999976,96,17.436043593160367,16.54042060000029,7.3302741050720215,0,0
+dev,165,base,one,What fund for vulnerable countries was operationalized at COP28?,Loss and Damage Fund,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint: If the context does not support an answer, return an empty answer.
+    *   Constraint: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Namibia's 1993 government receiving funding from USAID for the LIFE Project,",True,False,c17163,5.375834300000861,96,17.857693270044546,16.54042060000029,7.3302741050720215,0,0.0
+dev,171,base,one,Which company released ChatGPT in November 2022?,OpenAI,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint: If the context does not support an answer, return an empty answer.
+    *   Constraint: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Somali telecommunications companies (Sprint, ITT, Telenor, Somtel, Golis",True,False,c02836,5.413884499999767,96,17.732184718754922,16.54042060000029,7.3302741050720215,0,0.0
+dev,186,base,one,Which modern company was responsible for introducing LEDs in 1968?,Hewlett Packard (HP),"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the history of commercial LEDs (Monsanto, HP, Fairchild,",True,False,c17275,5.565696100000423,96,17.248516317661093,16.54042060000029,7.33291482925415,0,0.0
+dev,194,base,one,Which document sets out the role and powers assigned to the Czech Republic's prime minister?,constitution,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: ""Czech Republic's constitution clearly outlines the functions and powers of the Prime Minister of the",True,False,c01309,5.363729700000476,96,17.89799362931944,16.54042060000029,7.33291482925415,0,0.038461538461538464
+dev,197,base,one,"In 1962, what proportion of Egyptian business was owned by the government?",51,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Nasser's policies in Egypt (civil service oversight, worker benefits, land",True,False,c12624,5.5342978999997285,96,17.34637378302399,16.54042060000029,7.33291482925415,0,0.0
+dev,205,base,one,"During the 2008–2009 season, who became the new exclusive broadcaster of curling?",TSN,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Canadian Curling Association events, CBC, TSN, and broadcasting rights changes",True,False,c14093,5.468556599998919,96,17.554906536035297,16.54042060000029,7.33291482925415,0,0.038461538461538464
+dev,214,base,one,What is regarded as the finest surviving house exemplifying the Georgian period and style?,Hammond-Harwood House,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Georgian architecture (characteristics, ratios, symmetry, Classical orders, Gothic Rev",True,False,c16726,5.451195699999516,96,17.61081518317321,16.54042060000029,7.33291482925415,0,0.0
+dev,215,base,one,"On what date did Thomas Watson, Jr. circulate a letter about IBM employing the best candidates regardless of race, gender, or origin?","September 21, 1953","Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Thomas Watson, Jr., IBM, and nondiscrimination policies (195",True,False,c14165,5.459851800000251,96,17.582894832419367,16.54042060000029,7.33291482925415,0,0.0
+dev,218,base,one,What did he say about it?,,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about a telethon, West speaking, saying ""George Bush doesn't care about",False,False,c00742,5.3837793999991845,96,17.831339820501288,16.54042060000029,7.33291482925415,0,0
+dev,230,base,one,Yes.,,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Doug Morris, Mel Lewinter, and Dennis Kooker's appointments in",False,False,c02103,5.409301100000448,96,17.747209523979365,16.54042060000029,7.33291482925415,0,0
+dev,246,base,one,When did NBC Sports obtain a six-year extension with the Premier League?,2015,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Premier League broadcasting in the US via NBC Sports, viewership stats, and",True,False,c16357,5.460838299999523,96,17.579718483883397,16.54042060000029,7.33291482925415,0,0.0
+dev,261,base,one,During which period did Brahmanism begin spreading eastward?,2nd or 3rd centuries,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint: If the context does not support an answer, return an empty answer.
+    *   Constraint: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Buddhism, Greater Magadha, Aryavarta, Vedic texts, and the spread of",True,False,c00858,5.451993900000161,96,17.60823686908328,16.54042060000029,7.33291482925415,0,0.0
+dev,262,base,one,What effect did the introduction of a non-native snake have on Guam?,nearly eliminated the native bird population,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the brown tree snake (*Boiga irregularis*), its introduction to Guam,",True,False,c14663,5.425723100001051,96,17.69349416301422,16.54042060000029,7.33291482925415,0,0.0
+dev,263,base,one,Into how many municipalities is Portugal partitioned?,308,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph describing the administrative division of Portugal (municipalities, parishes, N",True,False,c18387,5.490767499999492,96,17.483894555726295,16.54042060000029,7.33291482925415,0,0.0
+dev,264,base,one,What word describes the sense of energy or enervation produced by an emotional experience?,arousal,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph defining ""Emotion"" in everyday speech and scientific discourse, mentioning its relationship with",True,False,c05829,5.526964799999405,96,17.36938871042029,16.54042060000029,7.33291482925415,0,0.0
+dev,267,base,one,Fix it.,,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: ""As sound scholar Jonathan Sterne notes, 'An Australian hacker acquired l3enc using a",False,False,c05271,5.422781600000235,96,17.70309171219358,16.54042060000029,7.33291482925415,0,0
+dev,269,base,one,What is the German designation for Austria's Supreme Court?,Oberste Gerichtshof (OGH),"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the Austrian judicial system (Constitution of 1920, Constitutional",True,False,c11541,5.493078999999852,96,17.4765372935657,16.54042060000029,7.33291482925415,0,0.0
+dev,274,base,one,Which authors contributed to shaping the post-punk movement?,William S. Burroughs and J.G. Ballard,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the post-punk movement, mentioning Nicholas Lezard, influences (liter",True,False,c14841,5.472754500000519,96,17.541440969075243,16.54042060000029,7.33291482925415,0,0.0
+dev,280,base,one,Which country voted in 2023 to halt oil drilling in Yasuní National Park?,Ecuador,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint: If the context does not support an answer, return an empty answer.
+    *   Constraint: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Shell pausing drilling off the Alaskan coast in 2013 and extending the suspension",True,False,c08570,5.567801899998813,96,17.24199275121848,16.54042060000029,7.33291482925415,0,0.0
+dev,285,base,one,Hello.,,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about music charts in the 1980s, mentioning soft rock artists",False,False,c03142,5.406112799999391,96,17.757676088447656,16.54042060000029,7.33291482925415,0,0
+dev,298,base,one,Who won the men's singles title at the 2024 Wimbledon Championships?,Carlos Alcaraz,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint: If the context does not support an answer, return an empty answer.
+    *   Constraint: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph describing various sporting events in New York City (US Open Tennis, New York Marathon, Millrose Games",True,False,c00542,5.479274699999223,96,17.52056709257771,16.54042060000029,7.33291482925415,0,0.0
+dev,302,base,one,When was the first TCM Classic Film Festival held?,April 2010,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about TCM winning a Peabody Award in 2008 and",True,False,c11675,5.484445000000051,96,17.504050090756515,16.54042060000029,7.33291482925415,0,0.0
+dev,306,base,one,What is based at Yeovilton?,"The Royal Naval Air Station in Yeovilton, is one of Britain's two active Fleet Air Arm bases and is home to the Royal Navy's Lynx helicopters","Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Somerset, defence equipment, ROF Bridgwater, Templecombe, Ta",True,False,c09751,5.466901399999188,96,17.560221590975516,16.54042060000029,7.33291482925415,0,0.0
+dev,312,base,one,What electric pickup truck did Tesla begin delivering in 2023?,Cybertruck,"current system was the first to be developed, but it was not suitable for long-distance transmission. The constant current system was the electrical system used by the first commercial power plant, the Edison Electric Light Company, which was established in 1882. The constant current system was the electrical system used by the first commercial power plant, the Edison Electric Light Company, used by the Oakland Growth Study, used by the Oakland Growth Study, used by the Oakland Growth Study, used by",True,False,c10175,5.504672600000049,96,17.43972929470849,16.54042060000029,7.335967540740967,0,0.0
+dev,317,base,one,In which year did the,,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the history of Daylight Saving Time (DST), mentioning Germany/Austria",False,False,c03187,5.434411099999124,96,17.66520755119455,16.54042060000029,7.335967540740967,0,0
+dev,318,base,one,Who explained predation in terms of competing genes within the predator?,Richard Dawkins,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Richard Dawkins' view on predation as competition between genes.",True,False,c09241,5.414119400000345,96,17.73141538030984,16.54042060000029,7.335967540740967,0,0.07692307692307693
+dev,323,base,one,Approximately how many people may have inhabited the Amazon region in AD 1500?,5 million,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about Amazon rainforest population history (Meggers' theory vs. recent findings,",True,False,c19405,5.564566600000035,96,17.252017434744946,16.54042060000029,7.335967540740967,0,0.0
+dev,324,base,one,Who arranged a treaty with the Makoko people?,Pierre de Brazza,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint: If the context does not support an answer, return an empty answer.
+    *   Constraint: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the Jaluit Gesellschaft, German administration of islands (1887-1905",True,False,c04028,5.466552200001388,96,17.561343327147892,16.54042060000029,7.335967540740967,0,0.0
+dev,330,base,one,Which two countries were struck by the major earthquakes of 6 February 2023?,Turkey and Syria,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: ""(The Ms 6.1 earthquake on August 30, 200",True,False,c00365,5.531765300000188,96,17.35431544790896,16.54042060000029,7.335967540740967,0,0.0
+dev,335,base,one,At which university was Europe's first botanical garden established?,University of Oxford,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about the history of botanical gardens, specifically mentioning the Padua botanical garden (1",True,False,c09347,5.427016499999809,96,17.689277340506223,16.54042060000029,7.335967540740967,0,0.037037037037037035
+dev,337,base,one,Which newspaper bought Wordle in 2022?,The New York Times,"Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Answer the question using *only* the provided context.
+    *   Constraint 1: If the context does not support an answer, return an empty answer.
+    *   Constraint 2: Return only the shortest complete answer supported by the context.
+    *   Input Context: A paragraph about News International producing a newspaper in broadsheet and tabloid sizes in 2",True,False,c05049,5.381654200000412,96,17.83838136608492,16.54042060000029,7.335967540740967,0,0.0
+dev,6,qlora,one,What kinds of objects can visitors see in the Esteve Pharmacy museum?,"albarellos from the 16th and 17th centuries, old prescription books and antique drugs","albarellos from the 16th and 17th centuries, old prescription books and antique drugs",True,False,c19557,1.8702838999997766,23,12.297598241637404,15.095467500001178,7.3468241691589355,1,1.0
+dev,14,qlora,one,What is the area of the Alexandria Center for Life Science in square meters?,"65,000",,True,True,c15990,0.2202618999999686,1,4.5400498225074,15.095467500001178,7.3468241691589355,0,0
+dev,19,qlora,one,"Which founder of Milton, Massachusetts, also helped formulate Canadian football's rules?",Christopher Gwynn,Christopher Gwynn,True,False,c14862,0.536261100000047,5,9.323816327530679,15.095467500001178,7.3544793128967285,1,1.0
+dev,25,qlora,one,...,,,False,True,c16910,0.23767939999925147,1,4.207348217822618,15.095467500001178,7.3544793128967285,1,1
+dev,27,qlora,one,What was the duration of patent protection in Sybaris?,one year,one year,True,False,c09052,0.3618477999989409,3,8.290778609152193,15.095467500001178,7.3544793128967285,1,1.0
+dev,29,qlora,one,What was the Polish revolutionary movement that the Warsaw Pact did not manage to suppress called?,Solidarity,Solidarity,True,False,c01997,0.36601640000117186,3,8.196354043125924,15.095467500001178,7.3544793128967285,1,1.0
+dev,41,qlora,one,By what local name is Hokkien known in the Philippines?,Lan-nang or Lán-lâng-oē,Lan-nang or Lán-lâng-oē,True,False,c08633,1.016754000000219,12,11.80226485462306,15.095467500001178,7.3544793128967285,1,1.0
+dev,54,qlora,one,At what frequencies is tonearm skating most likely to be audible?,frequencies below about 20 Hz,deep bass range up to about 100 Hz,True,False,c11643,1.0901262000006682,12,11.007899819298578,15.095467500001178,7.357762813568115,0,0.3076923076923077
+dev,62,qlora,one,What pope celebrated mass in Valencia using the Santo Caliz?,Benedict XVI,Benedict XVI,True,False,c06680,0.5126448999999411,5,9.75333998251143,15.095467500001178,7.357762813568115,1,1.0
+dev,64,qlora,one,By what other name was the oil crisis known?,first oil shock,first oil shock,True,False,c19336,0.44862539999849105,4,8.916124677767808,15.095467500001178,7.357762813568115,1,1.0
+dev,68,qlora,one,In what year did the fatal bubonic plague strike Strasbourg?,1348,1348,True,False,c12398,0.5258510999992723,5,9.508395057093006,15.095467500001178,7.357762813568115,1,1.0
+dev,75,qlora,one,What is Alaska's ferry network called?,the Alaska Marine Highway,Alaska Marine Highway,True,False,c13336,0.5164678000001004,5,9.681145659030491,15.095467500001178,7.357762813568115,1,1.0
+dev,88,qlora,one,How many people are in the room with me?,,,False,True,c03551,0.23901050000131363,1,4.18391660615121,15.095467500001178,7.357762813568115,1,1
+dev,93,qlora,one,When did development of the ASCII standard get underway?,"October 6, 1960","October 6, 1960",True,False,c06199,0.8794116000008216,10,11.371239587913847,15.095467500001178,7.357762813568115,1,1.0
+dev,96,qlora,one,Which two elements interact in humoral immunology?,antibodies and antigens,antibodies and antigens,True,False,c05238,0.6808075999997527,7,10.281906371201707,15.095467500001178,7.357762813568115,1,1.0
+dev,107,qlora,one,What was the reason the opening three games of the 1945 World Series took place in Detroit?,wartime travel restrictions,the wartime travel restrictions,True,False,c08287,0.5984047000001738,5,8.355549346451571,15.095467500001178,7.357762813568115,1,1.0
+dev,135,qlora,one,Who asserted that the name Black Death first came into use in 1631?,Gasquet,Gasquet (1908),True,False,c19508,0.8538130999986606,9,10.540948598720398,15.095467500001178,7.357762813568115,0,0.6666666666666666
+dev,137,qlora,one,Over how many categories of federal crime does the FBI exercise jurisdiction?,200,24,True,False,c06331,0.4280502000001434,3,7.008523766602598,15.095467500001178,7.357762813568115,0,0.0
+dev,138,qlora,one,Who made public the CIA's 2005 budget?,Mary Margaret Graham,Mary Margaret Graham,True,False,c16015,0.5124020000002929,4,7.806370779188437,15.095467500001178,7.357762813568115,1,1.0
+dev,142,qlora,one,Who was the first person to use the term Iranian language?,Christian Lassen,Christian Lassen,True,False,c01565,0.4069309999995312,3,7.3722572131478215,15.095467500001178,7.357762813568115,1,1.0
+dev,151,qlora,one,In what year did Beyoncé first work as a model for Tom Ford?,2010,2004,True,False,c00041,0.5169301000005362,5,9.672487634198152,15.095467500001178,7.357762813568115,0,0.0
+dev,153,qlora,one,What brought about the downfall of the Garamantes civilization?,depleted available water,depleted available water in the aquifers,True,False,c12259,0.8516773000010289,9,10.567382739905275,15.095467500001178,7.357762813568115,0,0.7499999999999999
+dev,159,qlora,one,When did British librarians place To Kill a Mockingbird above the Bible in their rankings?,2006,2006,True,False,c00583,0.5742236000005505,5,8.707409448157836,15.095467500001178,7.357762813568115,1,1.0
+dev,161,qlora,one,To which area of the brain do reticular neurons send signals?,the thalamus,thalamus,True,False,c04440,0.47580700000071374,4,8.406769971845726,15.095467500001178,7.357762813568115,1,1.0
+dev,163,qlora,one,Just checking something.,,,False,True,c07136,0.23618379999970784,1,4.233990646273102,15.095467500001178,7.357762813568115,1,1
+dev,165,qlora,one,What fund for vulnerable countries was operationalized at COP28?,Loss and Damage Fund,Loss and Damage Fund,True,False,c17163,0.5078062000011414,5,9.84627600054659,15.095467500001178,7.357762813568115,1,1.0
+dev,171,qlora,one,Which company released ChatGPT in November 2022?,OpenAI,OpenAI,True,False,c02836,0.41187189999982365,3,7.2838180997569495,15.095467500001178,7.357762813568115,1,1.0
+dev,186,qlora,one,Which modern company was responsible for introducing LEDs in 1968?,Hewlett Packard (HP),Hewlett Packard (HP),True,False,c17275,0.8950115999996342,9,10.0557355904702,15.095467500001178,7.3605637550354,1,1.0
+dev,194,qlora,one,Which document sets out the role and powers assigned to the Czech Republic's prime minister?,constitution,Czech Republic's constitution,True,False,c01309,0.5356599999995524,6,11.201135048360927,15.095467500001178,7.3605637550354,0,0.5
+dev,197,qlora,one,"In 1962, what proportion of Egyptian business was owned by the government?",51,51 percent,True,False,c12624,0.4518647000004421,4,8.852207308949087,15.095467500001178,7.3605637550354,0,0.6666666666666666
+dev,205,qlora,one,"During the 2008–2009 season, who became the new exclusive broadcaster of curling?",TSN,TSN,True,False,c14093,0.4021652000010363,3,7.459621071122688,15.095467500001178,7.3605637550354,1,1.0
+dev,214,qlora,one,What is regarded as the finest surviving house exemplifying the Georgian period and style?,Hammond-Harwood House,Blenheim Palace,True,False,c16726,0.5829161000001477,5,8.577563735156282,15.095467500001178,7.3605637550354,0,0.0
+dev,215,qlora,one,"On what date did Thomas Watson, Jr. circulate a letter about IBM employing the best candidates regardless of race, gender, or origin?","September 21, 1953","September 21, 1953",True,False,c14165,0.996428399999786,11,11.039428422556364,15.095467500001178,7.3605637550354,1,1.0
+dev,218,qlora,one,What did he say about it?,,,False,True,c00742,0.194465599999603,1,5.142297660882138,15.095467500001178,7.3605637550354,1,1
+dev,230,qlora,one,Yes.,,,False,True,c02103,0.19250940000165429,1,5.194551538737364,15.095467500001178,7.3605637550354,1,1
+dev,246,qlora,one,When did NBC Sports obtain a six-year extension with the Premier League?,2015,2015,True,False,c16357,0.5095854999999574,5,9.811896139117808,15.095467500001178,7.3605637550354,1,1.0
+dev,261,qlora,one,During which period did Brahmanism begin spreading eastward?,2nd or 3rd centuries,2nd or 3rd centuries BCE,True,False,c00858,0.8530652000008558,9,10.5501900675247,15.095467500001178,7.3605637550354,0,0.888888888888889
+dev,262,qlora,one,What effect did the introduction of a non-native snake have on Guam?,nearly eliminated the native bird population,nearly eliminated the native bird population,True,False,c14663,0.7821457000009104,8,10.228273325533449,15.095467500001178,7.3605637550354,1,1.0
+dev,263,qlora,one,Into how many municipalities is Portugal partitioned?,308,308,True,False,c18387,0.4807246000000305,4,8.320772433946061,15.095467500001178,7.3605637550354,1,1.0
+dev,264,qlora,one,What word describes the sense of energy or enervation produced by an emotional experience?,arousal,arousal,True,False,c05829,0.4459007000004931,4,8.970607132923488,15.095467500001178,7.3605637550354,1,1.0
+dev,267,qlora,one,Fix it.,,,False,True,c05271,0.19053099999837286,1,5.248489747120101,15.095467500001178,7.3605637550354,1,1
+dev,269,qlora,one,What is the German designation for Austria's Supreme Court?,Oberste Gerichtshof (OGH),Oberste Gerichtshof (OGH),True,False,c11541,0.8786170999992464,10,11.381522167060687,15.095467500001178,7.3605637550354,1,1.0
+dev,274,qlora,one,Which authors contributed to shaping the post-punk movement?,William S. Burroughs and J.G. Ballard,William S. Burroughs and J.G. Ballard,True,False,c14841,1.0814210000007733,12,11.096510979527324,15.095467500001178,7.3605637550354,1,1.0
+dev,280,qlora,one,Which country voted in 2023 to halt oil drilling in Yasuní National Park?,Ecuador,Ecuador,True,False,c08570,0.36962600000151724,3,8.116312164154268,15.095467500001178,7.3605637550354,1,1.0
+dev,285,qlora,one,Hello.,,,False,True,c03142,0.22090030000072147,1,4.52692911687641,15.095467500001178,7.3605637550354,1,1
+dev,298,qlora,one,Who won the men's singles title at the 2024 Wimbledon Championships?,Carlos Alcaraz,Carlos Alcaraz,True,False,c00542,0.5584023999999772,5,8.954116243053763,15.095467500001178,7.3605637550354,1,1.0
+dev,302,qlora,one,When was the first TCM Classic Film Festival held?,April 2010,April 2010,True,False,c11675,0.6506927999998879,7,10.757764647159467,15.095467500001178,7.3605637550354,1,1.0
+dev,306,qlora,one,What is based at Yeovilton?,"The Royal Naval Air Station in Yeovilton, is one of Britain's two active Fleet Air Arm bases and is home to the Royal Navy's Lynx helicopters",Royal Naval Air Station,True,False,c09751,0.6032116000005772,5,8.288965265248905,15.095467500001178,7.3605637550354,0,0.2857142857142857
+dev,312,qlora,one,What electric pickup truck did Tesla begin delivering in 2023?,Cybertruck,current system was developed by Charles Brush in 1881. The constant current system was developed by Charles Brush in 1881. The constant current system was developed by Charles Brush in 1881. The constant current system was developed by Charles Brush in 1881. The constant current system was developed by Charles Brush in 1881. The constant current system was,True,False,c10175,6.648984299999938,84,12.63350854956911,15.095467500001178,7.362700939178467,0,0.0
+dev,317,qlora,one,In which year did the,,United States,False,False,c03187,0.4188066999995499,3,7.163209184579006,15.095467500001178,7.362700939178467,0,0
+dev,318,qlora,one,Who explained predation in terms of competing genes within the predator?,Richard Dawkins,Richard Dawkins,True,False,c09241,0.4713670999990427,4,8.485955001967943,15.095467500001178,7.362700939178467,1,1.0
+dev,323,qlora,one,Approximately how many people may have inhabited the Amazon region in AD 1500?,5 million,5 million,True,False,c19405,0.458210799999506,3,6.547204910934519,15.095467500001178,7.362700939178467,1,1.0
+dev,324,qlora,one,Who arranged a treaty with the Makoko people?,Pierre de Brazza,,True,True,c04028,0.23633780000091065,1,4.231231736929712,15.095467500001178,7.362700939178467,0,0
+dev,330,qlora,one,Which two countries were struck by the major earthquakes of 6 February 2023?,Turkey and Syria,Turkey and Syria,True,False,c00365,0.4316357000006974,4,9.267074062672613,15.095467500001178,7.362700939178467,1,1.0
+dev,335,qlora,one,At which university was Europe's first botanical garden established?,University of Oxford,University of Oxford,True,False,c09347,0.5098174000013387,4,7.8459464113808135,15.095467500001178,7.362700939178467,1,1.0
+dev,337,qlora,one,Which newspaper bought Wordle in 2022?,The New York Times,The New York Times,True,False,c05049,0.502508300000045,5,9.95008440656513,15.095467500001178,7.362700939178467,1,1.0

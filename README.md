@@ -19,6 +19,7 @@ La evaluación utiliza Exact Match (EM) y F1 a nivel de tokens. En el experiment
 - Decoder Transformer y Encoder-Decoder Transformer implementados con PyTorch.
 - Modelos de Hugging Face como referencia.
 - Fine-tuning de `Qwen/Qwen2.5-7B-Instruct` mediante adaptadores LoRA.
+- Experimento independiente QLoRA de `Qwen/Qwen3.5-9B` con cuantización NF4.
 - Comparación entre modelo base y modelos ajustados.
 - Estudio de estrategias de prompting **zero-shot, one-shot y few-shot**, con adaptadores entrenados por separado.
 
@@ -110,6 +111,27 @@ La estructura puede evolucionar entre experimentos. Las carpetas principales son
 - `results/prompt_training/`: prompts guardados durante el entrenamiento, si están disponibles localmente.
 - `notebooks/comparacion_finetuning_prompts.ipynb`: notebook de comparación.
 - `results/rag_prompt_comparison/`: métricas, tablas, contextos recuperados y predicciones generadas.
+
+### Experimento QLoRA de Qwen3.5-9B
+
+El experimento independiente se ejecuta explícitamente por estrategia y no
+modifica los adaptadores anteriores:
+
+```bash
+uv run python scripts/experiments/train_qwen35_9b_qlora.py --prompt zero
+uv run python scripts/experiments/train_qwen35_9b_qlora.py --prompt one
+uv run python scripts/experiments/train_qwen35_9b_qlora.py --prompt few
+```
+
+Requiere CUDA, `bitsandbytes` y una GPU con memoria suficiente. Los artefactos
+se guardan en `models/prompt_training_controlled_qwen35_9b/` y
+`results/prompt_training_controlled_qwen35_9b/`; el script exige `--overwrite`
+para reutilizar una estrategia ya existente. La evaluación emparejada sobre
+DEV se ejecuta, después del entrenamiento, con:
+
+```bash
+uv run python scripts/experiments/evaluate_qwen35_9b_qlora.py --prompt zero
+```
 
 Los adaptadores LoRA y algunos resultados son artefactos locales; su presencia en la estructura descrita no implica que todos los modelos estén versionados en Git.
 

@@ -1,0 +1,24 @@
+[
+  {
+    "model": "base",
+    "em_percent": 0.0,
+    "f1_percent": 0.7390161298039233,
+    "latency_mean_seconds": 5.7405852499998025,
+    "latency_median_seconds": 5.729811849999351,
+    "tokens_per_second": 16.74044789750086,
+    "empty_predictions": 0,
+    "peak_vram_gib": 7.335967540740967,
+    "model_load_seconds": 15.176242999999886
+  },
+  {
+    "model": "qlora",
+    "em_percent": 0.0,
+    "f1_percent": 0.6514913838351546,
+    "latency_mean_seconds": 7.374839933928505,
+    "latency_median_seconds": 7.348109199999271,
+    "tokens_per_second": 13.026488092408455,
+    "empty_predictions": 0,
+    "peak_vram_gib": 7.363677501678467,
+    "model_load_seconds": 14.901873299999352
+  }
+]

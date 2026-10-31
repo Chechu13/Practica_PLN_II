@@ -26,7 +26,6 @@ from src.preprocess.preprocess import prepare_dataset
 
 SEED = 42
 MODEL_ID = "Qwen/Qwen2.5-1.5B-Instruct"  # O tu modelo base/adaptador
-MAX_PROMPT_LENGTH = 384
 MAX_COMPLETION_LENGTH = 64
 
 
@@ -44,11 +43,11 @@ def set_seed(seed=SEED):
 # GRPO evalúa múltiples generaciones (completions) por prompt.
 # Aquí defines qué hace que una respuesta sea mejor que otra.
 
-def reward_exact_match(completions, references, **kwargs):
+def reward_exact_match(completions, reference, **kwargs):
     """Recompensa basada en coincidencia exacta con la referencia."""
     rewards = []
-    for completion, reference in zip(completions, references):
-        score = 1.0 if completion.strip() == reference.strip() else 0.0
+    for completion, expected in zip(completions, reference):
+        score = 1.0 if completion.strip() == expected.strip() else 0.0
         rewards.append(score)
     return rewards
 
@@ -107,7 +106,6 @@ def main():
         per_device_train_batch_size=1,
         gradient_accumulation_steps=4,
         num_generations=4,          # Número de respuestas generadas por prompt para calcular ventaja
-        max_prompt_length=MAX_PROMPT_LENGTH,
         max_completion_length=MAX_COMPLETION_LENGTH,
         logging_steps=1,
         save_steps=10,
@@ -130,6 +128,7 @@ def main():
         reward_funcs=[reward_exact_match, reward_format_check],
         args=training_args,
         train_dataset=train_dataset,
+        processing_class=tokenizer,
         peft_config=peft_config,
     )
 

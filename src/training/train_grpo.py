@@ -79,7 +79,7 @@ def main():
     
     # Convertir a formato compatible para GRPO (requiere 'prompt' y 'reference')
     formatted_data = []
-    for item in dataset_raw[:100]:  # Subconjunto de prueba para el script
+    for item in dataset_raw:  # Subconjunto de prueba para el script
         context = item.get("context") or "No context is available."
         prompt = f"Context:\n{context}\n\nQuestion: {item['question']}\nAnswer:"
         formatted_data.append({

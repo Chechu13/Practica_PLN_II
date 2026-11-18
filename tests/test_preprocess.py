@@ -75,7 +75,8 @@ def test_tokenizer_build_encode_decode():
     encoded = tokenizer.encode("Hello, unknown!")
     assert encoded[-1] == tokenizer.word2idx["<EOS>"]
     assert tokenizer.word2idx["<UNK>"] in encoded
-    assert len(encoded) == 4
+    # hello, comma, unknown, exclamation mark, EOS
+    assert len(encoded) == 5
     assert tokenizer.vocab_size == len(tokenizer.word2idx)
     assert tokenizer.decode(tokenizer.encode("HELLO, WORLD!")) == "hello, world!"
 

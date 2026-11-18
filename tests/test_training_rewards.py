@@ -35,8 +35,11 @@ def test_set_seed_reproducible_python_numpy():
 
 
 def test_set_seed_cuda_when_available():
-    with patch("src.training.train_grpo.torch.cuda.is_available", return_value=True), patch(
-        "src.training.train_grpo.torch.cuda.manual_seed_all"
-    ) as mocked_seed:
+    # Mock torch.manual_seed to isolate set_seed's explicit CUDA call from
+    # PyTorch's own internal CUDA seeding implementation.
+    with patch("src.training.train_grpo.torch.manual_seed") as mocked_cpu_seed, patch(
+        "src.training.train_grpo.torch.cuda.is_available", return_value=True
+    ), patch("src.training.train_grpo.torch.cuda.manual_seed_all") as mocked_cuda_seed:
         set_seed(123)
-        mocked_seed.assert_called_once_with(123)
+        mocked_cpu_seed.assert_called_once_with(123)
+        mocked_cuda_seed.assert_called_once_with(123)

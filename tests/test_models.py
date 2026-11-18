@@ -19,10 +19,10 @@ def test_simple_decoder_batch_one_single_token():
     assert model(torch.randint(0, 20, (1, 1))).shape == (1, 1, 20)
 
 
-def test_simple_decoder_empty_sequence_raises():
+def test_simple_decoder_empty_sequence_is_supported():
     model = SimpleDecoder(vocab_size=20, d_model=16, nhead=4, num_layers=1)
-    with pytest.raises((RuntimeError, ValueError, IndexError)):
-        model(torch.empty((1, 0), dtype=torch.long))
+    output = model(torch.empty((1, 0), dtype=torch.long))
+    assert output.shape == (1, 0, 20)
 
 
 def test_simple_decoder_max_position_limit():

@@ -42,10 +42,10 @@ def test_f1_duplicate_tokens():
 
 
 @pytest.mark.parametrize(("pred", "ref", "expected"), [
-    ("a b", "a b", 1.0),
-    ("a b", "a c", 0.5),
-    ("a", "a b", math.exp(-1)),
-    ("a b", "c d", 0.0),
+    ("red blue", "red blue", 1.0),
+    ("red blue", "red green", 0.5),
+    ("red", "red blue", math.exp(-1)),
+    ("red blue", "green yellow", 0.0),
     ("", "", 1.0),
 ])
 def test_bleu_1(pred, ref, expected):
@@ -53,11 +53,11 @@ def test_bleu_1(pred, ref, expected):
 
 
 @pytest.mark.parametrize(("pred", "ref", "expected"), [
-    ("a b", "a b", 1.0),
-    ("a b", "a c", 0.5),
-    ("a b c", "a b", 1.0),
-    ("a", "a b", 0.5),
-    ("a b", "c d", 0.0),
+    ("red blue", "red blue", 1.0),
+    ("red blue", "red green", 0.5),
+    ("red blue green", "red blue", 1.0),
+    ("red", "red blue", 0.5),
+    ("red blue", "green yellow", 0.0),
     ("", "", 1.0),
 ])
 def test_rouge_1(pred, ref, expected):

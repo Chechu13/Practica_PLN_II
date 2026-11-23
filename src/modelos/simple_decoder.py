@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 
-
 class SimpleDecoder(nn.Module):
     """Arquitectura de un Decoder Transformer desde cero."""
 

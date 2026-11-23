@@ -7,7 +7,6 @@ el adaptador o configuración de prompts, y optimizando mediante recompensas.
 from __future__ import annotations
 
 import argparse
-import json
 import random
 import sys
 from pathlib import Path
@@ -22,7 +21,7 @@ from trl import GRPOConfig, GRPOTrainer
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
-from src.preprocess.preprocess import prepare_dataset
+from src.preprocess.preprocess import prepare_dataset  # noqa: E402
 
 SEED = 42
 MODEL_ID = "Qwen/Qwen2.5-1.5B-Instruct"  # O tu modelo base/adaptador
@@ -36,12 +35,12 @@ def set_seed(seed=SEED):
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
-
 # ============================================================
 # FUNCIONES DE RECOMPENSA (Reward Functions)
 # ============================================================
 # GRPO evalúa múltiples generaciones (completions) por prompt.
 # Aquí defines qué hace que una respuesta sea mejor que otra.
+
 
 def reward_exact_match(completions, reference, **kwargs):
     """Recompensa basada en coincidencia exacta con la referencia."""
@@ -76,7 +75,7 @@ def main():
         ROOT / "data" / "questions_train.json",
         ROOT / "data" / "contexts.json",
     )
-    
+
     # Convertir a formato compatible para GRPO (requiere 'prompt' y 'reference')
     formatted_data = []
     for item in dataset_raw:  # Subconjunto de prueba para el script

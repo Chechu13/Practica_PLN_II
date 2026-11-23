@@ -28,6 +28,28 @@ test = [
     "pytest>=8.0",
     "pytest-cov>=5.0",
 ]
+quality = [
+    "bandit[toml]>=1.7",
+    "flake8>=7.0",
+    "mypy>=1.10",
+    "vulture>=2.11",
+]
+
+[tool.bandit]
+exclude_dirs = ["tests", "notebooks", "models"]
+skips = ["B101"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+follow_imports = "silent"
+warn_unused_ignores = true
+show_error_codes = true
+
+[tool.vulture]
+paths = ["src"]
+exclude = ["*/notebooks/*", "*/models/*"]
+min_confidence = 80
 
 [[tool.uv.index]]
 name = "pytorch"

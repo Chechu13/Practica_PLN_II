@@ -24,9 +24,8 @@ from trl import GRPOConfig, GRPOTrainer
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
-from src.evaluate import f1_score
-from src.retrieval.context_retriever import ContextRetriever
-
+from src.evaluate import f1_score  # noqa: E402
+from src.retrieval.context_retriever import ContextRetriever  # noqa: E402
 
 SEED = 42
 MODEL_ID = "Qwen/Qwen2.5-1.5B-Instruct"
@@ -197,7 +196,6 @@ def main():
     print(f"Dispositivo: {device}")
     print(f"Modelo: {MODEL_ID}")
 
-    
     fit_records, dev_records, test_records = load_frozen_splits()
     print(
         f"Particiones: FIT={len(fit_records)}, DEV={len(dev_records)}, "

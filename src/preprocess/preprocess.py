@@ -1,10 +1,12 @@
 import json
 import re
 
+
 def load_json(filepath):
     """Carga un archivo JSON."""
     with open(filepath, 'r', encoding='utf-8') as f:
         return json.load(f)
+
 
 def clean_text(text):
     """
@@ -14,8 +16,9 @@ def clean_text(text):
     """
     if not isinstance(text, str):
         return ""
-    text = re.sub(r'\s+', ' ', text) # Reemplaza múltiples espacios/saltos por un solo espacio
+    text = re.sub(r'\s+', ' ', text)  # Reemplaza múltiples espacios/saltos por un solo espacio
     return text.strip()
+
 
 def prepare_dataset(questions_path, contexts_path=None):
     """
@@ -23,20 +26,20 @@ def prepare_dataset(questions_path, contexts_path=None):
     los cruza usando el 'context_id'.
     """
     questions = load_json(questions_path)
-    
+
     contexts_dict = {}
     if contexts_path:
         contexts = load_json(contexts_path)
         # Crear un diccionario para búsqueda rápida: {id: texto}
         contexts_dict = {item['id']: clean_text(item['text']) for item in contexts}
-        
+
     dataset = []
     for q_item in questions:
         q_text = clean_text(q_item.get('question', ''))
         a_text = clean_text(q_item.get('answer', ''))
         c_id = q_item.get('context', None)
         c_text = contexts_dict.get(c_id, "") if c_id else ""
-        
+
         dataset.append({
             "question": q_text,
             "answer": a_text,
@@ -44,8 +47,9 @@ def prepare_dataset(questions_path, contexts_path=None):
             "has_answer": bool(a_text),
             "has_context": bool(c_text)
         })
-        
+
     return dataset
+
 
 class CustomTokenizer:
     """
@@ -67,7 +71,7 @@ class CustomTokenizer:
         words = []
         for text in texts:
             words.extend(self._tokenize_string(text))
-        
+
         for word in set(words):
             if word not in self.word2idx:
                 self.word2idx[word] = self.vocab_size

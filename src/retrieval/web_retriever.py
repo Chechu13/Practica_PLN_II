@@ -5,7 +5,6 @@ import torch.nn.functional as functional
 from ddgs import DDGS
 from transformers import AutoModel, AutoTokenizer
 
-
 class WebRetriever:
     """
     Recupera información desde Internet y realiza un segundo

@@ -43,7 +43,7 @@ def set_seed(seed=SEED):
 # Aquí defines qué hace que una respuesta sea mejor que otra.
 
 
-def reward_exact_match(completions, reference, **kwargs):
+def reward_exact_match(completions, reference, **_kwargs):
     """Recompensa basada en coincidencia exacta con la referencia."""
     rewards = []
     for completion, expected in zip(completions, reference):
@@ -52,7 +52,7 @@ def reward_exact_match(completions, reference, **kwargs):
     return rewards
 
 
-def reward_format_check(completions, **kwargs):
+def reward_format_check(completions, **_kwargs):
     """Recompensa si la respuesta sigue un formato estructurado (ej. no está vacía)."""
     rewards = []
     for completion in completions:

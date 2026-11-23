@@ -37,6 +37,7 @@ MAX_PROMPT_LENGTH = 384
 MAX_COMPLETION_LENGTH = 64
 RETRIEVAL_TOP_K = 1
 
+
 def set_seed(seed: int = SEED) -> None:
     random.seed(seed)
     np.random.seed(seed)
@@ -44,12 +45,14 @@ def set_seed(seed: int = SEED) -> None:
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
+
 def save_json(path: Path, data) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(
         json.dumps(data, ensure_ascii=False, indent=2, default=str),
         encoding="utf-8",
     )
+
 
 def completion_text(completion) -> str:
     """Admite completions en formato string o chat."""
@@ -68,6 +71,7 @@ def completion_text(completion) -> str:
         return " ".join(parts).strip()
     return str(completion).strip()
 
+
 def reward_answer_f1(completions, reference, **kwargs):
     """Reward basado en el F1 token-level del evaluador del proyecto."""
     if len(completions) != len(reference):
@@ -79,6 +83,7 @@ def reward_answer_f1(completions, reference, **kwargs):
         float(f1_score(completion_text(pred), str(ref or "")))
         for pred, ref in zip(completions, reference)
     ]
+
 
 def load_frozen_splits():
     if not RANKINGS_PATH.exists():
@@ -104,6 +109,7 @@ def load_frozen_splits():
         raise ValueError("Hay índices duplicados en rankings.jsonl.")
     return splits["fit"], splits["dev"], splits["test"]
 
+
 def retrieve_fit_contexts(fit_records, retriever):
     samples = []
     for i, row in enumerate(fit_records, start=1):
@@ -122,6 +128,7 @@ def retrieve_fit_contexts(fit_records, retriever):
             print(f"Contextos recuperados: {i}/{len(fit_records)}", flush=True)
     return samples
 
+
 def truncate_prompt(prompt, tokenizer):
     token_ids = tokenizer.encode(prompt, add_special_tokens=False)
     if len(token_ids) > MAX_PROMPT_LENGTH:
@@ -132,6 +139,7 @@ def truncate_prompt(prompt, tokenizer):
         skip_special_tokens=True,
         clean_up_tokenization_spaces=False,
     )
+
 
 def make_dataset(samples, tokenizer, system_prompt):
     rows = []
@@ -155,6 +163,7 @@ def make_dataset(samples, tokenizer, system_prompt):
             "question_index": sample["index"],
         })
     return Dataset.from_list(rows)
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -322,6 +331,7 @@ def main():
     })
     print(f"Adaptador guardado en: {adapter_dir}")
     print(f"Tiempo de entrenamiento: {training_seconds:.2f} s")
+
 
 if __name__ == "__main__":
     main()

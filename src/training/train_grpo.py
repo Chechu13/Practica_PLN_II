@@ -25,6 +25,7 @@ from src.preprocess.preprocess import prepare_dataset  # noqa: E402
 
 SEED = 42
 MODEL_ID = "Qwen/Qwen2.5-1.5B-Instruct"  # O tu modelo base/adaptador
+MODEL_REVISION = "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
 MAX_COMPLETION_LENGTH = 64
 
 
@@ -89,12 +90,13 @@ def main():
     train_dataset = Dataset.from_list(formatted_data)
 
     # 2. Tokenizador y Modelo
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, revision=MODEL_REVISION)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_ID,
+        revision=MODEL_REVISION,
         torch_dtype=torch.bfloat16 if device.type == "cuda" else torch.float32,
     )
 

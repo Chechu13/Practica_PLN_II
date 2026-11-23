@@ -29,6 +29,7 @@ from src.retrieval.context_retriever import ContextRetriever  # noqa: E402
 
 SEED = 42
 MODEL_ID = "Qwen/Qwen2.5-1.5B-Instruct"
+MODEL_REVISION = "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
 INDEX_PATH = ROOT / "models" / "context_embeddings.pt"
 RANKINGS_PATH = ROOT / "results" / "rag_audit_2026-10-29" / "rankings.jsonl"
 PROMPT_PATH = ROOT / "prompts" / "controlled_zero.md"
@@ -72,7 +73,7 @@ def completion_text(completion) -> str:
     return str(completion).strip()
 
 
-def reward_answer_f1(completions, reference, **kwargs):
+def reward_answer_f1(completions, reference, **_kwargs):
     """Reward basado en el F1 token-level del evaluador del proyecto."""
     if len(completions) != len(reference):
         raise ValueError(
@@ -212,7 +213,7 @@ def main():
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
 
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, revision=MODEL_REVISION)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
@@ -258,6 +259,7 @@ def main():
     )
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_ID,
+        revision=MODEL_REVISION,
         torch_dtype=dtype,
     )
 

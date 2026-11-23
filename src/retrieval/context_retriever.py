@@ -7,6 +7,9 @@ import torch.nn.functional as functional
 from transformers import AutoModel, AutoTokenizer
 
 
+MODEL_REVISION = "b207367332321f8e44f96e224ef15bc607f4dbf0"
+
+
 class ContextRetriever:
     """
     Busca los contextos más relevantes para una pregunta.
@@ -57,12 +60,15 @@ class ContextRetriever:
                     self.term_document_frequency.get(term, 0) + 1
                 )
 
+        self.model_revision = index.get("model_revision", MODEL_REVISION)
         self.tokenizer = AutoTokenizer.from_pretrained(
-            self.model_name
+            self.model_name,
+            revision=self.model_revision,
         )
 
         self.model = AutoModel.from_pretrained(
-            self.model_name
+            self.model_name,
+            revision=self.model_revision,
         ).to(self.device)
 
         self.model.eval()
@@ -76,6 +82,7 @@ class ContextRetriever:
         device=None,
         batch_size=32,
         max_length=512,
+        model_revision=MODEL_REVISION,
     ):
         device = torch.device(
             device or ("cuda" if torch.cuda.is_available() else "cpu")
@@ -88,11 +95,13 @@ class ContextRetriever:
             raw_contexts = json.load(contexts_file)
 
         tokenizer = AutoTokenizer.from_pretrained(
-            model_name
+            model_name,
+            revision=model_revision,
         )
 
         model = AutoModel.from_pretrained(
-            model_name
+            model_name,
+            revision=model_revision,
         ).to(device)
 
         model.eval()
@@ -132,6 +141,7 @@ class ContextRetriever:
 
         index = {
             "model_name": model_name,
+            "model_revision": model_revision,
             "context_ids": [
                 item["id"]
                 for item in raw_contexts

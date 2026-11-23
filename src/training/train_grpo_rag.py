@@ -73,7 +73,7 @@ def completion_text(completion) -> str:
     return str(completion).strip()
 
 
-def reward_answer_f1(completions, reference, **kwargs):
+def reward_answer_f1(completions, reference, **_kwargs):
     """Reward basado en el F1 token-level del evaluador del proyecto."""
     if len(completions) != len(reference):
         raise ValueError(

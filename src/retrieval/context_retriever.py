@@ -6,7 +6,6 @@ import torch
 import torch.nn.functional as functional
 from transformers import AutoModel, AutoTokenizer
 
-
 class ContextRetriever:
     """
     Busca los contextos más relevantes para una pregunta.

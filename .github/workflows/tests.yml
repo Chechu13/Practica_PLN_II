@@ -2,7 +2,10 @@ name: Unit tests
 
 on:
   push:
-    branches: [master, main, "feature/issue-6-tests-quality"]
+    branches:
+      - master
+      - main
+      - "feature/**"
   pull_request:
     branches: [master, main]
   workflow_dispatch:

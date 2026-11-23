@@ -23,21 +23,20 @@ def f1_score(prediction, reference):
     """Calcula el F1-score token a token (muy útil para respuestas cortas)."""
     pred_tokens = normalize_answer(prediction).split()
     ref_tokens = normalize_answer(reference).split()
-    
+
     if not pred_tokens or not ref_tokens:
         return int(pred_tokens == ref_tokens)
-        
+
     common = Counter(pred_tokens) & Counter(ref_tokens)
     num_same = sum(common.values())
-    
+
     if num_same == 0:
         return 0.0
-        
+
     precision = 1.0 * num_same / len(pred_tokens)
     recall = 1.0 * num_same / len(ref_tokens)
     f1 = (2 * precision * recall) / (precision + recall)
     return f1
-
 
 def bleu_score(prediction, reference):
     """BLEU-1: precisión de unigramas con brevity penalty."""
@@ -93,17 +92,17 @@ def evaluate_predictions(results):
     for item in results:
         pred = item.get('prediction', '')
         ref = item.get('reference', '')
-        
+
         em_total += exact_match_score(pred, ref)
         f1_total += f1_score(pred, ref)
         bleu_total += bleu_score(pred, ref)
         rouge_total += rouge_score(pred, ref)
 
     metrics = {
-        "exact_match": round(em_total / total * 100, 2), # En porcentaje
+        "exact_match": round(em_total / total * 100, 2),  # En porcentaje
         "f1_score": round(f1_total / total * 100, 2),    # En porcentaje
-        "bleu_score": round(bleu_total / total * 100, 2), # En porcentaje
-        "rouge_score": round(rouge_total / total * 100, 2), # En porcentaje
+        "bleu_score": round(bleu_total / total * 100, 2),  # En porcentaje
+        "rouge_score": round(rouge_total / total * 100, 2),  # En porcentaje
         "total_evaluated": total
     }
     return metrics

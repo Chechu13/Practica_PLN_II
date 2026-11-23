@@ -1,10 +1,12 @@
 import json
 import re
 
+
 def load_json(filepath):
     """Carga un archivo JSON."""
     with open(filepath, 'r', encoding='utf-8') as f:
         return json.load(f)
+
 
 def clean_text(text):
     """
@@ -16,6 +18,7 @@ def clean_text(text):
         return ""
     text = re.sub(r'\s+', ' ', text)  # Reemplaza múltiples espacios/saltos por un solo espacio
     return text.strip()
+
 
 def prepare_dataset(questions_path, contexts_path=None):
     """
@@ -46,6 +49,7 @@ def prepare_dataset(questions_path, contexts_path=None):
         })
 
     return dataset
+
 
 class CustomTokenizer:
     """

@@ -32,3 +32,9 @@ jobs:
       - name: Run Flake8
         continue-on-error: true
         run: uv run flake8 src tests
+      - name: Run Bandit
+        continue-on-error: true
+        run: uv run bandit -c pyproject.toml -r src
+      - name: Run Vulture
+        continue-on-error: true
+        run: uv run vulture src --min-confidence 80

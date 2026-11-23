@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 
-
 class EncoderDecoderTransformer(nn.Module):
     """Transformer encoder-decoder para generar respuestas a partir de contexto y pregunta."""
 

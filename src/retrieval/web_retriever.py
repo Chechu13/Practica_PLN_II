@@ -15,6 +15,7 @@ class WebRetriever:
     """
 
     MODEL_NAME = "sentence-transformers/multi-qa-MiniLM-L6-cos-v1"
+    MODEL_REVISION = "b207367332321f8e44f96e224ef15bc607f4dbf0"
 
     # Umbral mínimo para aceptar un resultado web.
     MIN_WEB_SCORE = 0.45
@@ -32,11 +33,13 @@ class WebRetriever:
         )
 
         self.tokenizer = AutoTokenizer.from_pretrained(
-            self.MODEL_NAME
+            self.MODEL_NAME,
+            revision=self.MODEL_REVISION,
         )
 
         self.model = AutoModel.from_pretrained(
-            self.MODEL_NAME
+            self.MODEL_NAME,
+            revision=self.MODEL_REVISION,
         ).to(self.device)
 
         self.model.eval()

@@ -27,6 +27,7 @@ SEED = 42
 MODEL_ID = "Qwen/Qwen2.5-1.5B-Instruct"  # O tu modelo base/adaptador
 MAX_COMPLETION_LENGTH = 64
 
+
 def set_seed(seed=SEED):
     random.seed(seed)
     np.random.seed(seed)
@@ -40,6 +41,7 @@ def set_seed(seed=SEED):
 # GRPO evalúa múltiples generaciones (completions) por prompt.
 # Aquí defines qué hace que una respuesta sea mejor que otra.
 
+
 def reward_exact_match(completions, reference, **kwargs):
     """Recompensa basada en coincidencia exacta con la referencia."""
     rewards = []
@@ -48,6 +50,7 @@ def reward_exact_match(completions, reference, **kwargs):
         rewards.append(score)
     return rewards
 
+
 def reward_format_check(completions, **kwargs):
     """Recompensa si la respuesta sigue un formato estructurado (ej. no está vacía)."""
     rewards = []
@@ -55,6 +58,7 @@ def reward_format_check(completions, **kwargs):
         score = 0.5 if len(completion.strip()) > 0 else 0.0
         rewards.append(score)
     return rewards
+
 
 def main():
     parser = argparse.ArgumentParser(description="Entrenamiento GRPO para Qwen")
@@ -134,6 +138,7 @@ def main():
     trainer.save_model(str(args.output))
     tokenizer.save_pretrained(str(args.output))
     print(f"✅ Modelo entrenado con GRPO guardado en: {args.output}")
+
 
 if __name__ == "__main__":
     main()

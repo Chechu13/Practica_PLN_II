@@ -2,6 +2,7 @@ import math
 import re
 from collections import Counter
 
+
 def normalize_answer(s):
     """
     Normaliza el texto para una comparación justa:
@@ -15,9 +16,11 @@ def normalize_answer(s):
     s = ''.join(ch for ch in s if ch not in set(['.', ',', '!', '?', ':', ';', "'", '"']))
     return ' '.join(s.split())
 
+
 def exact_match_score(prediction, reference):
     """Calcula si la predicción coincide exactamente con la referencia."""
     return int(normalize_answer(prediction) == normalize_answer(reference))
+
 
 def f1_score(prediction, reference):
     """Calcula el F1-score token a token (muy útil para respuestas cortas)."""
@@ -37,6 +40,7 @@ def f1_score(prediction, reference):
     recall = 1.0 * num_same / len(ref_tokens)
     f1 = (2 * precision * recall) / (precision + recall)
     return f1
+
 
 def bleu_score(prediction, reference):
     """BLEU-1: precisión de unigramas con brevity penalty."""
@@ -58,6 +62,7 @@ def bleu_score(prediction, reference):
 
     return bp * num_same / c
 
+
 def rouge_score(prediction, reference):
     """ROUGE-1: recall de unigramas."""
     pred_tokens = normalize_answer(prediction).split()
@@ -70,6 +75,7 @@ def rouge_score(prediction, reference):
     num_same = sum(common.values())
 
     return num_same / len(ref_tokens)
+
 
 def evaluate_predictions(results):
     """

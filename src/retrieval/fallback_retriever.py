@@ -3,6 +3,7 @@ import re
 from src.retrieval.context_retriever import ContextRetriever
 from src.retrieval.web_retriever import WebRetriever
 
+
 class FallbackRetriever:
     """
     Sistema híbrido de recuperación:

@@ -62,5 +62,7 @@ They are intentionally excluded from the default unit test run.
 ## Continuous integration
 
 GitHub Actions runs the CPU unit-test suite on pushes and pull requests to
-`master` and `main`. The static-analysis commands above can also be run locally
-before opening a pull request.
+`master` and `main`. On pushes to `master`, `main` and `feature/**`, GitHub Actions runs the unit tests
+and then executes Flake8, Bandit and Vulture. The static-analysis steps use
+`continue-on-error: true`: findings are reported in the workflow logs but do not
+fail the CI job. The unit-test step remains blocking.

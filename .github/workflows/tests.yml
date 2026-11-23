@@ -22,10 +22,12 @@ jobs:
           python-version: "3.12"
       - uses: astral-sh/setup-uv@v5
       - name: Install dependencies
-        run: uv sync --extra test
+        run: uv sync --extra test --extra quality
       - name: Run unit tests
         env:
           CUDA_VISIBLE_DEVICES: ""
           HF_HUB_OFFLINE: "1"
           TRANSFORMERS_OFFLINE: "1"
         run: uv run pytest -q
+      - name: Run Flake8
+        run: uv run flake8 src tests

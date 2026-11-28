@@ -9,6 +9,7 @@ import gc
 import json
 import math
 import random
+import shutil
 import sys
 from pathlib import Path
 from typing import Any
@@ -308,6 +309,18 @@ def main() -> None:
     )
     args = parser.parse_args()
     condition = args.prompt
+
+    # Each run replaces only the artifacts belonging to the selected condition.
+    # Do this before loading the retriever or model to fail fast and avoid stale outputs.
+    experiment_dir = RESULTS_DIR / condition
+    adapter_dir = MODELS_DIR / ADAPTER_NAMES[condition]
+    for output_dir in (experiment_dir, adapter_dir):
+        if output_dir.exists():
+            if output_dir.is_dir():
+                shutil.rmtree(output_dir)
+            else:
+                output_dir.unlink()
+
     set_seed()
 
     if not INDEX_PATH.exists():
@@ -329,18 +342,6 @@ def main() -> None:
     )
     system_prompt = build_system_prompt(condition, examples)
 
-    experiment_dir = RESULTS_DIR / condition
-    adapter_dir = MODELS_DIR / ADAPTER_NAMES[condition]
-    if adapter_dir.exists() and any(adapter_dir.iterdir()):
-        raise FileExistsError(
-            f"El adaptador ya existe: {adapter_dir}. "
-            "Muévelo o elimínalo explícitamente antes de sobrescribirlo."
-        )
-    if experiment_dir.exists() and any(experiment_dir.iterdir()):
-        raise FileExistsError(
-            f"Ya existen artefactos para '{condition}': {experiment_dir}. "
-            "Muévelos o elimínalos explícitamente antes de repetir."
-        )
     experiment_dir.mkdir(parents=True, exist_ok=True)
     (experiment_dir / "training_prompt.txt").write_text(
         system_prompt, encoding="utf-8"

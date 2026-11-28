@@ -42,9 +42,9 @@ ADAPTER_NAMES = {
     "zero": "qwen_lora_controlled_zero",
     "one": "qwen_lora_controlled_one",
     "few": "qwen_lora_controlled_few",
-    "zero_reasoning": "qwen_lora_reasoning_zero",
-    "one_reasoning": "qwen_lora_reasoning_one",
-    "few_reasoning": "qwen_lora_reasoning_few",
+    "zero_reasoning": "qwen25_7b_lora_zero_reasoning",
+    "one_reasoning": "qwen25_7b_lora_one_reasoning",
+    "few_reasoning": "qwen25_7b_lora_few_reasoning",
 }
 OUTPUT_DIR = ROOT / "results" / "reasoning_prompt_comparison"
 

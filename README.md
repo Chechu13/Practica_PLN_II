@@ -112,6 +112,35 @@ La estructura puede evolucionar entre experimentos. Las carpetas principales son
 - `notebooks/comparacion_finetuning_prompts.ipynb`: notebook de comparación.
 - `results/rag_prompt_comparison/`: métricas, tablas, contextos recuperados y predicciones generadas.
 
+### Prompts orientados al razonamiento (Issue #4)
+
+Se ha añadido un experimento separado para comparar los prompts controlados
+con instrucciones que guían un análisis interno de la pregunta y la evidencia,
+sin mostrar ese análisis en la respuesta final. El fine-tuning sigue
+supervisando únicamente la respuesta factual de referencia; no se generan
+trazas de razonamiento artificiales.
+
+Entrenamiento:
+
+```bash
+uv run python scripts/experiments/train_qwen_reasoning_prompt.py --prompt zero_reasoning
+uv run python scripts/experiments/train_qwen_reasoning_prompt.py --prompt one_reasoning
+uv run python scripts/experiments/train_qwen_reasoning_prompt.py --prompt few_reasoning
+```
+
+Comparación emparejada en el test reservado (misma partición y mismos contextos congelados):
+
+```bash
+uv run python scripts/experiments/compare_reasoning_prompts.py --conditions zero zero_reasoning
+uv run python scripts/experiments/compare_reasoning_prompts.py --conditions one one_reasoning
+uv run python scripts/experiments/compare_reasoning_prompts.py --conditions few few_reasoning
+```
+
+Los adaptadores y resultados se guardan bajo `models/prompt_training_reasoning/`
+y `results/reasoning_prompt_comparison/`, separados de los experimentos
+anteriores. El protocolo, las limitaciones y los criterios de interpretación se
+describen en `docs/experiments/reasoning_prompt_experiment.md`.
+
 ### Experimento QLoRA de Qwen3.5-9B
 
 El experimento independiente se ejecuta explícitamente por estrategia y no

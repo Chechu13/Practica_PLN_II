@@ -123,7 +123,7 @@ def generate(
         {
             "role": "user",
             "content": (
-                f"Context:\\n{record['context'] or 'No context is available.'}"
+                f"Context:\n{record['context'] or 'No context is available.'}"
                 f"\\n\\nQuestion: {record['question']}"
             ),
         },

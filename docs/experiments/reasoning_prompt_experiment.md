@@ -39,12 +39,9 @@ uv run python scripts/experiments/train_qwen_reasoning_prompt.py --prompt one_re
 uv run python scripts/experiments/train_qwen_reasoning_prompt.py --prompt few_reasoning
 ```
 
-Antes de evaluar, asegúrate de que los rankings congelados se han construido
-sobre exactamente la partición reservada por `train_test_split` (20%, seed 42).
-El evaluador compara preguntas, respuestas de referencia y etiquetas de
-respondibilidad y aborta si difieren.
-
-Comparación emparejada con el mismo contexto congelado:
+La evaluación vuelve a construir la misma partición reservada (20%, seed 42),
+recupera un contexto local por pregunta una sola vez y reutiliza exactamente
+los mismos contextos para todas las condiciones:
 
 ```bash
 uv run python scripts/experiments/compare_reasoning_prompts.py --conditions zero zero_reasoning
@@ -60,10 +57,11 @@ piloto no deben presentarse como evaluación final.
 El evaluador guarda predicciones por pregunta y EM/F1 globales, además de F1
 para preguntas respondibles y no respondibles, latencia, longitud generada y
 número de respuestas vacías. La unidad de comparación es la misma pregunta
-reservada y el mismo primer contexto semántico congelado para ambas condiciones.
+reservada y el mismo primer contexto recuperado congelado para ambas condiciones.
 
 Los artefactos se guardan en `results/reasoning_prompt_comparison/`:
-`predictions.csv`, `metrics.json` y `experiment_config.json`.
+`predictions.csv`, `metrics.json`, `experiment_config.json` y
+`frozen_evaluation_set.json` (pregunta, etiqueta y contexto asociado).
 
 ## Limitaciones
 

@@ -66,7 +66,13 @@ def load_evaluation_records(
             "Ejecuta scripts/create_context_embeddings.py."
         )
 
-    retriever = ContextRetriever(str(INDEX_PATH), device=device)
+    try:
+        retriever = ContextRetriever(str(INDEX_PATH), device=device)
+    except Exception as exc:
+        raise RuntimeError(
+            "No se pudo inicializar ContextRetriever. Comprueba el índice "
+            "local y las dependencias/modelo de embeddings."
+        ) from exc
     records = []
     try:
         for index, sample in enumerate(test_data):

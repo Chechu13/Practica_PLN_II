@@ -39,8 +39,12 @@ uv run python scripts/experiments/train_qwen_reasoning_prompt.py --prompt one_re
 uv run python scripts/experiments/train_qwen_reasoning_prompt.py --prompt few_reasoning
 ```
 
-La comparación emparejada en DEV con contextos congelados y generación
-determinista:
+Antes de evaluar, asegúrate de que los rankings congelados se han construido
+sobre exactamente la partición reservada por `train_test_split` (20%, seed 42).
+El evaluador compara preguntas, respuestas de referencia y etiquetas de
+respondibilidad y aborta si difieren.
+
+Comparación emparejada con el mismo contexto congelado:
 
 ```bash
 uv run python scripts/experiments/compare_reasoning_prompts.py --conditions zero zero_reasoning
@@ -56,23 +60,17 @@ piloto no deben presentarse como evaluación final.
 El evaluador guarda predicciones por pregunta y EM/F1 globales, además de F1
 para preguntas respondibles y no respondibles, latencia, longitud generada y
 número de respuestas vacías. La unidad de comparación es la misma pregunta
-DEV y el mismo primer contexto semántico congelado para ambas condiciones.
+reservada y el mismo primer contexto semántico congelado para ambas condiciones.
 
 Los artefactos se guardan en `results/reasoning_prompt_comparison/`:
 `predictions.csv`, `metrics.json` y `experiment_config.json`.
 
 ## Limitaciones
 
-- El entrenamiento original Qwen2.5-7B usa el split aleatorio de
-  `questions_train.json`, mientras que el evaluador emparejado consume los
-  rankings DEV del audit de recuperación. Solo debe considerarse una
-  comparación válida cuando los IDs/preguntas de los rankings coincidan con el
-  conjunto de evaluación del entrenamiento; se debe comprobar esta
-  correspondencia antes de interpretar métricas.
 - La instrucción de razonamiento es una guía de análisis latente, no una
   cadena de pensamiento supervisada. No permite concluir que el modelo haya
   aprendido razonamiento explícito.
-- Un solo seed y un conjunto de DEV no permiten inferir significación
+- Un solo seed y un conjunto de evaluación no permiten inferir significación
   estadística ni generalización.
 - El coste, tiempo y memoria pueden variar con el hardware.
 

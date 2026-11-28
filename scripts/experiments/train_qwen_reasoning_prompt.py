@@ -40,9 +40,9 @@ PROMPT_FILES = {
     "few_reasoning": "controlled_few_reasoning.md",
 }
 ADAPTER_NAMES = {
-    "zero_reasoning": "qwen_lora_reasoning_zero",
-    "one_reasoning": "qwen_lora_reasoning_one",
-    "few_reasoning": "qwen_lora_reasoning_few",
+    "zero_reasoning": "qwen25_7b_lora_zero_reasoning",
+    "one_reasoning": "qwen25_7b_lora_one_reasoning",
+    "few_reasoning": "qwen25_7b_lora_few_reasoning",
 }
 INDEX_PATH = ROOT / "models" / "context_embeddings.pt"
 PROMPTS_DIR = ROOT / "prompts"

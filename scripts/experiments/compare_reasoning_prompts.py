@@ -65,13 +65,12 @@ def load_records() -> tuple[list[dict[str, Any]], dict[str, str]]:
 
 def load_prompt(prompt_name: str, result_root: Path) -> str:
     saved_prompt = result_root / prompt_name / "training_prompt.txt"
-    # Training prompts for one/few-shot contain examples selected from train.
+    # One/few-shot prompts contain demonstrations selected from train.
     if saved_prompt.exists():
         return saved_prompt.read_text(encoding="utf-8").strip()
-    if prompt_name.endswith("_reasoning") and prompt_name == "zero_reasoning":
-        return (ROOT / "prompts" / PROMPT_FILES[prompt_name]).read_text(
-            encoding="utf-8"
-        ).strip()
+    if prompt_name in ("zero", "zero_reasoning"):
+        prompt_path = ROOT / "prompts" / PROMPT_FILES[prompt_name]
+        return prompt_path.read_text(encoding="utf-8").strip()
     raise FileNotFoundError(
         f"No se encuentra el prompt exacto guardado por el entrenamiento: {saved_prompt}"
     )
@@ -200,7 +199,7 @@ def main() -> None:
     )
     expected_questions = {item["question"] for item in expected_test}
     ranking_questions = {record["question"] for record in records}
-    if ranking_questions != expected_questions:
+    if args.limit is None and ranking_questions != expected_questions:
         raise ValueError(
             "Los rankings DEV no coinciden con la partición test (20%, seed=42) "
             "del entrenamiento. No se puede presentar esta evaluación como "
@@ -208,6 +207,8 @@ def main() -> None:
             "partición reservada exacta o evalúa ambos adaptadores con el "
             "mismo conjunto congelado derivado del split."
         )
+    if args.limit is None and len(records) != len(expected_test):
+        raise ValueError("El tamaño del conjunto de evaluación congelado no coincide.")
 
     args.output.mkdir(parents=True, exist_ok=True)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
@@ -276,6 +277,7 @@ def main() -> None:
         "conditions": args.conditions,
         "same_frozen_contexts": True,
         "context_source": str(RANKINGS_PATH),
+        "paired_split_validation": args.limit is None,
         "test_used_for_selection": False,
         "generation": {"max_new_tokens": MAX_NEW_TOKENS, "do_sample": False},
     }

@@ -197,9 +197,11 @@ def main() -> None:
     _, expected_test = train_test_split(
         source_dataset, test_size=0.2, random_state=42
     )
-    expected_questions = {item["question"] for item in expected_test}
+    expected_by_question = {
+        item["question"]: item for item in expected_test
+    }
     ranking_questions = {record["question"] for record in records}
-    if args.limit is None and ranking_questions != expected_questions:
+    if args.limit is None and ranking_questions != set(expected_by_question):
         raise ValueError(
             "Los rankings DEV no coinciden con la partición test (20%, seed=42) "
             "del entrenamiento. No se puede presentar esta evaluación como "
@@ -209,6 +211,16 @@ def main() -> None:
         )
     if args.limit is None and len(records) != len(expected_test):
         raise ValueError("El tamaño del conjunto de evaluación congelado no coincide.")
+    for record in records:
+        expected = expected_by_question.get(record["question"])
+        if expected is None or (
+            (record.get("answer") or "") != (expected.get("answer") or "")
+            or bool(record.get("has_answer")) != bool(expected.get("has_answer"))
+        ):
+            raise ValueError(
+                "Los rankings congelados contienen referencias o etiquetas que "
+                "no coinciden con la partición de evaluación del entrenamiento."
+            )
 
     args.output.mkdir(parents=True, exist_ok=True)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)

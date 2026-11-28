@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import importlib.util
 from pathlib import Path
-from types import SimpleNamespace
 
 import pytest
 
@@ -26,9 +25,7 @@ class DummyTokenizer:
         return "encoded prompt"
 
     def __call__(self, text, **kwargs):
-        if text == "encoded prompt":
-            return {"input_ids": [1, 2, 3]}
-        return {"input_ids": [4, 5]}
+        return {"input_ids": [1, 2, 3] if text == "encoded prompt" else [4, 5]}
 
 
 @pytest.mark.parametrize(
@@ -40,11 +37,7 @@ class DummyTokenizer:
     ],
 )
 def test_build_system_prompt(condition, expected, monkeypatch):
-    monkeypatch.setattr(
-        TRAIN,
-        "PROMPTS_DIR",
-        ROOT / "prompts",
-    )
+    monkeypatch.setattr(TRAIN, "PROMPTS_DIR", ROOT / "prompts")
     examples = [
         {"context": f"context {i}", "question": f"question {i}", "answer": f"answer {i}"}
         for i in range(1, 5)
@@ -58,11 +51,7 @@ def test_build_system_prompt(condition, expected, monkeypatch):
 def test_reasoning_dataset_keeps_final_answer_as_only_target():
     tokenizer = DummyTokenizer()
     dataset = TRAIN.QuestionAnsweringDataset(
-        [{
-            "context": "Evidence about Paris.",
-            "question": "What is the capital?",
-            "answer": "Paris",
-        }],
+        [{"context": "Evidence about Paris.", "question": "What is the capital?", "answer": "Paris"}],
         tokenizer,
         "Reason internally; return only the answer.",
     )
@@ -73,7 +62,7 @@ def test_reasoning_dataset_keeps_final_answer_as_only_target():
     assert "Question: What is the capital?" in tokenizer.messages[1]["content"]
 
 
-def test_reasoning_dataset_rejects_missing_eos(monkeypatch):
+def test_reasoning_dataset_rejects_missing_eos():
     class MissingEosTokenizer(DummyTokenizer):
         eos_token_id = None
 

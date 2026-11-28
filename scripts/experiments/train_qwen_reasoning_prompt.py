@@ -265,6 +265,11 @@ def main() -> None:
     condition = args.prompt
     set_seed()
 
+    if not INDEX_PATH.exists():
+        raise FileNotFoundError(
+            f"No existe el índice local: {INDEX_PATH}. "
+            "Ejecuta scripts/create_context_embeddings.py."
+        )
     dataset = prepare_dataset(
         str(ROOT / "data" / "questions_train.json"),
         str(ROOT / "data" / "contexts.json"),
@@ -279,6 +284,11 @@ def main() -> None:
 
     experiment_dir = RESULTS_DIR / condition
     adapter_dir = MODELS_DIR / ADAPTER_NAMES[condition]
+    if adapter_dir.exists() and any(adapter_dir.iterdir()):
+        raise FileExistsError(
+            f"El adaptador ya existe: {adapter_dir}. "
+            "Muévelo o elimínalo explícitamente antes de sobrescribirlo."
+        )
     experiment_dir.mkdir(parents=True, exist_ok=True)
     (experiment_dir / "training_prompt.txt").write_text(system_prompt, encoding="utf-8")
     save_json(experiment_dir / "examples.json", examples)

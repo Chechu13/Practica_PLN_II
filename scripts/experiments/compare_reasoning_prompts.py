@@ -1,7 +1,7 @@
 """Paired evaluation of baseline and reasoning-oriented prompt adapters.
 
-The script reuses the frozen DEV rankings, retrieved contexts and generation
-settings from the controlled Qwen2.5 experiment. It does not evaluate TEST.
+The script validates that the frozen evaluation rankings match the training
+script's held-out split before it reports final metrics.
 """
 from __future__ import annotations
 
@@ -65,7 +65,6 @@ def load_records() -> tuple[list[dict[str, Any]], dict[str, str]]:
 
 def load_prompt(prompt_name: str, result_root: Path) -> str:
     saved_prompt = result_root / prompt_name / "training_prompt.txt"
-    # One/few-shot prompts contain demonstrations selected from train.
     if saved_prompt.exists():
         return saved_prompt.read_text(encoding="utf-8").strip()
     if prompt_name in ("zero", "zero_reasoning"):
@@ -76,14 +75,15 @@ def load_prompt(prompt_name: str, result_root: Path) -> str:
     )
 
 
-def load_model(with_adapter: bool, adapter_path: Path, device: torch.device):
-    dtype = torch.bfloat16 if device.type == "cuda" and torch.cuda.is_bf16_supported() else (
-        torch.float16 if device.type == "cuda" else torch.float32
+def load_model(adapter_path: Path, device: torch.device):
+    dtype = (
+        torch.bfloat16
+        if device.type == "cuda" and torch.cuda.is_bf16_supported()
+        else torch.float16 if device.type == "cuda" else torch.float32
     )
     model = AutoModelForCausalLM.from_pretrained(MODEL_ID, torch_dtype=dtype)
     model.to(device)
-    if with_adapter:
-        model = PeftModel.from_pretrained(model, adapter_path)
+    model = PeftModel.from_pretrained(model, adapter_path)
     model.eval()
     return model
 
@@ -169,27 +169,33 @@ def main() -> None:
         choices=tuple(PROMPT_FILES),
         default=["zero", "zero_reasoning"],
     )
-    parser.add_argument("--split", choices=("dev",), default="dev")
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--output", type=Path, default=OUTPUT_DIR)
-    parser.add_argument("--results-root", type=Path, default=ROOT / "results" / "prompt_training_controlled")
-    parser.add_argument("--reasoning-results-root", type=Path, default=ROOT / "results" / "prompt_training_reasoning")
-    parser.add_argument("--limit", type=int, default=None, help="Límite opcional para un piloto; no usar para resultados finales.")
+    parser.add_argument(
+        "--results-root",
+        type=Path,
+        default=ROOT / "results" / "prompt_training_controlled",
+    )
+    parser.add_argument(
+        "--reasoning-results-root",
+        type=Path,
+        default=ROOT / "results" / "prompt_training_reasoning",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Límite opcional para un piloto técnico, no para resultados finales.",
+    )
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:
         parser.error("--limit debe ser mayor que cero.")
     device = torch.device(args.device)
     if device.type == "cuda" and not torch.cuda.is_available():
         raise RuntimeError("CUDA fue solicitado, pero no está disponible.")
-    records, contexts = load_records()
-    records = [record for record in records if record["split"] == args.split]
-    if args.limit:
-        records = records[:args.limit]
-    if not records:
-        raise ValueError(f"No hay registros para el split {args.split}.")
 
-    # Validate that the frozen DEV rankings correspond to the same dataset
-    # split used for training before reporting paired metrics.
+    records, contexts = load_records()
+    records = [record for record in records if record["split"] == "dev"]
     source_dataset = prepare_dataset(
         str(ROOT / "data" / "questions_train.json"),
         str(ROOT / "data" / "contexts.json"),
@@ -197,11 +203,9 @@ def main() -> None:
     _, expected_test = train_test_split(
         source_dataset, test_size=0.2, random_state=42
     )
-    expected_by_question = {
-        item["question"]: item for item in expected_test
-    }
+    expected_by_question = {item["question"]: item for item in expected_test}
     ranking_questions = {record["question"] for record in records}
-    if args.limit is None and ranking_questions != set(expected_by_question):
+    if ranking_questions != set(expected_by_question):
         raise ValueError(
             "Los rankings DEV no coinciden con la partición test (20%, seed=42) "
             "del entrenamiento. No se puede presentar esta evaluación como "
@@ -209,8 +213,6 @@ def main() -> None:
             "partición reservada exacta o evalúa ambos adaptadores con el "
             "mismo conjunto congelado derivado del split."
         )
-    if args.limit is None and len(records) != len(expected_test):
-        raise ValueError("El tamaño del conjunto de evaluación congelado no coincide.")
     for record in records:
         expected = expected_by_question.get(record["question"])
         if expected is None or (
@@ -221,6 +223,10 @@ def main() -> None:
                 "Los rankings congelados contienen referencias o etiquetas que "
                 "no coinciden con la partición de evaluación del entrenamiento."
             )
+    if args.limit is not None:
+        records = records[:args.limit]
+    if not records:
+        raise ValueError("No hay registros en el conjunto de evaluación.")
 
     args.output.mkdir(parents=True, exist_ok=True)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
@@ -230,7 +236,9 @@ def main() -> None:
 
     for condition in args.conditions:
         reasoning = condition.endswith("_reasoning")
-        adapter_path = ROOT / "models" / "prompt_training_reasoning" / ADAPTER_NAMES[condition] if reasoning else (
+        adapter_path = (
+            ROOT / "models" / "prompt_training_reasoning" / ADAPTER_NAMES[condition]
+            if reasoning else
             ROOT / "models" / "prompt_training_controlled" / ADAPTER_NAMES[condition]
         )
         if not adapter_path.exists():
@@ -244,7 +252,7 @@ def main() -> None:
         system_prompt = load_prompt(condition, prompt_root)
         model = None
         try:
-            model = load_model(True, adapter_path, device)
+            model = load_model(adapter_path, device)
             for record in records:
                 ranking = record.get("semantic_ids", [])
                 context_id = ranking[0] if ranking else "none"
@@ -284,12 +292,12 @@ def main() -> None:
     )
     comparison = {
         "model_id": MODEL_ID,
-        "split": args.split,
+        "split": "dev",
         "n_questions": len(records),
         "conditions": args.conditions,
         "same_frozen_contexts": True,
         "context_source": str(RANKINGS_PATH),
-        "paired_split_validation": args.limit is None,
+        "paired_split_validation": True,
         "test_used_for_selection": False,
         "generation": {"max_new_tokens": MAX_NEW_TOKENS, "do_sample": False},
     }

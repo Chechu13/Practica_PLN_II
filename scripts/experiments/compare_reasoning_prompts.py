@@ -68,19 +68,21 @@ def load_evaluation_records(
 
     retriever = ContextRetriever(str(INDEX_PATH), device=device)
     records = []
-    for index, sample in enumerate(test_data):
-        retrieved = retriever.retrieve(sample["question"])
-        records.append({
-            **sample,
-            "split": "test",
-            "index": index,
-            "context": retrieved["context"],
-            "context_id": retrieved["context_id"],
-            "retrieval_score": float(retrieved["score"]),
-        })
-    del retriever
-    if torch.cuda.is_available():
-        torch.cuda.empty_cache()
+    try:
+        for index, sample in enumerate(test_data):
+            retrieved = retriever.retrieve(sample["question"])
+            records.append({
+                **sample,
+                "split": "test",
+                "index": index,
+                "context": retrieved["context"],
+                "context_id": retrieved["context_id"],
+                "retrieval_score": float(retrieved["score"]),
+            })
+    finally:
+        del retriever
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
     return records
 
 

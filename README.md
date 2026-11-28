@@ -128,7 +128,7 @@ uv run python scripts/experiments/train_qwen_reasoning_prompt.py --prompt one_re
 uv run python scripts/experiments/train_qwen_reasoning_prompt.py --prompt few_reasoning
 ```
 
-Comparación emparejada en DEV con el mismo contexto congelado:
+Comparación emparejada en el test reservado (misma partición y mismos contextos congelados):
 
 ```bash
 uv run python scripts/experiments/compare_reasoning_prompts.py --conditions zero zero_reasoning

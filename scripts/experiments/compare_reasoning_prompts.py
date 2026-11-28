@@ -1,7 +1,7 @@
 """Paired evaluation of baseline and reasoning-oriented prompt adapters.
 
-Evaluation rankings must correspond exactly to the training script's held-out
-split. This prevents silently reporting metrics on a different DEV set.
+Evaluation uses the exact held-out split from training and retrieves each
+question's context once, so every condition receives identical evidence.
 """
 from __future__ import annotations
 
@@ -24,11 +24,12 @@ sys.path.insert(0, str(ROOT))
 
 from src.evaluate import exact_match_score, f1_score
 from src.preprocess.preprocess import prepare_dataset
+from src.retrieval.context_retriever import ContextRetriever
 
 MODEL_ID = "Qwen/Qwen2.5-7B-Instruct"
+SEED = 42
 MAX_LENGTH = 512
 MAX_NEW_TOKENS = 96
-RANKINGS_PATH = ROOT / "results" / "rag_audit_2026-10-29" / "rankings.jsonl"
 INDEX_PATH = ROOT / "models" / "context_embeddings.pt"
 PROMPT_FILES = {
     "zero": "controlled_zero.md",
@@ -49,18 +50,39 @@ ADAPTER_NAMES = {
 OUTPUT_DIR = ROOT / "results" / "reasoning_prompt_comparison"
 
 
-def load_records() -> tuple[list[dict[str, Any]], dict[str, str]]:
-    if not RANKINGS_PATH.exists():
-        raise FileNotFoundError(
-            f"No existen los rankings congelados: {RANKINGS_PATH}. "
-            "Genera primero el audit de recuperación."
-        )
+def load_evaluation_records(
+    device: torch.device,
+) -> list[dict[str, Any]]:
+    """Build the frozen evaluation set from the same deterministic split."""
+    dataset = prepare_dataset(
+        str(ROOT / "data" / "questions_train.json"),
+        str(ROOT / "data" / "contexts.json"),
+    )
+    _, test_data = train_test_split(
+        dataset, test_size=0.2, random_state=SEED
+    )
     if not INDEX_PATH.exists():
-        raise FileNotFoundError(f"No existe el índice de contextos: {INDEX_PATH}")
-    with RANKINGS_PATH.open(encoding="utf-8") as file:
-        records = [json.loads(line) for line in file]
-    index = torch.load(INDEX_PATH, map_location="cpu", weights_only=True)
-    return records, dict(zip(index["context_ids"], index["contexts"]))
+        raise FileNotFoundError(
+            f"No existe el índice local: {INDEX_PATH}. "
+            "Ejecuta scripts/create_context_embeddings.py."
+        )
+
+    retriever = ContextRetriever(str(INDEX_PATH), device=device)
+    records = []
+    for index, sample in enumerate(test_data):
+        retrieved = retriever.retrieve(sample["question"])
+        records.append({
+            **sample,
+            "split": "test",
+            "index": index,
+            "context": retrieved["context"],
+            "context_id": retrieved["context_id"],
+            "retrieval_score": float(retrieved["score"]),
+        })
+    del retriever
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    return records
 
 
 def load_prompt(prompt_name: str, result_root: Path) -> str:
@@ -93,7 +115,6 @@ def generate(
     model: Any,
     tokenizer: Any,
     record: dict[str, Any],
-    context: str,
     system_prompt: str,
     device: torch.device,
 ) -> tuple[str, float, int]:
@@ -102,8 +123,8 @@ def generate(
         {
             "role": "user",
             "content": (
-                f"Context:\n{context or 'No context is available.'}\n\n"
-                f"Question: {record['question']}"
+                f"Context:\\n{record['context'] or 'No context is available.'}"
+                f"\\n\\nQuestion: {record['question']}"
             ),
         },
     ]
@@ -198,41 +219,30 @@ def main() -> None:
     if device.type == "cuda" and not torch.cuda.is_available():
         raise RuntimeError("CUDA fue solicitado, pero no está disponible.")
 
-    records, contexts = load_records()
-    records = [record for record in records if record["split"] == "dev"]
-    source_dataset = prepare_dataset(
-        str(ROOT / "data" / "questions_train.json"),
-        str(ROOT / "data" / "contexts.json"),
-    )
-    _, expected_test = train_test_split(
-        source_dataset, test_size=0.2, random_state=42
-    )
-    expected_by_question = {item["question"]: item for item in expected_test}
-    ranking_questions = {record["question"] for record in records}
-    if ranking_questions != set(expected_by_question):
-        raise ValueError(
-            "Los rankings DEV no coinciden con la partición test (20%, seed=42) "
-            "del entrenamiento. No se puede presentar esta evaluación como "
-            "una comparación emparejada válida. Genera rankings sobre la "
-            "partición reservada exacta o evalúa ambos adaptadores con el "
-            "mismo conjunto congelado derivado del split."
-        )
-    for record in records:
-        expected = expected_by_question.get(record["question"])
-        if expected is None or (
-            (record.get("answer") or "") != (expected.get("answer") or "")
-            or bool(record.get("has_answer")) != bool(expected.get("has_answer"))
-        ):
-            raise ValueError(
-                "Los rankings congelados contienen referencias o etiquetas que "
-                "no coinciden con la partición de evaluación del entrenamiento."
-            )
+    records = load_evaluation_records(device)
     if args.limit is not None:
         records = records[:args.limit]
     if not records:
         raise ValueError("No hay registros en el conjunto de evaluación.")
 
     args.output.mkdir(parents=True, exist_ok=True)
+    # Persist the exact question/context pairing used in every condition.
+    frozen_records = [
+        {
+            "index": record["index"],
+            "question": record["question"],
+            "reference": record.get("answer") or "",
+            "has_answer": bool(record.get("has_answer")),
+            "context_id": record["context_id"],
+            "retrieval_score": record["retrieval_score"],
+        }
+        for record in records
+    ]
+    (args.output / "frozen_evaluation_set.json").write_text(
+        json.dumps(frozen_records, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
     tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
@@ -258,22 +268,20 @@ def main() -> None:
         try:
             model = load_model(adapter_path, device)
             for record in records:
-                ranking = record.get("semantic_ids", [])
-                context_id = ranking[0] if ranking else "none"
-                context = contexts.get(context_id, "")
                 prediction, generation_seconds, generated_tokens = generate(
-                    model, tokenizer, record, context, system_prompt, device
+                    model, tokenizer, record, system_prompt, device
                 )
                 reference = record.get("answer") or ""
                 rows.append({
-                    "split": record["split"],
+                    "split": "test",
                     "index": record["index"],
                     "condition": condition,
                     "question": record["question"],
                     "reference": reference,
                     "prediction": prediction,
                     "has_answer": bool(record["has_answer"]),
-                    "context_id": context_id,
+                    "context_id": record["context_id"],
+                    "retrieval_score": record["retrieval_score"],
                     "generation_seconds": generation_seconds,
                     "generated_tokens": generated_tokens,
                     "em": exact_match_score(prediction, reference),
@@ -296,12 +304,12 @@ def main() -> None:
     )
     comparison = {
         "model_id": MODEL_ID,
-        "split": "dev",
+        "split": "test",
+        "seed": SEED,
         "n_questions": len(records),
         "conditions": args.conditions,
         "same_frozen_contexts": True,
-        "context_source": str(RANKINGS_PATH),
-        "paired_split_validation": True,
+        "context_source": "ContextRetriever.retrieve, computed once per held-out question",
         "test_used_for_selection": False,
         "generation": {"max_new_tokens": MAX_NEW_TOKENS, "do_sample": False},
     }

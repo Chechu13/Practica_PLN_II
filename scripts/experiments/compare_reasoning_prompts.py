@@ -1,7 +1,7 @@
 """Paired evaluation of baseline and reasoning-oriented prompt adapters.
 
-The script validates that the frozen evaluation rankings match the training
-script's held-out split before it reports final metrics.
+Evaluation rankings must correspond exactly to the training script's held-out
+split. This prevents silently reporting metrics on a different DEV set.
 """
 from __future__ import annotations
 
@@ -81,8 +81,9 @@ def load_model(adapter_path: Path, device: torch.device):
         if device.type == "cuda" and torch.cuda.is_bf16_supported()
         else torch.float16 if device.type == "cuda" else torch.float32
     )
-    model = AutoModelForCausalLM.from_pretrained(MODEL_ID, torch_dtype=dtype)
-    model.to(device)
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL_ID, torch_dtype=dtype
+    ).to(device)
     model = PeftModel.from_pretrained(model, adapter_path)
     model.eval()
     return model
@@ -169,7 +170,10 @@ def main() -> None:
         choices=tuple(PROMPT_FILES),
         default=["zero", "zero_reasoning"],
     )
-    parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
+    parser.add_argument(
+        "--device",
+        default="cuda" if torch.cuda.is_available() else "cpu",
+    )
     parser.add_argument("--output", type=Path, default=OUTPUT_DIR)
     parser.add_argument(
         "--results-root",

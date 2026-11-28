@@ -172,6 +172,7 @@ def main() -> None:
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--output", type=Path, default=OUTPUT_DIR)
     parser.add_argument("--results-root", type=Path, default=ROOT / "results" / "prompt_training_controlled")
+    parser.add_argument("--reasoning-results-root", type=Path, default=ROOT / "results" / "prompt_training_reasoning")
     parser.add_argument("--limit", type=int, default=None, help="Límite opcional para un piloto; no usar para resultados finales.")
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:
@@ -202,7 +203,10 @@ def main() -> None:
                 f"Falta el adaptador para '{condition}': {adapter_path}. "
                 "Entrena primero las condiciones indicadas."
             )
-        system_prompt = load_prompt(condition, args.results_root)
+        prompt_root = (
+            args.reasoning_results_root if reasoning else args.results_root
+        )
+        system_prompt = load_prompt(condition, prompt_root)
         model = None
         try:
             model = load_model(True, adapter_path, device)
@@ -249,6 +253,7 @@ def main() -> None:
         "n_questions": len(records),
         "conditions": args.conditions,
         "same_frozen_contexts": True,
+        "context_source": str(RANKINGS_PATH),
         "test_used_for_selection": False,
         "generation": {"max_new_tokens": MAX_NEW_TOKENS, "do_sample": False},
     }

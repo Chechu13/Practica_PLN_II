@@ -27,11 +27,11 @@ sys.path.insert(0, str(ROOT))
 from src.preprocess.preprocess import prepare_dataset
 from src.retrieval.context_retriever import ContextRetriever
 
-MODEL_ID = "Qwen/Qwen2.5-7B-Instruct"
+MODEL_ID = "Qwen/Qwen2.5-1.5B-Instruct"
 SEED = 42
 MAX_LENGTH = 512
 MAX_TARGET_LENGTH = 96
-EPOCHS = 1
+EPOCHS = 3
 LEARNING_RATE = 2e-4
 BATCH_SIZE = 1
 GRADIENT_ACCUMULATION_STEPS = 4
@@ -41,9 +41,9 @@ PROMPT_FILES = {
     "few_reasoning": "controlled_few_reasoning.md",
 }
 ADAPTER_NAMES = {
-    "zero_reasoning": "qwen25_7b_lora_zero_reasoning",
-    "one_reasoning": "qwen25_7b_lora_one_reasoning",
-    "few_reasoning": "qwen25_7b_lora_few_reasoning",
+    "zero_reasoning": "qwen25_1.5b_lora_zero_reasoning",
+    "one_reasoning": "qwen25_1.5b_lora_one_reasoning",
+    "few_reasoning": "qwen25_1.5b_lora_few_reasoning",
 }
 INDEX_PATH = ROOT / "models" / "context_embeddings.pt"
 PROMPTS_DIR = ROOT / "prompts"

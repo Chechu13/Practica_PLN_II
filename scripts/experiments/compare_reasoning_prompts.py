@@ -16,7 +16,6 @@ from typing import Any
 import numpy as np
 import torch
 from peft import PeftModel
-from sklearn.model_selection import train_test_split
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -124,7 +123,7 @@ def generate(
             "role": "user",
             "content": (
                 f"Context:\n{record['context'] or 'No context is available.'}"
-                f"\\n\\nQuestion: {record['question']}"
+                f"\n\nQuestion: {record['question']}"
             ),
         },
     ]

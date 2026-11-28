@@ -62,16 +62,16 @@ def load_records() -> tuple[list[dict[str, Any]], dict[str, str]]:
 
 
 def load_prompt(prompt_name: str, result_root: Path) -> str:
-    prompt_path = ROOT / "prompts" / PROMPT_FILES[prompt_name]
     saved_prompt = result_root / prompt_name / "training_prompt.txt"
-    # The exact training prompt includes examples selected from train.
+    # Training prompts for one/few-shot contain examples selected from train.
     if saved_prompt.exists():
         return saved_prompt.read_text(encoding="utf-8").strip()
-    if prompt_name.endswith("_reasoning"):
-        prompt_path_reasoning = ROOT / "prompts" / PROMPT_FILES[prompt_name]
-        return prompt_path_reasoning.read_text(encoding="utf-8").strip()
+    if prompt_name.endswith("_reasoning") and prompt_name == "zero_reasoning":
+        return (ROOT / "prompts" / PROMPT_FILES[prompt_name]).read_text(
+            encoding="utf-8"
+        ).strip()
     raise FileNotFoundError(
-        f"No se encuentra el prompt de entrenamiento guardado: {saved_prompt}"
+        f"No se encuentra el prompt exacto guardado por el entrenamiento: {saved_prompt}"
     )
 
 

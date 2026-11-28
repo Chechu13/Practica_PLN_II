@@ -16,12 +16,14 @@ from typing import Any
 import numpy as np
 import torch
 from peft import PeftModel
+from sklearn.model_selection import train_test_split
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from src.evaluate import exact_match_score, f1_score
+from src.preprocess.preprocess import prepare_dataset
 
 MODEL_ID = "Qwen/Qwen2.5-7B-Instruct"
 MAX_LENGTH = 512
@@ -186,6 +188,26 @@ def main() -> None:
         records = records[:args.limit]
     if not records:
         raise ValueError(f"No hay registros para el split {args.split}.")
+
+    # Validate that the frozen DEV rankings correspond to the same dataset
+    # split used for training before reporting paired metrics.
+    source_dataset = prepare_dataset(
+        str(ROOT / "data" / "questions_train.json"),
+        str(ROOT / "data" / "contexts.json"),
+    )
+    _, expected_test = train_test_split(
+        source_dataset, test_size=0.2, random_state=42
+    )
+    expected_questions = {item["question"] for item in expected_test}
+    ranking_questions = {record["question"] for record in records}
+    if ranking_questions != expected_questions:
+        raise ValueError(
+            "Los rankings DEV no coinciden con la partición test (20%, seed=42) "
+            "del entrenamiento. No se puede presentar esta evaluación como "
+            "una comparación emparejada válida. Genera rankings sobre la "
+            "partición reservada exacta o evalúa ambos adaptadores con el "
+            "mismo conjunto congelado derivado del split."
+        )
 
     args.output.mkdir(parents=True, exist_ok=True)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
